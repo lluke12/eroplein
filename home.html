@@ -1,0 +1,211 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viens - Expert Accounting</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        /* Smooth gradient animation */
+        @keyframes blob-bounce {
+            0% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(20px, -20px) scale(1.1); }
+            100% { transform: translate(0, 0) scale(1); }
+        }
+        .animate-blob {
+            animation: blob-bounce 10s infinite ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-[#050505] text-white min-h-screen overflow-x-hidden selection:bg-fuchsia-500/30">
+
+    <!-- Background Gradients -->
+    <div class="fixed inset-0 z-0 pointer-events-none">
+        <!-- Top Left Major Glow -->
+        <div class="absolute -top-[10%] -left-[10%] w-[80vw] h-[80vw] md:w-[50vw] md:h-[50vw] rounded-full bg-fuchsia-700/30 blur-[120px] mix-blend-screen animate-blob"></div>
+        <div class="absolute top-[0%] left-[10%] w-[40vw] h-[40vw] rounded-full bg-purple-800/20 blur-[100px] mix-blend-screen"></div>
+        
+        <!-- Right Side Glow behind cards -->
+        <div class="absolute top-[20%] -right-[10%] w-[50vw] h-[50vw] rounded-full bg-pink-900/20 blur-[120px] mix-blend-screen"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="relative z-50 w-full px-6 py-6 md:px-10 flex items-center justify-between">
+        <!-- Logo -->
+        <div class="flex items-center gap-2">
+            <div class="text-white/90">
+                <i data-lucide="asterisk" class="w-7 h-7"></i>
+            </div>
+            <span class="text-xl font-medium tracking-tight text-white">Viens</span>
+        </div>
+
+        <!-- Center Menu -->
+        <div class="hidden md:flex items-center bg-white/5 backdrop-blur-md border border-white/5 rounded-full p-1.5">
+            <a href="#" class="px-5 py-1.5 bg-white/10 text-white rounded-full text-sm font-medium shadow-sm transition-all hover:bg-white/20">Home</a>
+            <a href="#" class="px-5 py-1.5 text-white/60 hover:text-white rounded-full text-sm font-medium transition-colors">About</a>
+            <a href="#" class="px-5 py-1.5 text-white/60 hover:text-white rounded-full text-sm font-medium transition-colors">Pricing</a>
+            <a href="#" class="px-5 py-1.5 text-white/60 hover:text-white rounded-full text-sm font-medium transition-colors">Product</a>
+            <a href="#" class="px-5 py-1.5 text-white/60 hover:text-white rounded-full text-sm font-medium transition-colors">Contact</a>
+        </div>
+
+        <!-- Auth Buttons -->
+        <div class="flex items-center gap-4">
+            <button class="hidden md:block px-5 py-2 rounded-full bg-white text-black text-sm font-medium hover:bg-gray-100 transition-colors">Sign Up</button>
+            <button class="px-5 py-2 rounded-full border border-white/20 text-white text-sm font-medium hover:bg-white/5 transition-colors">Login</button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="relative z-10 container mx-auto px-6 pt-12 md:pt-20 lg:pt-24 pb-20">
+        <div class="grid lg:grid-cols-2 gap-16 lg:gap-8 items-center">
+            
+            <!-- Left Column: Copy -->
+            <div class="flex flex-col items-start max-w-2xl">
+                <!-- Badge -->
+                <div class="inline-flex items-center px-4 py-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm mb-8">
+                    <span class="text-xs font-medium text-pink-100/90 tracking-wide">New Updates v2 Out Now!</span>
+                </div>
+
+                <!-- Headline -->
+                <h1 class="text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] leading-[0.95] font-semibold tracking-tight text-pink-50 mb-10">
+                    Expert <br>
+                    Accounting For <br>
+                    Daily Use
+                </h1>
+
+                <!-- Buttons -->
+                <div class="flex flex-wrap items-center gap-4 mb-20">
+                    <button class="px-8 py-3.5 bg-white text-black rounded-full font-medium text-base hover:bg-gray-100 transition-transform active:scale-95">
+                        Get Started
+                    </button>
+                    <button class="px-8 py-3.5 border border-white/20 text-white rounded-full font-medium text-base hover:bg-white/5 transition-transform active:scale-95">
+                        Watch Demo
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right Column: Visuals -->
+            <div class="relative h-[500px] w-full flex items-center justify-center lg:justify-end perspective-[1000px]">
+                
+                <!-- Decorative SVG Lines Background -->
+                <svg class="absolute top-0 right-0 w-[120%] h-[120%] text-white/5 pointer-events-none stroke-current" viewBox="0 0 400 400" fill="none">
+                    <path d="M50,350 Q200,300 350,50" stroke-width="1"></path>
+                    <path d="M100,400 Q220,320 380,80" stroke-width="1"></path>
+                    <circle cx="300" cy="150" r="140" stroke-width="0.5" stroke-dasharray="4 4"></circle>
+                </svg>
+
+                <!-- Card 1: Balance (Top Right) -->
+                <div class="absolute top-0 right-0 md:right-10 z-20 w-80 p-6 rounded-2xl bg-[#131313]/60 border border-white/10 backdrop-blur-xl shadow-2xl shadow-purple-900/20 transform hover:-translate-y-1 transition-transform duration-500">
+                    <div class="flex justify-between items-start mb-6">
+                        <div>
+                            <p class="text-sm text-gray-400 font-medium">Your Balance</p>
+                            <div class="flex items-center gap-3 mt-1">
+                                <h3 class="text-3xl font-medium tracking-tight text-white">$6,650.05</h3>
+                                <i data-lucide="eye-off" class="w-4 h-4 text-gray-500"></i>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-1 opacity-80">
+                            <div class="w-5 h-5 rounded-full bg-[#EB001B]"></div>
+                            <div class="w-5 h-5 rounded-full bg-[#F79E1B] -ml-2"></div>
+                            <span class="text-xs text-gray-400 ml-1">**** 9090</span>
+                        </div>
+                    </div>
+                    
+                    <div class="w-full border-t border-white/10 my-6 border-dashed"></div>
+
+                    <div class="flex gap-3">
+                        <button class="flex-1 flex items-center justify-center gap-2 bg-gradient-to-r from-fuchsia-500 to-pink-500 text-white py-2.5 rounded-full text-sm font-medium hover:brightness-110 transition-all">
+                            <i data-lucide="arrow-right-left" class="w-4 h-4"></i>
+                            Transfer
+                        </button>
+                        <button class="flex-1 flex items-center justify-center gap-2 bg-transparent border border-white/20 text-white py-2.5 rounded-full text-sm font-medium hover:bg-white/5 transition-all">
+                            <i data-lucide="arrow-down-left" class="w-4 h-4"></i>
+                            Request
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 2: Income (Bottom Left) -->
+                <div class="absolute top-40 left-0 md:left-10 z-10 w-72 p-5 rounded-2xl bg-[#0a0a0a]/80 border border-white/10 backdrop-blur-xl shadow-2xl">
+                    <div class="mb-4">
+                        <p class="text-xs text-gray-400 mb-1">Income</p>
+                        <h3 class="text-2xl font-medium tracking-tight text-white">$1,650.05</h3>
+                        <p class="text-xs text-green-400 mt-1 flex items-center gap-1">
+                            10% <i data-lucide="arrow-up-right" class="w-3 h-3"></i> 
+                            <span class="text-gray-500">+$450 this month</span>
+                        </p>
+                    </div>
+
+                    <div class="mt-6">
+                        <div class="flex justify-between text-xs mb-2">
+                            <span class="text-gray-400">Target</span>
+                            <span class="text-pink-400 font-medium">$2,400.00 <span class="text-gray-500">75%</span></span>
+                        </div>
+                        <div class="w-full h-2 bg-white/10 rounded-full overflow-hidden">
+                            <div class="h-full w-3/4 bg-gradient-to-r from-purple-600 to-pink-500 rounded-full"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <!-- Description Text on right side aligned with cards visual roughly -->
+        <div class="grid lg:grid-cols-2 gap-8 mt-4 lg:-mt-20">
+            <div></div> <!-- spacer -->
+            <div class="lg:pl-10">
+                <p class="text-lg text-gray-400 leading-relaxed font-normal max-w-md">
+                    Free yourself from financial admin. Our dedicated experts and easy-to-use tools make managing your money and paying the right tax effortless.
+                </p>
+            </div>
+        </div>
+
+        <!-- Footer / Social Proof -->
+        <div class="mt-32 md:mt-40 text-center">
+            <h4 class="text-lg text-white font-medium mb-12">Trusted by the world's most innovative companies</h4>
+            
+            <div class="flex flex-wrap justify-center items-center gap-10 md:gap-16 opacity-60">
+                <!-- Coinbase -->
+                <svg class="h-6 md:h-7 text-white fill-current" viewBox="0 0 100 22" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.45,10.91c0,5.65-4.22,9.78-9.78,9.78C2.56,20.69,0,18.91,0,16.22h3.91c0,0.88,0.72,1.5,1.72,1.5 c1.53,0,2.69-1.28,2.69-3.72V7.78C8.31,5.34,7.16,4.06,5.62,4.06c-1,0-1.72,0.62-1.72,1.5H0C0,2.88,2.56,1.09,5.75,1.09 C11.31,1.09,12.45,5.22,12.45,10.91z M25.84,10.88c0,4.06-2.91,7.22-7.19,7.22c-4.28,0-7.19-3.16-7.19-7.22 c0-4.06,2.91-7.22,7.19-7.22C22.94,3.66,25.84,6.81,25.84,10.88z M15.5,10.88c0,2.16,1.31,3.75,3.16,3.75s3.16-1.59,3.16-3.75 c0-2.16-1.31-3.75-3.16-3.75S15.5,8.72,15.5,10.88z M30.16,1.5h4.03v16.22h-4.03V1.5z M47.94,17.72V8.53 c0-1.59-0.81-2.44-2.12-2.44c-1.44,0-2.41,1.06-2.41,2.66v9h-4.03V6.34h3.75l0.16,1.25c1.03-0.97,2.53-1.5,4.06-1.5 c3.03,0,4.62,1.94,4.62,5.12v6.5H47.94z M64.66,10.75c0,4.31-2.94,7.34-6.66,7.34c-2.09,0-3.69-0.91-4.31-2.22l-0.19,1.84h-3.66V1.5 h4.03v6.75c0.75-1.34,2.34-2.16,4.12-2.16C61.59,6.09,64.66,8.28,64.66,10.75z M60.62,12c0-1.94-1.28-3.12-3.03-3.12 c-1.69,0-3.03,1.22-3.03,3.34c0,1.97,1.28,3.22,2.97,3.22C59.34,15.44,60.62,14.12,60.62,12z M77.72,17.72h-3.97l-0.25-1.59 c-1.09,1.19-2.72,1.97-4.56,1.97c-3.19,0-5.06-2.09-5.06-4.66c0-3.03,2.44-5.06,6.59-5.06h2.72v-0.5c0-1.09-0.66-1.78-2.03-1.78 c-1.12,0-1.88,0.47-2.09,1.16h-3.84c0.31-2.5,3.06-4.16,6.03-4.16c3.84,0,5.94,2.22,5.94,5.47v9.16H77.72z M73.22,11.53h-2.19 c-1.94,0-2.97,0.78-2.97,2.06c0,1.06,0.78,1.75,2.06,1.75c1.78,0,3.09-1.22,3.09-2.97V11.53z M90.47,9.75 c-0.69-0.28-1.53-0.44-2.19-0.44c-1.34,0-2.09,0.59-2.09,1.44c0,0.88,0.75,1.28,2.38,1.69c2.75,0.66,4.62,1.78,4.62,4.41 c0,2.62-2.31,4.25-5.69,4.25c-2.41,0-4.69-0.78-5.62-1.94l1.88-2.5c0.78,0.75,2.16,1.25,3.38,1.25c1.44,0,2.03-0.62,2.03-1.31 c0-0.97-0.78-1.34-2.53-1.78c-2.62-0.62-4.47-1.78-4.47-4.28c0-2.62,2.31-4.16,5.34-4.16c2.09,0,3.94,0.66,4.91,1.59L90.47,9.75z M99.38,13.78h-7.66c0.16,1.53,1.31,2.34,2.94,2.34c1.03,0,1.81-0.34,2.34-0.88l2.25,2.03c-1.12,1.22-2.88,1.84-4.88,1.84 c-4.09,0-6.66-2.91-6.66-7.09c0-3.91,2.47-6.94,6.25-6.94c3.97,0,5.78,3.22,5.78,6.59C99.75,12.38,99.66,13.22,99.38,13.78z M92.09,11.38h4.09c-0.12-1.22-0.91-1.91-2.16-1.91C92.88,9.47,92.25,10.22,92.09,11.38z"></path>
+                </svg>
+
+                <!-- Spotify -->
+                <div class="flex items-center gap-2 text-white">
+                    <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"></path></svg>
+                    <span class="text-xl font-semibold tracking-tighter">Spotify</span>
+                </div>
+
+                <!-- Slack -->
+                <div class="flex items-center gap-2 text-white">
+                    <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24"><path d="M5.042 15.165a2.528 2.528 0 0 1-2.52 2.523A2.528 2.528 0 0 1 0 15.165a2.527 2.527 0 0 1 2.522-2.52h2.52v2.52zM6.313 15.165a2.527 2.527 0 0 1 2.521-2.52 2.527 2.527 0 0 1 2.521 2.52v6.313A2.528 2.528 0 0 1 8.834 24a2.528 2.528 0 0 1-2.521-2.523v-3.792zM8.834 5.042a2.528 2.528 0 0 1-2.521-2.52A2.528 2.528 0 0 1 8.834 0a2.528 2.528 0 0 1 2.521 2.522v2.52H8.834zM8.834 6.313a2.528 2.528 0 0 1 2.521 2.521 2.528 2.528 0 0 1-2.521 2.521H2.522A2.528 2.528 0 0 1 0 8.834a2.528 2.528 0 0 1 2.522-2.521h6.312zM18.956 8.834a2.528 2.528 0 0 1 2.522-2.521A2.528 2.528 0 0 1 24 8.834a2.528 2.528 0 0 1-2.522 2.521h-2.52V8.834zM17.688 8.834a2.528 2.528 0 0 1-2.523 2.521 2.527 2.527 0 0 1-2.52-2.521V2.522A2.527 2.527 0 0 1 15.165 0a2.528 2.528 0 0 1 2.523 2.522v6.312zM15.165 18.956a2.528 2.528 0 0 1 2.523 2.522A2.528 2.528 0 0 1 15.165 24a2.527 2.527 0 0 1-2.52-2.522v-2.522h2.52zM15.165 17.688a2.527 2.527 0 0 1-2.52-2.523 2.526 2.526 0 0 1 2.52-2.52h6.313A2.527 2.527 0 0 1 24 15.165a2.528 2.528 0 0 1-2.522 2.523h-6.313z"></path></svg>
+                    <span class="text-xl font-bold tracking-tight">slack</span>
+                </div>
+
+                <!-- Dropbox -->
+                <div class="flex items-center gap-2 text-white">
+                    <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24"><path d="M6 1.807L0 5.61l6 3.805 6-3.805-6-3.803zm12 0l-6 3.803 6 3.805 6-3.805-6-3.803zM0 13.216l6 3.805 6-3.804-6-3.805-6 3.804zm18-3.804l-6 3.805 6 3.804 6-3.805-6-3.804zM6 18.25l6 3.943 6-3.943-6-3.856-6 3.856z"></path></svg>
+                    <span class="text-xl font-bold tracking-tight">Dropbox</span>
+                </div>
+
+                <!-- Webflow -->
+                <div class="flex items-center gap-1 text-white">
+                    <span class="text-xl font-bold italic tracking-tighter">webflow</span>
+                </div>
+
+                <!-- Zoom -->
+                <div class="flex items-center gap-1 text-white">
+                     <span class="text-xl font-bold tracking-tight">zoom</span>
+                </div>
+            </div>
+
+            <p class="mt-12 text-sm text-gray-500">Stellar is used by over 55,000+ companies across the globe</p>
+        </div>
+    </main>
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+</body></html>

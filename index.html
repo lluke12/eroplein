@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Margret - Ontdek, Beleef, Deel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        blush: {
+                            50: '#fef1f7',
+                            100: '#fee5f0',
+                            200: '#fecce3',
+                            300: '#ffa2cb',
+                            400: '#fd68a6',
+                            500: '#f83c83',
+                            600: '#e81a5d',
+                            700: '#ca0c44',
+                            800: '#a70d39',
+                            900: '#8b1033',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .font-serif { font-family: 'Playfair Display', serif; }
+
+        /* Animated gradient blobs */
+        @keyframes float-slow {
+            0%, 100% { transform: translate(0, 0) scale(1) rotate(0deg); }
+            33% { transform: translate(30px, -30px) scale(1.05) rotate(2deg); }
+            66% { transform: translate(-20px, 20px) scale(0.95) rotate(-1deg); }
+        }
+        @keyframes float-medium {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(-40px, 30px) scale(1.1); }
+        }
+        .animate-float-slow { animation: float-slow 20s infinite ease-in-out; }
+        .animate-float-medium { animation: float-medium 15s infinite ease-in-out; }
+
+        /* Smooth reveal */
+        @keyframes fade-up {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-up {
+            animation: fade-up 0.8s ease-out forwards;
+            opacity: 0;
+        }
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; }
+        .delay-500 { animation-delay: 0.5s; }
+
+        /* Glass card hover */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(20px);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass-card:hover {
+            background: rgba(255, 255, 255, 0.06);
+            border-color: rgba(255, 255, 255, 0.12);
+            transform: translateY(-4px);
+            box-shadow: 0 20px 60px -15px rgba(248, 60, 131, 0.15);
+        }
+
+        /* Rating stars */
+        .star-filled { color: #f83c83; }
+        .star-empty { color: rgba(255,255,255,0.15); }
+
+        /* Scroll indicator */
+        @keyframes scroll-bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(8px); }
+        }
+        .animate-scroll { animation: scroll-bounce 2s infinite ease-in-out; }
+
+        /* Subtle grain texture */
+        .grain::after {
+            content: '';
+            position: fixed;
+            inset: 0;
+            z-index: 100;
+            pointer-events: none;
+            opacity: 0.015;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #050505; }
+        ::-webkit-scrollbar-thumb { background: rgba(248, 60, 131, 0.3); border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(248, 60, 131, 0.5); }
+
+        /* Magnetic hover for nav items */
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 50%;
+            width: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #f83c83, transparent);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Search input glow */
+        .search-glow:focus {
+            box-shadow: 0 0 0 1px rgba(248, 60, 131, 0.3), 0 0 30px -5px rgba(248, 60, 131, 0.15);
+        }
+
+        /* Tag hover */
+        .tag-pill {
+            transition: all 0.3s ease;
+        }
+        .tag-pill:hover {
+            background: rgba(248, 60, 131, 0.15);
+            border-color: rgba(248, 60, 131, 0.4);
+            color: #ffa2cb;
+        }
+    </style>
+</head>
+<body class="bg-[#050505] text-white min-h-screen overflow-x-hidden selection:bg-fuchsia-500/30 grain">
+
+    <!-- ============================================ -->
+    <!-- BACKGROUND AMBIENT GLOW                      -->
+    <!-- ============================================ -->
+    <div class="fixed inset-0 z-0 pointer-events-none overflow-hidden">
+        <div class="absolute -top-[20%] -left-[15%] w-[70vw] h-[70vw] md:w-[45vw] md:h-[45vw] rounded-full bg-fuchsia-700/20 blur-[150px] mix-blend-screen animate-float-slow"></div>
+        <div class="absolute top-[5%] left-[20%] w-[35vw] h-[35vw] rounded-full bg-purple-900/15 blur-[120px] mix-blend-screen animate-float-medium"></div>
+        <div class="absolute top-[30%] -right-[10%] w-[40vw] h-[40vw] rounded-full bg-pink-900/15 blur-[130px] mix-blend-screen animate-float-slow" style="animation-delay: -7s;"></div>
+        <div class="absolute bottom-[10%] left-[30%] w-[30vw] h-[30vw] rounded-full bg-rose-900/10 blur-[100px] mix-blend-screen animate-float-medium" style="animation-delay: -5s;"></div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- NAVIGATION                                   -->
+    <!-- ============================================ -->
+    <nav class="relative z-50 w-full px-6 py-5 md:px-10">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-2.5 group">
+                <div class="w-9 h-9 rounded-full bg-gradient-to-br from-fuchsia-500 to-pink-600 flex items-center justify-center shadow-lg shadow-fuchsia-500/20 group-hover:shadow-fuchsia-500/40 transition-shadow">
+                    <i data-lucide="sparkles" class="w-4.5 h-4.5 text-white"></i>
+                </div>
+                <span class="text-xl font-semibold tracking-tight text-white">Margret</span>
+            </a>
+
+            <!-- Center Menu -->
+            <div class="hidden md:flex items-center gap-1 bg-white/[0.03] backdrop-blur-md border border-white/[0.06] rounded-full p-1.5">
+                <a href="#" class="px-5 py-2 bg-white/10 text-white rounded-full text-sm font-medium transition-all">Home</a>
+                <a href="#" class="nav-link px-5 py-2 text-white/50 hover:text-white rounded-full text-sm font-medium transition-colors">Directory</a>
+                <a href="#" class="nav-link px-5 py-2 text-white/50 hover:text-white rounded-full text-sm font-medium transition-colors">Nieuws</a>
+                <a href="#" class="nav-link px-5 py-2 text-white/50 hover:text-white rounded-full text-sm font-medium transition-colors">Reviews</a>
+                <a href="#" class="nav-link px-5 py-2 text-white/50 hover:text-white rounded-full text-sm font-medium transition-colors">Steden</a>
+            </div>
+
+            <!-- Auth -->
+            <div class="flex items-center gap-3">
+                <button class="hidden md:flex items-center gap-2 px-5 py-2.5 rounded-full border border-white/10 text-white/70 text-sm font-medium hover:bg-white/5 hover:text-white transition-all">
+                    <i data-lucide="log-in" class="w-4 h-4"></i>
+                    Login
+                </button>
+                <button class="px-5 py-2.5 rounded-full bg-gradient-to-r from-fuchsia-500 to-pink-500 text-white text-sm font-medium hover:brightness-110 shadow-lg shadow-fuchsia-500/20 transition-all active:scale-95">
+                    Schrijf Review
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============================================ -->
+    <!-- HERO                                         -->
+    <!-- ============================================ -->
+    <section class="relative z-10 pt-16 md:pt-24 pb-20 md:pb-32">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <!-- Tagline -->
+                <div class="animate-fade-up inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/10 bg-white/[0.03] backdrop-blur-sm mb-8">
+                    <div class="w-1.5 h-1.5 rounded-full bg-fuchsia-400 animate-pulse"></div>
+                    <span class="text-xs font-medium text-pink-200/80 tracking-wide uppercase">Ontdek de beste plekken bij jou in de buurt</span>
+                </div>
+
+                <!-- Heading -->
+                <h1 class="animate-fade-up delay-100 text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[0.92] font-bold tracking-tight mb-8">
+                    <span class="text-pink-50">Echte </span>
+                    <span class="font-serif italic bg-gradient-to-r from-fuchsia-400 via-pink-400 to-rose-400 bg-clip-text text-transparent">ervaringen,</span>
+                    <br>
+                    <span class="text-pink-50">eerlijke </span>
+                    <span class="font-serif italic bg-gradient-to-r from-rose-400 via-pink-400 to-fuchsia-400 bg-clip-text text-transparent">reviews</span>
+                </h1>
+
+                <!-- Subtitle -->
+                <p class="animate-fade-up delay-200 text-lg md:text-xl text-gray-400 leading-relaxed max-w-2xl mx-auto mb-12">
+                    Ontdek bedrijven, lees eerlijke ervaringen van anderen en deel jouw verhaal. Van restaurants tot wellness &#8212; vind precies wat je zoekt.
+                </p>
+
+                <!-- Search Bar -->
+                <div class="animate-fade-up delay-300 relative max-w-2xl mx-auto">
+                    <div class="flex flex-col sm:flex-row gap-3 p-2 rounded-2xl bg-white/[0.04] border border-white/[0.08] backdrop-blur-xl">
+                        <div class="flex-1 relative">
+                            <i data-lucide="search" class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500"></i>
+                            <input type="text" placeholder="Zoek een bedrijf, categorie of dienst..." class="w-full pl-12 pr-4 py-4 bg-white/[0.04] border border-white/[0.06] rounded-xl text-white placeholder-gray-500 text-base focus:outline-none search-glow transition-all">
+                        </div>
+                        <div class="relative sm:w-48">
+                            <i data-lucide="map-pin" class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-500"></i>
+                            <select class="w-full pl-12 pr-10 py-4 bg-white/[0.04] border border-white/[0.06] rounded-xl text-gray-400 text-base focus:outline-none search-glow appearance-none cursor-pointer transition-all">
+                                <option>Alle steden</option>
+                                <option>Amsterdam</option>
+                                <option>Rotterdam</option>
+                                <option>Utrecht</option>
+                                <option>Den Haag</option>
+                                <option>Eindhoven</option>
+                                <option>Groningen</option>
+                            </select>
+                            <i data-lucide="chevron-down" class="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500 pointer-events-none"></i>
+                        </div>
+                        <button class="px-8 py-4 bg-gradient-to-r from-fuchsia-500 to-pink-500 text-white rounded-xl font-medium hover:brightness-110 shadow-lg shadow-fuchsia-500/20 transition-all active:scale-95">
+                            Zoeken
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Quick Tags -->
+                <div class="animate-fade-up delay-400 flex flex-wrap justify-center gap-2 mt-8">
+                    <span class="tag-pill px-4 py-1.5 rounded-full border border-white/10 text-xs font-medium text-white/40 cursor-pointer">Restaurants</span>
+                    <span class="tag-pill px-4 py-1.5 rounded-full border border-white/10 text-xs font-medium text-white/40 cursor-pointer">Wellness & Spa</span>
+                    <span class="tag-pill px-4 py-1.5 rounded-full border border-white/10 text-xs font-medium text-white/40 cursor-pointer">Nachtleven</span>
+                    <span class="tag-pill px-4 py-1.5 rounded-full border border-white/10 text-xs font-medium text-white/40 cursor-pointer">Hotels</span>
+                    <span class="tag-pill px-4 py-1.5 rounded-full border border-white/10 text-xs font-medium text-white/40 cursor-pointer">Beauty</span>
+                    <span class="tag-pill px-4 py-1.5 rounded-full border border-white/10 text-xs font-medium text-white/40 cursor-pointer">Shopping</span>
+                </div>
+            </div>
+
+            <!-- Scroll indicator -->
+            <div class="hidden md:flex justify-center mt-20">
+                <div class="animate-scroll flex flex-col items-center gap-2 text-white/20">
+                    <span class="text-xs font-medium tracking-widest uppercase">Scroll</span>
+                    <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- STATS BAR                                    -->
+    <!-- ============================================ -->
+    <section class="relative z-10 border-y border-white/[0.06]">
+        <div class="max-w-7xl mx-auto px-6 py-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="text-3xl md:text-4xl font-bold bg-gradient-to-r from-fuchsia-400 to-pink-400 bg-clip-text text-transparent">2.847</div>
+                    <div class="text-sm text-gray-500 mt-1">Bedrijven</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl md:text-4xl font-bold bg-gradient-to-r from-pink-400 to-rose-400 bg-clip-text text-transparent">18.3K</div>
+                    <div class="text-sm text-gray-500 mt-1">Reviews</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl md:text-4xl font-bold bg-gradient-to-r from-rose-400 to-fuchsia-400 bg-clip-text text-transparent">42</div>
+                    <div class="text-sm text-gray-500 mt-1">Steden</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl md:text-4xl font-bold bg-gradient-to-r from-fuchsia-400 to-purple-400 bg-clip-text text-transparent">4.8</div>
+                    <div class="text-sm text-gray-500 mt-1">Gem. Score</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- POPULAR CITIES                               -->
+    <!-- ============================================ -->
+    <section class="relative z-10 py-20 md:py-28">
+        <div class="max-w-7xl mx-auto px-6">
+            <!-- Section Header -->
+            <div class="flex items-end justify-between mb-12">
+                <div>
+                    <span class="text-xs font-medium text-fuchsia-400/80 tracking-widest uppercase mb-3 block">Ontdek per stad</span>
+                    <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-pink-50">
+                        Populaire <span class="font-serif italic text-fuchsia-400">steden</span>
+                    </h2>
+                </div>
+                <a href="#" class="hidden md:flex items-center gap-2 text-sm text-white/40 hover:text-fuchsia-400 transition-colors group">
+                    Bekijk alle steden
+                    <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                </a>
+            </div>
+
+            <!-- City Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                <!-- Amsterdam -->
+                <a href="#" class="group relative h-48 md:h-56 rounded-2xl overflow-hidden cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1534351590666-13e3e96b5017?w=400&h=500&fit=crop" alt="Amsterdam" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent group-hover:from-fuchsia-900/60 transition-all duration-500"></div>
+                    <div class="absolute bottom-0 left-0 p-4">
+                        <h3 class="text-white font-semibold text-base">Amsterdam</h3>
+                        <p class="text-white/50 text-xs mt-0.5">847 bedrijven</p>
+                    </div>
+                </a>
+
+                <!-- Rotterdam -->
+                <a href="#" class="group relative h-48 md:h-56 rounded-2xl overflow-hidden cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1543872084-c7bd3822856f?w=400&h=500&fit=crop" alt="Rotterdam" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent group-hover:from-fuchsia-900/60 transition-all duration-500"></div>
+                    <div class="absolute bottom-0 left-0 p-4">
+                        <h3 class="text-white font-semibold text-base">Rotterdam</h3>
+                        <p class="text-white/50 text-xs mt-0.5">623 bedrijven</p>
+                    </div>
+                </a>
+
+                <!-- Utrecht -->
+                <a href="#" class="group relative h-48 md:h-56 rounded-2xl overflow-hidden cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1560452992-e85e5bf2b1d4?w=400&h=500&fit=crop" alt="Utrecht" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent group-hover:from-fuchsia-900/60 transition-all duration-500"></div>
+                    <div class="absolute bottom-0 left-0 p-4">
+                        <h3 class="text-white font-semibold text-base">Utrecht</h3>
+                        <p class="text-white/50 text-xs mt-0.5">412 bedrijven</p>
+                    </div>
+                </a>
+
+                <!-- Den Haag -->
+                <a href="#" class="group relative h-48 md:h-56 rounded-2xl overflow-hidden cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=400&h=500&fit=crop" alt="Den Haag" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent group-hover:from-fuchsia-900/60 transition-all duration-500"></div>
+                    <div class="absolute bottom-0 left-0 p-4">
+                        <h3 class="text-white font-semibold text-base">Den Haag</h3>
+                        <p class="text-white/50 text-xs mt-0.5">389 bedrijven</p>
+                    </div>
+                </a>
+
+                <!-- Eindhoven -->
+                <a href="#" class="group relative h-48 md:h-56 rounded-2xl overflow-hidden cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1597659840241-37e2b9c2f55f?w=400&h=500&fit=crop" alt="Eindhoven" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent group-hover:from-fuchsia-900/60 transition-all duration-500"></div>
+                    <div class="absolute bottom-0 left-0 p-4">
+                        <h3 class="text-white font-semibold text-base">Eindhoven</h3>
+                        <p class="text-white/50 text-xs mt-0.5">298 bedrijven</p>
+                    </div>
+                </a>
+
+                <!-- Groningen -->
+                <a href="#" class="group relative h-48 md:h-56 rounded-2xl overflow-hidden cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1605101100278-5d1deb2b6498?w=400&h=500&fit=crop" alt="Groningen" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent group-hover:from-fuchsia-900/60 transition-all duration-500"></div>
+                    <div class="absolute bottom-0 left-0 p-4">
+                        <h3 class="text-white font-semibold text-base">Groningen</h3>
+                        <p class="text-white/50 text-xs mt-0.5">278 bedrijven</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- FEATURED BUSINESSES                          -->
+    <!-- ============================================ -->
+    <section class="relative z-10 py-20 md:py-28">
+        <div class="max-w-7xl mx-auto px-6">
+            <!-- Section Header -->
+            <div class="flex items-end justify-between mb-12">
+                <div>
+                    <span class="text-xs font-medium text-fuchsia-400/80 tracking-widest uppercase mb-3 block">Aanbevolen</span>
+                    <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-pink-50">
+                        Uitgelichte <span class="font-serif italic text-fuchsia-400">bedrijven</span>
+                    </h2>
+                </div>
+                <div class="hidden md:flex items-center gap-2">
+                    <button class="p-2.5 rounded-full border border-white/10 text-white/40 hover:text-white hover:border-white/20 transition-all">
+                        <i data-lucide="arrow-left" class="w-4 h-4"></i>
+                    </button>
+                    <button class="p-2.5 rounded-full border border-white/10 text-white/40 hover:text-white hover:border-white/20 transition-all">
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Business Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- Business Card 1 -->
+                <article class="glass-card rounded-2xl overflow-hidden group cursor-pointer">
+                    <div class="relative h-52 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&h=400&fit=crop" alt="Restaurant Locale" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute top-4 left-4 flex gap-2">
+                            <span class="px-3 py-1 bg-black/50 backdrop-blur-md rounded-full text-xs font-medium text-white/90">Restaurant</span>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <button class="p-2 bg-black/30 backdrop-blur-md rounded-full text-white/60 hover:text-fuchsia-400 transition-colors">
+                                <i data-lucide="heart" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                        <div class="absolute bottom-0 inset-x-0 h-20 bg-gradient-to-t from-[#0a0a0a] to-transparent"></div>
+                    </div>
+                    <div class="p-5">
+                        <div class="flex items-start justify-between mb-3">
+                            <div>
+                                <h3 class="text-lg font-semibold text-white group-hover:text-fuchsia-300 transition-colors">Restaurant Locale</h3>
+                                <div class="flex items-center gap-1.5 mt-1">
+                                    <i data-lucide="map-pin" class="w-3.5 h-3.5 text-gray-500"></i>
+                                    <span class="text-sm text-gray-500">Amsterdam Centrum</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-1 px-2.5 py-1 bg-fuchsia-500/10 rounded-lg">
+                                <i data-lucide="star" class="w-3.5 h-3.5 text-fuchsia-400 fill-fuchsia-400"></i>
+                                <span class="text-sm font-semibold text-fuchsia-400">4.9</span>
+                            </div>
+                        </div>
+                        <p class="text-sm text-gray-500 leading-relaxed mb-4">Verfijnd dineren in een intieme sfeer. Seizoensgebonden menu's met lokale ingredi&euml;nten.</p>
+                        <div class="flex items-center justify-between pt-4 border-t border-white/[0.06]">
+                            <div class="flex -space-x-2">
+                                <div class="w-7 h-7 rounded-full bg-gradient-to-br from-fuchsia-400 to-pink-500 ring-2 ring-[#0a0a0a] flex items-center justify-center text-[10px] font-medium">A</div>
+                                <div class="w-7 h-7 rounded-full bg-gradient-to-br from-purple-400 to-fuchsia-500 ring-2 ring-[#0a0a0a] flex items-center justify-center text-[10px] font-medium">S</div>
+                                <div class="w-7 h-7 rounded-full bg-gradient-to-br from-pink-400 to-rose-500 ring-2 ring-[#0a0a0a] flex items-center justify-center text-[10px] font-medium">M</div>
+                                <div class="w-7 h-7 rounded-full bg-white/10 ring-2 ring-[#0a0a0a] flex items-center justify-center text-[10px] font-medium text-gray-400">+24</div>
+                            </div>
+                            <span class="text-xs text-gray-500">127 reviews</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Business Card 2 -->
+                <article class="glass-card rounded-2xl overflow-hidden group cursor-pointer">
+                    <div class="relative h-52 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1540555700478-4be289fbec6d?w=600&h=400&fit=crop" alt="Wellness Oase" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute top-4 left-4 flex gap-2">
+                            <span class="px-3 py-1 bg-black/50 backdrop-blur-md rounded-full text-xs font-medium text-white/90">Wellness</span>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <button class="p-2 bg-black/30 backdrop-blur-md rounded-full text-fuchsia-400 transition-colors">
+                                <i data-lucide="heart" class="w-4 h-4 fill-fuchsia-400"></i>
+                            </button>
+                        </div>
+                        <div class="absolute bottom-0 inset-x-0 h-20 bg-gradient-to-t from-[#0a0a0a] to-transparent"></div>
+                    </div>
+                    <div class="p-5">
+                        <div class="flex items-start justify-between mb-3">
+                            <div>
+                                <h3 class="text-lg font-semibold text-white group-hover:text-fuchsia-300 transition-colors">Spa &amp; Wellness Oase</h3>
+                                <div class="flex items-center gap-1.5 mt-1">
+                                    <i data-lucide="map-pin" class="w-3.5 h-3.5 text-gray-500"></i>
+                                    <span class="text-sm text-gray-500">Rotterdam Zuid</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-1 px-2.5 py-1 bg-fuchsia-500/10 rounded-lg">
+                                <i data-lucide="star" class="w-3.5 h-3.5 text-fuchsia-400 fill-fuchsia-400"></i>
+                                <span class="text-sm font-semibold text-fuchsia-400">4.7</span>
+                            </div>
+                        </div>
+                        <p class="text-sm text-gray-500 leading-relaxed mb-4">Luxe wellness ervaring met Turkse hamam, diverse sauna's en exclusieve treatments.</p>
+                        <div class="flex items-center justify-between pt-4 border-t border-white/[0.06]">
+                            <div class="flex -space-x-2">
+                                <div class="w-7 h-7 rounded-full bg-gradient-to-br from-rose-400 to-pink-500 ring-2 ring-[#0a0a0a] flex items-center justify-center text-[10px] font-medium">L</div>
+                                <div class="w-7 h-7 rounded-full bg-gradient-to-br from-fuchsia-400 to-purple-500 ring-2 ring-[#0a0a0a] flex items-center justify-center text-[10px] font-medium">K</div>
+                                <div class="w-7 h-7 rounded-full bg-white/10 ring-2 ring-[#0a0a0a] flex items-center justify-center text-[10px] font-medium text-gray-400">+89</div>
+                            </div>
+                            <span class="text-xs text-gray-500">91 reviews</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Business Card 3 -->
+                <article class="glass-card rounded-2xl overflow-hidden group cursor-pointer">
+                    <div class="relative h-52 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=600&h=400&fit=crop" alt="Club Velvet" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute top-4 left-4 flex gap-2">
+                            <span class="px-3 py-1 bg-black/50 backdrop-blur-md rounded-full text-xs font-medium text-white/90">Nachtleven</span>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <button class="p-2 bg-black/30 backdrop-blur-md rounded-full text-white/60 hover:text-fuchsia-400 transition-colors">
+                                <i data-lucide="heart" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                        <div class="absolute bottom-0 inset-x-0 h-20 bg-gradient-to-t from-[#0a0a0a] to-transparent"></div>
+                    </div>
+                    <div class="p-5">
+                        <div class="flex items-start justify-between mb-3">
+                            <div>
+                                <h3 class="text-lg font-semibold text-white group-hover:text-fuchsia-300 transition-colors">Club Velvet</h3>
+                                <div class="flex items-center gap-1.5 mt-1">
+                                    <i data-lucide="map-pin" class="w-3.5 h-3.5 text-gray-500"></i>
+                                    <span class="text-sm text-gray-500">Utrecht Centrum</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-1 px-2.5 py-1 bg-fuchsia-500/10 rounded-lg">
+                                <i data-lucide="star" class="w-3.5 h-3.5 text-fuchsia-400 fill-fuchsia-400"></i>
+                                <span class="text-sm font-semibold text-fuchsia-400">4.6</span>
+                            </div>
+                        </div>
+                        <p class="text-sm text-gray-500 leading-relaxed mb-4">Exclusieve nachtclub met top DJ's, velvet interieur en een onvergetelijke sfeer.</p>
+                        <div class="flex items-center justify-between pt-4 border-t border-white/[0.06]">
+                            <div class="flex -space-x-2">
+                                <div class="w-7 h-7 rounded-full bg-gradient-to-br from-purple-400 to-fuchsia-500 ring-2 ring-[#0a0a0a] flex items-center justify-center text-[10px] font-medium">D</div>
+                                <div class="w-7 h-7 rounded-full bg-gradient-to-br from-fuchsia-400 to-pink-500 ring-2 ring-[#0a0a0a] flex items-center justify-center text-[10px] font-medium">J</div>
+                                <div class="w-7 h-7 rounded-full bg-white/10 ring-2 ring-[#0a0a0a] flex items-center justify-center text-[10px] font-medium text-gray-400">+56</div>
+                            </div>
+                            <span class="text-xs text-gray-500">58 reviews</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- LATEST NEWS + RECENT REVIEWS SPLIT           -->
+    <!-- ============================================ -->
+    <section class="relative z-10 py-20 md:py-28">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+
+                <!-- LEFT: Latest News -->
+                <div class="lg:col-span-7">
+                    <div class="flex items-end justify-between mb-10">
+                        <div>
+                            <span class="text-xs font-medium text-fuchsia-400/80 tracking-widest uppercase mb-3 block">Laatste nieuws</span>
+                            <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-pink-50">
+                                Nieuws &amp; <span class="font-serif italic text-fuchsia-400">updates</span>
+                            </h2>
+                        </div>
+                        <a href="#" class="hidden md:flex items-center gap-2 text-sm text-white/40 hover:text-fuchsia-400 transition-colors group">
+                            Alle artikelen
+                            <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+
+                    <!-- Featured News Article -->
+                    <article class="glass-card rounded-2xl overflow-hidden group cursor-pointer mb-6">
+                        <div class="grid md:grid-cols-2">
+                            <div class="relative h-64 md:h-auto overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?w=600&h=500&fit=crop" alt="Nieuws" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700">
+                            </div>
+                            <div class="p-6 md:p-8 flex flex-col justify-center">
+                                <div class="flex items-center gap-3 mb-4">
+                                    <span class="px-3 py-1 bg-fuchsia-500/10 border border-fuchsia-500/20 rounded-full text-xs font-medium text-fuchsia-400">Trending</span>
+                                    <span class="text-xs text-gray-500">15 feb 2026</span>
+                                </div>
+                                <h3 class="text-xl font-semibold text-white mb-3 group-hover:text-fuchsia-300 transition-colors leading-snug">De beste nieuwe restaurants in Amsterdam die je moet proberen</h3>
+                                <p class="text-sm text-gray-500 leading-relaxed mb-4">Van verborgen parels in de Jordaan tot fine dining aan het IJ &#8212; dit zijn de openingshotspots van 2026.</p>
+                                <div class="flex items-center gap-3">
+                                    <div class="w-8 h-8 rounded-full bg-gradient-to-br from-fuchsia-400 to-pink-500 flex items-center justify-center text-xs font-medium">S</div>
+                                    <div>
+                                        <p class="text-sm font-medium text-white/80">Sophie de Vries</p>
+                                        <p class="text-xs text-gray-500">5 min leestijd</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Small News Cards -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <article class="glass-card rounded-2xl p-5 group cursor-pointer">
+                            <div class="flex items-center gap-3 mb-4">
+                                <span class="px-2.5 py-1 bg-purple-500/10 border border-purple-500/20 rounded-full text-xs font-medium text-purple-400">Wellness</span>
+                                <span class="text-xs text-gray-500">14 feb</span>
+                            </div>
+                            <h3 class="text-base font-semibold text-white mb-2 group-hover:text-fuchsia-300 transition-colors leading-snug">Top 10 wellness centra in Rotterdam voor ultieme ontspanning</h3>
+                            <p class="text-sm text-gray-500 leading-relaxed">Van hamams tot floatcentra: de beste plekken om tot rust te komen.</p>
+                        </article>
+
+                        <article class="glass-card rounded-2xl p-5 group cursor-pointer">
+                            <div class="flex items-center gap-3 mb-4">
+                                <span class="px-2.5 py-1 bg-rose-500/10 border border-rose-500/20 rounded-full text-xs font-medium text-rose-400">Nachtleven</span>
+                                <span class="text-xs text-gray-500">13 feb</span>
+                            </div>
+                            <h3 class="text-base font-semibold text-white mb-2 group-hover:text-fuchsia-300 transition-colors leading-snug">Utrecht nachtleven: deze clubs scoren het hoogst dit seizoen</h3>
+                            <p class="text-sm text-gray-500 leading-relaxed">De Utrechtse uitgaansscene groeit. Bekijk de favorieten van onze community.</p>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- RIGHT: Recent Reviews -->
+                <div class="lg:col-span-5">
+                    <div class="flex items-end justify-between mb-10">
+                        <div>
+                            <span class="text-xs font-medium text-fuchsia-400/80 tracking-widest uppercase mb-3 block">Community</span>
+                            <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-pink-50">
+                                Recente <span class="font-serif italic text-fuchsia-400">reviews</span>
+                            </h2>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <!-- Review 1 -->
+                        <div class="glass-card rounded-2xl p-5 group cursor-pointer">
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-full bg-gradient-to-br from-fuchsia-400 to-pink-500 flex-shrink-0 flex items-center justify-center text-sm font-semibold">E</div>
+                                <div class="flex-1 min-w-0">
+                                    <div class="flex items-center justify-between mb-1">
+                                        <span class="text-sm font-medium text-white">Emma K.</span>
+                                        <span class="text-xs text-gray-500">2 uur geleden</span>
+                                    </div>
+                                    <div class="flex items-center gap-1 mb-2">
+                                        <i data-lucide="star" class="w-3.5 h-3.5 text-fuchsia-400 fill-fuchsia-400"></i>
+                                        <i data-lucide="star" class="w-3.5 h-3.5 text-fuchsia-400 fill-fuchsia-400"></i>
+                                        <i data-lucide="star" class="w-3.5 h-3.5 text-fuchsia-400 fill-fuchsia-400"></i>
+                                        <i data-lucide="star" class="w-3.5 h-3.5 text-fuchsia-400 fill-fuchsia-400"></i>
+                                        <i data-lucide="star" class="w-3.5 h-3.5 text-fuchsia-400 fill-fuchsia-400"></i>
+                                        <span class="text-xs text-gray-500 ml-2">Restaurant Locale</span>
+                                    </div>
+                                    <p class="text-sm text-gray-400 leading-relaxed">"Absoluut top! De sfeer, het eten, de bediening &#8212; alles klopte. Zeker een aanrader voor een date night."</p>
+                                    <div class="flex items-center gap-4 mt-3">
+                                        <button class="flex items-center gap-1 text-xs text-gray-500 hover:text-fuchsia-400 transition-colors">
+                                            <i data-lucide="thumbs-up" class="w-3.5 h-3.5"></i>
+                                            <span>24</span>
+                                        </button>
+                                        <button class="flex items-center gap-1 text-xs text-gray-500 hover:text-white transition-colors">
+                                            <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+                                            <span>3</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Review 2 -->
+                        <div class="glass-card rounded-2xl p-5 group cursor-pointer">
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-full bg-gradient-to-br from-purple-400 to-fuchsia-500 flex-shrink-0 flex items-center justify-center text-sm font-semibold">M</div>
+                                <div class="flex-1 min-w-0">
+                                    <div class="flex items-center justify-between mb-1">
+                                        <span class="text-sm font-medium text-white">Mila V.</span>
+                                        <span class="text-xs text-gray-500">5 uur geleden</span>
+                                    </div>
+                                    <div class="flex items-center gap-1 mb-2">
+                                        <i data-lucide="star" class="w-3.5 h-3.5 text-fuchsia-400 fill-fuchsia-400"></i>
+                                        <i data-lucide="star" class="w-3.5 h-3.5 text-fuchsia-400 fill-fuchsia-400"></i>
+                                        <i data-lucide="star" class="w-3.5 h-3.5 text-fuchsia-400 fill-fuchsia-400"></i>
+                                        <i data-lucide="star" class="w-3.5 h-3.5 text-fuchsia-400 fill-fuchsia-400"></i>
+                                        <i data-lucide="star" class="w-3.5 h-3.5 text-white/15"></i>
+                                        <span class="text-xs text-gray-500 ml-2">Spa & Wellness Oase</span>
+                                    </div>
+                                    <p class="text-sm text-gray-400 leading-relaxed">"Heerlijk ontspannen! De hamam was geweldig en het personeel super vriendelijk. Enige minpunt: het was druk op zaterdag."</p>
+                                    <div class="flex items-center gap-4 mt-3">
+                                        <button class="flex items-center gap-1 text-xs text-gray-500 hover:text-fuchsia-400 transition-colors">
+                                            <i data-lucide="thumbs-up" class="w-3.5 h-3.5"></i>
+                                            <span>18</span>
+                                        </button>
+                                        <button class="flex items-center gap-1 text-xs text-gray-500 hover:text-white transition-colors">
+                                            <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+                                            <span>7</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Review 3 -->
+                        <div class="glass-card rounded-2xl p-5 group cursor-pointer">
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-full bg-gradient-to-br from-rose-400 to-pink-500 flex-shrink-0 flex items-center justify-center text-sm font-semibold">L</div>
+                                <div class="flex-1 min-w-0">
+                                    <div class="flex items-center justify-between mb-1">
+                                        <span class="text-sm font-medium text-white">Luna B.</span>
+                                        <span class="text-xs text-gray-500">8 uur geleden</span>
+                                    </div>
+                                    <div class="flex items-center gap-1 mb-2">
+                                        <i data-lucide="star" class="w-3.5 h-3.5 text-fuchsia-400 fill-fuchsia-400"></i>
+                                        <i data-lucide="star" class="w-3.5 h-3.5 text-fuchsia-400 fill-fuchsia-400"></i>
+                                        <i data-lucide="star" class="w-3.5 h-3.5 text-fuchsia-400 fill-fuchsia-400"></i>
+                                        <i data-lucide="star" class="w-3.5 h-3.5 text-fuchsia-400 fill-fuchsia-400"></i>
+                                        <i data-lucide="star" class="w-3.5 h-3.5 text-fuchsia-400 fill-fuchsia-400"></i>
+                                        <span class="text-xs text-gray-500 ml-2">Club Velvet</span>
+                                    </div>
+                                    <p class="text-sm text-gray-400 leading-relaxed">"Wat een ongelofelijke nacht! De DJ was top, de cocktails perfect en de sfeer electrifying. Mijn nieuwe favoriete plek!"</p>
+                                    <div class="flex items-center gap-4 mt-3">
+                                        <button class="flex items-center gap-1 text-xs text-gray-500 hover:text-fuchsia-400 transition-colors">
+                                            <i data-lucide="thumbs-up" class="w-3.5 h-3.5"></i>
+                                            <span>42</span>
+                                        </button>
+                                        <button class="flex items-center gap-1 text-xs text-gray-500 hover:text-white transition-colors">
+                                            <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+                                            <span>12</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Review 4 -->
+                        <div class="glass-card rounded-2xl p-5 group cursor-pointer">
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-full bg-gradient-to-br from-pink-400 to-fuchsia-500 flex-shrink-0 flex items-center justify-center text-sm font-semibold">J</div>
+                                <div class="flex-1 min-w-0">
+                                    <div class="flex items-center justify-between mb-1">
+                                        <span class="text-sm font-medium text-white">Julia R.</span>
+                                        <span class="text-xs text-gray-500">1 dag geleden</span>
+                                    </div>
+                                    <div class="flex items-center gap-1 mb-2">
+                                        <i data-lucide="star" class="w-3.5 h-3.5 text-fuchsia-400 fill-fuchsia-400"></i>
+                                        <i data-lucide="star" class="w-3.5 h-3.5 text-fuchsia-400 fill-fuchsia-400"></i>
+                                        <i data-lucide="star" class="w-3.5 h-3.5 text-fuchsia-400 fill-fuchsia-400"></i>
+                                        <i data-lucide="star" class="w-3.5 h-3.5 text-white/15"></i>
+                                        <i data-lucide="star" class="w-3.5 h-3.5 text-white/15"></i>
+                                        <span class="text-xs text-gray-500 ml-2">Bistro Noir</span>
+                                    </div>
+                                    <p class="text-sm text-gray-400 leading-relaxed">"Mooi interieur en goede wijnkaart, maar het eten viel een beetje tegen voor de prijs. Service was wel uitstekend."</p>
+                                    <div class="flex items-center gap-4 mt-3">
+                                        <button class="flex items-center gap-1 text-xs text-gray-500 hover:text-fuchsia-400 transition-colors">
+                                            <i data-lucide="thumbs-up" class="w-3.5 h-3.5"></i>
+                                            <span>9</span>
+                                        </button>
+                                        <button class="flex items-center gap-1 text-xs text-gray-500 hover:text-white transition-colors">
+                                            <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+                                            <span>5</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#" class="mt-6 flex items-center justify-center gap-2 w-full py-3.5 rounded-xl border border-white/10 text-sm font-medium text-white/50 hover:text-fuchsia-400 hover:border-fuchsia-500/30 transition-all group">
+                        Bekijk alle reviews
+                        <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- CATEGORIES                                   -->
+    <!-- ============================================ -->
+    <section class="relative z-10 py-20 md:py-28 border-t border-white/[0.06]">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-14">
+                <span class="text-xs font-medium text-fuchsia-400/80 tracking-widest uppercase mb-3 block">Blader door</span>
+                <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-pink-50">
+                    Alle <span class="font-serif italic text-fuchsia-400">categorie&euml;n</span>
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+                <!-- Category 1 -->
+                <a href="#" class="glass-card rounded-2xl p-6 text-center group cursor-pointer">
+                    <div class="w-14 h-14 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-fuchsia-500/20 to-pink-500/10 flex items-center justify-center group-hover:from-fuchsia-500/30 group-hover:to-pink-500/20 transition-all">
+                        <i data-lucide="utensils" class="w-6 h-6 text-fuchsia-400"></i>
+                    </div>
+                    <h3 class="text-sm font-semibold text-white mb-1">Restaurants</h3>
+                    <p class="text-xs text-gray-500">847 listings</p>
+                </a>
+
+                <!-- Category 2 -->
+                <a href="#" class="glass-card rounded-2xl p-6 text-center group cursor-pointer">
+                    <div class="w-14 h-14 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-purple-500/20 to-fuchsia-500/10 flex items-center justify-center group-hover:from-purple-500/30 group-hover:to-fuchsia-500/20 transition-all">
+                        <i data-lucide="sparkles" class="w-6 h-6 text-purple-400"></i>
+                    </div>
+                    <h3 class="text-sm font-semibold text-white mb-1">Beauty</h3>
+                    <p class="text-xs text-gray-500">623 listings</p>
+                </a>
+
+                <!-- Category 3 -->
+                <a href="#" class="glass-card rounded-2xl p-6 text-center group cursor-pointer">
+                    <div class="w-14 h-14 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-pink-500/20 to-rose-500/10 flex items-center justify-center group-hover:from-pink-500/30 group-hover:to-rose-500/20 transition-all">
+                        <i data-lucide="heart" class="w-6 h-6 text-pink-400"></i>
+                    </div>
+                    <h3 class="text-sm font-semibold text-white mb-1">Wellness</h3>
+                    <p class="text-xs text-gray-500">412 listings</p>
+                </a>
+
+                <!-- Category 4 -->
+                <a href="#" class="glass-card rounded-2xl p-6 text-center group cursor-pointer">
+                    <div class="w-14 h-14 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-rose-500/20 to-pink-500/10 flex items-center justify-center group-hover:from-rose-500/30 group-hover:to-pink-500/20 transition-all">
+                        <i data-lucide="music" class="w-6 h-6 text-rose-400"></i>
+                    </div>
+                    <h3 class="text-sm font-semibold text-white mb-1">Nachtleven</h3>
+                    <p class="text-xs text-gray-500">298 listings</p>
+                </a>
+
+                <!-- Category 5 -->
+                <a href="#" class="glass-card rounded-2xl p-6 text-center group cursor-pointer">
+                    <div class="w-14 h-14 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-fuchsia-500/20 to-purple-500/10 flex items-center justify-center group-hover:from-fuchsia-500/30 group-hover:to-purple-500/20 transition-all">
+                        <i data-lucide="bed" class="w-6 h-6 text-fuchsia-400"></i>
+                    </div>
+                    <h3 class="text-sm font-semibold text-white mb-1">Hotels</h3>
+                    <p class="text-xs text-gray-500">186 listings</p>
+                </a>
+
+                <!-- Category 6 -->
+                <a href="#" class="glass-card rounded-2xl p-6 text-center group cursor-pointer">
+                    <div class="w-14 h-14 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-pink-500/20 to-fuchsia-500/10 flex items-center justify-center group-hover:from-pink-500/30 group-hover:to-fuchsia-500/20 transition-all">
+                        <i data-lucide="shopping-bag" class="w-6 h-6 text-pink-400"></i>
+                    </div>
+                    <h3 class="text-sm font-semibold text-white mb-1">Shopping</h3>
+                    <p class="text-xs text-gray-500">481 listings</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- CTA BANNER                                   -->
+    <!-- ============================================ -->
+    <section class="relative z-10 py-20 md:py-28">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="relative rounded-3xl overflow-hidden">
+                <!-- Background -->
+                <div class="absolute inset-0 bg-gradient-to-br from-fuchsia-600 via-pink-600 to-rose-600"></div>
+                <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(255,255,255,0.15),transparent_60%)]"></div>
+                <div class="absolute top-0 right-0 w-80 h-80 rounded-full bg-white/10 blur-[80px] -translate-y-1/2 translate-x-1/4"></div>
+
+                <div class="relative px-8 py-16 md:px-16 md:py-20 text-center">
+                    <h2 class="text-3xl md:text-5xl font-bold tracking-tight text-white mb-6 leading-tight">
+                        Deel jouw ervaring met<br>de <span class="font-serif italic">community</span>
+                    </h2>
+                    <p class="text-lg text-white/70 max-w-xl mx-auto mb-10 leading-relaxed">
+                        Schrijf een review, help anderen de juiste keuze te maken en bouw mee aan de meest eerlijke directory van Nederland.
+                    </p>
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <button class="px-8 py-4 bg-white text-fuchsia-600 rounded-full font-semibold text-base hover:bg-white/90 shadow-xl shadow-black/20 transition-all active:scale-95">
+                            Schrijf een Review
+                        </button>
+                        <button class="px-8 py-4 border-2 border-white/30 text-white rounded-full font-semibold text-base hover:bg-white/10 transition-all active:scale-95">
+                            Voeg Bedrijf Toe
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!-- FOOTER                                       -->
+    <!-- ============================================ -->
+    <footer class="relative z-10 border-t border-white/[0.06] pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-10 mb-16">
+                <!-- Brand -->
+                <div class="col-span-2 md:col-span-4 lg:col-span-1">
+                    <a href="#" class="flex items-center gap-2.5 mb-5">
+                        <div class="w-8 h-8 rounded-full bg-gradient-to-br from-fuchsia-500 to-pink-600 flex items-center justify-center shadow-lg shadow-fuchsia-500/20">
+                            <i data-lucide="sparkles" class="w-4 h-4 text-white"></i>
+                        </div>
+                        <span class="text-lg font-semibold tracking-tight text-white">Margret</span>
+                    </a>
+                    <p class="text-sm text-gray-500 leading-relaxed max-w-xs">De meest eerlijke directory van Nederland. Ontdek, beleef en deel.</p>
+                </div>
+
+                <!-- Directory -->
+                <div>
+                    <h4 class="text-sm font-semibold text-white mb-4">Directory</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-sm text-gray-500 hover:text-fuchsia-400 transition-colors">Alle bedrijven</a></li>
+                        <li><a href="#" class="text-sm text-gray-500 hover:text-fuchsia-400 transition-colors">Categorie&euml;n</a></li>
+                        <li><a href="#" class="text-sm text-gray-500 hover:text-fuchsia-400 transition-colors">Steden</a></li>
+                        <li><a href="#" class="text-sm text-gray-500 hover:text-fuchsia-400 transition-colors">Nieuw toegevoegd</a></li>
+                    </ul>
+                </div>
+
+                <!-- Community -->
+                <div>
+                    <h4 class="text-sm font-semibold text-white mb-4">Community</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-sm text-gray-500 hover:text-fuchsia-400 transition-colors">Recente reviews</a></li>
+                        <li><a href="#" class="text-sm text-gray-500 hover:text-fuchsia-400 transition-colors">Top reviewers</a></li>
+                        <li><a href="#" class="text-sm text-gray-500 hover:text-fuchsia-400 transition-colors">Nieuws</a></li>
+                        <li><a href="#" class="text-sm text-gray-500 hover:text-fuchsia-400 transition-colors">Blog</a></li>
+                    </ul>
+                </div>
+
+                <!-- Over ons -->
+                <div>
+                    <h4 class="text-sm font-semibold text-white mb-4">Over Margret</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-sm text-gray-500 hover:text-fuchsia-400 transition-colors">Over ons</a></li>
+                        <li><a href="#" class="text-sm text-gray-500 hover:text-fuchsia-400 transition-colors">Contact</a></li>
+                        <li><a href="#" class="text-sm text-gray-500 hover:text-fuchsia-400 transition-colors">Privacybeleid</a></li>
+                        <li><a href="#" class="text-sm text-gray-500 hover:text-fuchsia-400 transition-colors">Voorwaarden</a></li>
+                    </ul>
+                </div>
+
+                <!-- Bedrijven -->
+                <div>
+                    <h4 class="text-sm font-semibold text-white mb-4">Voor bedrijven</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-sm text-gray-500 hover:text-fuchsia-400 transition-colors">Claim je pagina</a></li>
+                        <li><a href="#" class="text-sm text-gray-500 hover:text-fuchsia-400 transition-colors">Adverteren</a></li>
+                        <li><a href="#" class="text-sm text-gray-500 hover:text-fuchsia-400 transition-colors">Analytics</a></li>
+                        <li><a href="#" class="text-sm text-gray-500 hover:text-fuchsia-400 transition-colors">Partnerprogramma</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-white/[0.06] gap-4">
+                <p class="text-sm text-gray-600">&copy; 2026 Margret. Alle rechten voorbehouden.</p>
+                <div class="flex items-center gap-4">
+                    <a href="#" class="p-2 text-gray-600 hover:text-fuchsia-400 transition-colors">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                    </a>
+                    <a href="#" class="p-2 text-gray-600 hover:text-fuchsia-400 transition-colors">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    </a>
+                    <a href="#" class="p-2 text-gray-600 hover:text-fuchsia-400 transition-colors">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lucide Icons Init -->
+    <script>
+        lucide.createIcons();
+    </script>
+
+</body>
+</html>

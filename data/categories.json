@@ -1,0 +1,68 @@
+{
+  "categories": [
+    {
+      "name": "Escorts",
+      "slug": "escorts",
+      "icon": "crown",
+      "color": "fuchsia",
+      "description": "Onafhankelijke escorts en escortbureaus. Lees ervaringen en vind de beste begeleiding bij jou in de buurt.",
+      "sort_order": 1
+    },
+    {
+      "name": "Priv\u00e9huizen",
+      "slug": "privehuizen",
+      "icon": "home",
+      "color": "pink",
+      "description": "Priv\u00e9huizen en relaxhuizen in heel Nederland. Bekijk ervaringen en beoordelingen.",
+      "sort_order": 2
+    },
+    {
+      "name": "Clubs",
+      "slug": "clubs",
+      "icon": "sparkles",
+      "color": "purple",
+      "description": "Seksclubs, parenclubs en swingersclubs. Ontdek de beste clubs en lees eerlijke ervaringen.",
+      "sort_order": 3
+    },
+    {
+      "name": "Erotische Massage",
+      "slug": "erotische-massage",
+      "icon": "heart",
+      "color": "rose",
+      "description": "Erotische massagesalons en tantra. Vind de beste salons op basis van echte ervaringen.",
+      "sort_order": 4
+    },
+    {
+      "name": "Ramen",
+      "slug": "ramen",
+      "icon": "door-open",
+      "color": "fuchsia",
+      "description": "Raamprostitutie en walletjes in Nederlandse steden. Eerlijke reviews en informatie.",
+      "sort_order": 5
+    },
+    {
+      "name": "Seksshops",
+      "slug": "seksshops",
+      "icon": "shopping-bag",
+      "color": "pink",
+      "description": "Erotiekwinkels en adult stores. Vergelijk aanbod, service en ervaringen.",
+      "sort_order": 6
+    },
+    {
+      "name": "Stripclubs",
+      "slug": "stripclubs",
+      "icon": "music",
+      "color": "purple",
+      "description": "Stripclubs en gentlemen's clubs. Lees ervaringen over sfeer, shows en service.",
+      "sort_order": 7
+    },
+    {
+      "name": "Saunaclubs",
+      "slug": "saunaclubs",
+      "icon": "flame",
+      "color": "rose",
+      "description": "Erotische saunaclubs en wellnessclubs. Ontdek de beste clubs met eerlijke reviews.",
+      "sort_order": 8
+    }
+  ]
+}
