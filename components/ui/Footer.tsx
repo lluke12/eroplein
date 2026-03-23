@@ -22,6 +22,7 @@ export function Footer() {
             <h4 className="text-sm font-semibold text-white mb-4">Directory</h4>
             <ul className="space-y-3">
               <li><Link href="/steden" className="text-sm text-gray-400 hover:text-fuchsia-400 transition-colors">Alle steden</Link></li>
+              <li><Link href="/provincie" className="text-sm text-gray-400 hover:text-fuchsia-400 transition-colors">Provincies</Link></li>
               <li><Link href="/categorieen" className="text-sm text-gray-400 hover:text-fuchsia-400 transition-colors">Categorie&euml;n</Link></li>
               <li><Link href="/steden" className="text-sm text-gray-400 hover:text-fuchsia-400 transition-colors">Nieuw toegevoegd</Link></li>
               <li><Link href="/steden" className="text-sm text-gray-400 hover:text-fuchsia-400 transition-colors">Meest beoordeeld</Link></li>
