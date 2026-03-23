@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import {
   MapPin,
   Star,
@@ -128,12 +129,21 @@ export default async function BedrijfPage({ params }: BedrijfPageProps) {
                 </div>
               </div>
 
-              {/* Image placeholder */}
+              {/* Image */}
               <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden mb-10">
-                <div className="absolute inset-0 bg-gradient-to-br from-fuchsia-900/40 via-purple-900/30 to-pink-900/40" />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <p className="text-white/30 text-sm">Foto&apos;s binnenkort beschikbaar</p>
-                </div>
+                {business.image_url ? (
+                  <Image
+                    src={business.image_url}
+                    alt={business.name}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 100vw, 66vw"
+                    priority
+                  />
+                ) : (
+                  <div className="absolute inset-0 bg-gradient-to-br from-fuchsia-900/40 via-purple-900/30 to-pink-900/40" />
+                )}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#111114]/60 to-transparent" />
               </div>
 
               {/* Description */}
