@@ -1,11 +1,12 @@
 import Link from "next/link";
-import { ArrowRight, ChevronDown } from "lucide-react";
+import { ArrowRight, Search, Star, Shield, Users, TrendingUp, MapPin, ChevronRight } from "lucide-react";
 import { Navbar } from "@/components/ui/Navbar";
 import { Footer } from "@/components/ui/Footer";
 import { SearchBar } from "@/components/ui/SearchBar";
 import { CityCard } from "@/components/ui/CityCard";
 import { CategoryCard } from "@/components/ui/CategoryCard";
 import { ReviewCard } from "@/components/ui/ReviewCard";
+import { BusinessCard } from "@/components/ui/BusinessCard";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { getFeaturedCities, getCities, getCategories } from "@/lib/data";
 import {
@@ -13,12 +14,18 @@ import {
   placeholderArticles,
   placeholderBusinesses,
   formatTimeAgo,
+  getTopRatedBusinesses,
+  getRecentReviews,
+  getBusinessCountByCity,
+  getBusinessCountByCategory,
 } from "@/lib/placeholder-data";
 
 export default function HomePage() {
   const featuredCities = getFeaturedCities();
   const allCities = getCities();
   const categories = getCategories();
+  const topBusinesses = getTopRatedBusinesses(6);
+  const recentReviews = getRecentReviews(4);
 
   return (
     <>
@@ -28,7 +35,6 @@ export default function HomePage() {
       <section className="relative z-10 pt-16 md:pt-24 pb-16 md:pb-24">
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-3xl mx-auto text-center">
-            {/* Heading */}
             <h1 className="text-4xl sm:text-5xl md:text-6xl leading-[0.95] font-bold tracking-tight mb-6">
               <span className="text-white">Echte </span>
               <span className="text-fuchsia-400">ervaringen</span>
@@ -38,13 +44,11 @@ export default function HomePage() {
               <span className="text-fuchsia-400">reviews</span>
             </h1>
 
-            {/* Subtitle */}
             <p className="text-base md:text-lg text-gray-400 leading-relaxed max-w-xl mx-auto mb-10">
               Lees ervaringen van echte bezoekers en deel jouw verhaal.
               Escorts, clubs, massage en meer in 42+ steden.
             </p>
 
-            {/* Search Bar */}
             <SearchBar cities={allCities} />
 
             {/* Quick Tags */}
@@ -95,8 +99,73 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Popular Cities */}
+      {/* How it works */}
+      <section className="relative z-10 py-20 md:py-28 border-b border-white/[0.06]">
+        <div className="max-w-7xl mx-auto px-6">
+          <SectionHeader
+            label="Zo werkt het"
+            title="In 3 stappen naar de"
+            highlight="beste keuze"
+            centered
+          />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-2">
+            <div className="text-center">
+              <div className="w-14 h-14 mx-auto mb-5 rounded-2xl bg-fuchsia-500/10 flex items-center justify-center">
+                <Search className="w-6 h-6 text-fuchsia-400" />
+              </div>
+              <h3 className="text-base font-semibold text-white mb-2">
+                Zoek & vergelijk
+              </h3>
+              <p className="text-sm text-gray-500 leading-relaxed">
+                Zoek op stad of categorie en vergelijk bedrijven op basis van reviews, prijs en score.
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="w-14 h-14 mx-auto mb-5 rounded-2xl bg-purple-500/10 flex items-center justify-center">
+                <Star className="w-6 h-6 text-purple-400" />
+              </div>
+              <h3 className="text-base font-semibold text-white mb-2">
+                Lees ervaringen
+              </h3>
+              <p className="text-sm text-gray-500 leading-relaxed">
+                Lees eerlijke reviews van echte bezoekers. Met voor- en nadelen, scores en foto's.
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="w-14 h-14 mx-auto mb-5 rounded-2xl bg-pink-500/10 flex items-center justify-center">
+                <Shield className="w-6 h-6 text-pink-400" />
+              </div>
+              <h3 className="text-base font-semibold text-white mb-2">
+                Kies met vertrouwen
+              </h3>
+              <p className="text-sm text-gray-500 leading-relaxed">
+                Maak een weloverwogen keuze op basis van de community. Geverifieerde bedrijven herken je aan het badge.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Top Rated Businesses */}
       <section className="relative z-10 py-20 md:py-28">
+        <div className="max-w-7xl mx-auto px-6">
+          <SectionHeader
+            label="Trending nu"
+            title="Best beoordeelde"
+            highlight="bedrijven"
+            href="/reviews"
+            linkText="Bekijk alle reviews"
+          />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {topBusinesses.map((biz) => (
+              <BusinessCard key={biz.id} business={biz} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Popular Cities */}
+      <section className="relative z-10 py-20 md:py-28 border-t border-white/[0.06]">
         <div className="max-w-7xl mx-auto px-6">
           <SectionHeader
             label="Ontdek per stad"
@@ -107,7 +176,11 @@ export default function HomePage() {
           />
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
             {featuredCities.map((city) => (
-              <CityCard key={city.slug} city={city} />
+              <CityCard
+                key={city.slug}
+                city={city}
+                businessCount={getBusinessCountByCity(city.slug)}
+              />
             ))}
           </div>
         </div>
@@ -124,7 +197,11 @@ export default function HomePage() {
           />
           <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-4">
             {categories.map((cat) => (
-              <CategoryCard key={cat.slug} category={cat} />
+              <CategoryCard
+                key={cat.slug}
+                category={cat}
+                listingCount={getBusinessCountByCategory(cat.slug)}
+              />
             ))}
           </div>
         </div>
@@ -147,7 +224,7 @@ export default function HomePage() {
               {/* Featured Article */}
               <Link
                 href={`/nieuws/${placeholderArticles[0].slug}`}
-                className="glass-card rounded-2xl overflow-hidden group cursor-pointer mb-6 block"
+                className="rounded-2xl overflow-hidden group cursor-pointer mb-6 block border border-white/[0.06] bg-white/[0.02] hover:bg-white/[0.05] hover:border-white/[0.12] transition-all"
               >
                 <div className="grid md:grid-cols-2">
                   <div className="relative h-64 md:h-auto overflow-hidden">
@@ -191,7 +268,7 @@ export default function HomePage() {
                   <Link
                     key={article.id}
                     href={`/nieuws/${article.slug}`}
-                    className="glass-card rounded-2xl p-5 group cursor-pointer block"
+                    className="rounded-2xl p-5 group cursor-pointer block border border-white/[0.06] bg-white/[0.02] hover:bg-white/[0.05] hover:border-white/[0.12] transition-all"
                   >
                     <div className="flex items-center gap-3 mb-4">
                       <span className="px-2.5 py-1 bg-purple-500/10 border border-purple-500/20 rounded-full text-xs font-medium text-purple-400">
@@ -220,7 +297,7 @@ export default function HomePage() {
                 highlight="reviews"
               />
               <div className="space-y-4">
-                {placeholderReviews.slice(0, 4).map((review) => {
+                {recentReviews.map((review) => {
                   const biz = placeholderBusinesses.find(
                     (b) => b.id === review.business_id
                   );
@@ -236,12 +313,40 @@ export default function HomePage() {
               </div>
               <Link
                 href="/reviews"
-                className="mt-6 flex items-center justify-center gap-2 w-full py-3.5 rounded-xl border border-white/10 text-sm font-medium text-white/50 hover:text-fuchsia-400 hover:border-fuchsia-500/30 transition-all group"
+                className="mt-6 flex items-center justify-center gap-2 w-full py-3.5 rounded-xl border border-white/[0.06] text-sm font-medium text-white/50 hover:text-fuchsia-400 hover:border-fuchsia-500/30 transition-all group"
               >
                 Bekijk alle reviews
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Popular searches / quick links */}
+      <section className="relative z-10 py-16 border-t border-white/[0.06]">
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="text-lg font-semibold text-white mb-6">Populaire zoekopdrachten</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+            {[
+              { label: "Escorts Amsterdam", href: "/amsterdam/escorts" },
+              { label: "Clubs Rotterdam", href: "/rotterdam/clubs" },
+              { label: "Massage Utrecht", href: "/utrecht/erotische-massage" },
+              { label: "Saunaclubs Eindhoven", href: "/eindhoven/saunaclubs" },
+              { label: "Privéhuizen Den Haag", href: "/den-haag/privehuizen" },
+              { label: "Stripclubs Amsterdam", href: "/amsterdam/stripclubs" },
+              { label: "Escorts Den Haag", href: "/den-haag/escorts" },
+              { label: "Clubs Groningen", href: "/groningen/clubs" },
+            ].map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="flex items-center justify-between px-4 py-3 rounded-xl border border-white/[0.06] bg-white/[0.02] text-sm text-white/50 hover:text-fuchsia-400 hover:border-fuchsia-500/30 transition-all group"
+              >
+                <span>{item.label}</span>
+                <ChevronRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+              </Link>
+            ))}
           </div>
         </div>
       </section>

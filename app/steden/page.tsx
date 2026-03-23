@@ -4,6 +4,7 @@ import { Footer } from "@/components/ui/Footer";
 import { CityCard } from "@/components/ui/CityCard";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { getCities } from "@/lib/data";
+import { getBusinessCountByCity, placeholderReviews, placeholderBusinesses } from "@/lib/placeholder-data";
 
 export const metadata: Metadata = {
   title: "Alle Steden",
@@ -39,9 +40,7 @@ export default function StedenPage() {
             </span>
             <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-pink-50 mb-4">
               Steden in{" "}
-              <span className="text-fuchsia-400">
-                Nederland
-              </span>
+              <span className="text-fuchsia-400">Nederland</span>
             </h1>
             <p className="text-lg text-gray-400 max-w-2xl">
               Ontdek bedrijven en lees ervaringen in {cities.length}+ steden
@@ -58,7 +57,11 @@ export default function StedenPage() {
               {cities
                 .filter((c) => c.featured)
                 .map((city) => (
-                  <CityCard key={city.slug} city={city} />
+                  <CityCard
+                    key={city.slug}
+                    city={city}
+                    businessCount={getBusinessCountByCity(city.slug)}
+                  />
                 ))}
             </div>
           </div>
@@ -70,12 +73,19 @@ export default function StedenPage() {
                 <h2 className="text-lg font-semibold text-white mb-4 flex items-center gap-3">
                   <span className="w-2 h-2 rounded-full bg-fuchsia-400" />
                   {province}
+                  <span className="text-sm font-normal text-gray-500">
+                    {byProvince[province].length} steden
+                  </span>
                 </h2>
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
                   {byProvince[province]
                     .sort((a, b) => b.population - a.population)
                     .map((city) => (
-                      <CityCard key={city.slug} city={city} />
+                      <CityCard
+                        key={city.slug}
+                        city={city}
+                        businessCount={getBusinessCountByCity(city.slug)}
+                      />
                     ))}
                 </div>
               </div>

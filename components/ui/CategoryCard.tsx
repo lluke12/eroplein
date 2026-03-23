@@ -22,22 +22,26 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   flame: Flame,
 };
 
-const colorMap: Record<string, { bg: string; text: string }> = {
+const colorMap: Record<string, { bg: string; text: string; border: string }> = {
   fuchsia: {
-    bg: "from-fuchsia-500/20 to-pink-500/10 group-hover:from-fuchsia-500/30 group-hover:to-pink-500/20",
+    bg: "bg-fuchsia-500/10",
     text: "text-fuchsia-400",
+    border: "group-hover:border-fuchsia-500/30",
   },
   pink: {
-    bg: "from-pink-500/20 to-rose-500/10 group-hover:from-pink-500/30 group-hover:to-rose-500/20",
+    bg: "bg-pink-500/10",
     text: "text-pink-400",
+    border: "group-hover:border-pink-500/30",
   },
   purple: {
-    bg: "from-purple-500/20 to-fuchsia-500/10 group-hover:from-purple-500/30 group-hover:to-fuchsia-500/20",
+    bg: "bg-purple-500/10",
     text: "text-purple-400",
+    border: "group-hover:border-purple-500/30",
   },
   rose: {
-    bg: "from-rose-500/20 to-pink-500/10 group-hover:from-rose-500/30 group-hover:to-pink-500/20",
+    bg: "bg-rose-500/10",
     text: "text-rose-400",
+    border: "group-hover:border-rose-500/30",
   },
 };
 
@@ -61,14 +65,14 @@ export function CategoryCard({
   return (
     <Link
       href={href}
-      className="glass-card rounded-2xl p-6 text-center group cursor-pointer block"
+      className={`rounded-2xl p-5 text-center group cursor-pointer block border border-white/[0.06] bg-white/[0.02] hover:bg-white/[0.05] transition-all ${colors.border}`}
     >
       <div
-        className={`w-14 h-14 mx-auto mb-4 rounded-2xl bg-gradient-to-br ${colors.bg} flex items-center justify-center transition-all`}
+        className={`w-12 h-12 mx-auto mb-3 rounded-xl ${colors.bg} flex items-center justify-center`}
       >
-        <Icon className={`w-6 h-6 ${colors.text}`} />
+        <Icon className={`w-5 h-5 ${colors.text}`} />
       </div>
-      <h3 className="text-sm font-semibold text-white mb-1">
+      <h3 className="text-sm font-semibold text-white mb-0.5">
         {category.name}
       </h3>
       {listingCount !== undefined && (

@@ -44,6 +44,12 @@ export function Navbar() {
           >
             Reviews
           </Link>
+          <Link
+            href="/vergelijk"
+            className="nav-link px-5 py-2 text-white/50 hover:text-white rounded-full text-sm font-medium transition-colors"
+          >
+            Vergelijk
+          </Link>
         </div>
 
         {/* Auth */}
