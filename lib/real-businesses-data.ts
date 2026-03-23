@@ -1,58 +1,5 @@
 import type { Business } from "./types";
-
-// ══════════════════════════════════════════════════════════════════════════════
-// REAL BUSINESSES DATA - Verified existing adult/erotic businesses in NL
-// ══════════════════════════════════════════════════════════════════════════════
-// Last research date: March 2026
-// Sources: stripclubs.nl, parenclub.eu, huisjesvanplezier.com, google,
-//          yelp.nl, amsterdam.info, goudengids.nl, and individual websites
-// ══════════════════════════════════════════════════════════════════════════════
-
-// Category-based placeholder images (Unsplash)
-const categoryImages: Record<string, string[]> = {
-  clubs: [
-    "https://images.unsplash.com/photo-1566417713940-fe7c737a9ef2?w=600&h=400&fit=crop",
-    "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=600&h=400&fit=crop",
-    "https://images.unsplash.com/photo-1571204829887-3b8d69e4094d?w=600&h=400&fit=crop",
-  ],
-  escorts: [
-    "https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?w=600&h=400&fit=crop",
-    "https://images.unsplash.com/photo-1520013817300-1f4c1cb245ef?w=600&h=400&fit=crop",
-    "https://images.unsplash.com/photo-1549439602-43ebca2327af?w=600&h=400&fit=crop",
-  ],
-  "erotische-massage": [
-    "https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=600&h=400&fit=crop",
-    "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=600&h=400&fit=crop",
-    "https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=600&h=400&fit=crop",
-  ],
-  privehuizen: [
-    "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=600&h=400&fit=crop",
-    "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&h=400&fit=crop",
-    "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=600&h=400&fit=crop",
-  ],
-  saunaclubs: [
-    "https://images.unsplash.com/photo-1540555700478-4be289fbec6d?w=600&h=400&fit=crop",
-    "https://images.unsplash.com/photo-1507652313519-d4e9174996dd?w=600&h=400&fit=crop",
-    "https://images.unsplash.com/photo-1554244933-d876deb6b2ff?w=600&h=400&fit=crop",
-  ],
-  stripclubs: [
-    "https://images.unsplash.com/photo-1574391884720-bbc3740c59d1?w=600&h=400&fit=crop",
-    "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=600&h=400&fit=crop",
-  ],
-  seksshops: [
-    "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
-    "https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=600&h=400&fit=crop",
-  ],
-  ramen: [
-    "https://images.unsplash.com/photo-1534351590666-13e3e96b5017?w=600&h=400&fit=crop",
-    "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&h=400&fit=crop",
-  ],
-};
-
-function getCategoryImage(category: string, index: number): string {
-  const images = categoryImages[category] || categoryImages.clubs;
-  return images[index % images.length];
-}
+import { getCategoryImage } from "./images";
 
 // ══════════════════════════════════════════════════════════════════════════════
 // REAL BUSINESSES - All businesses below are verified as real and operating
