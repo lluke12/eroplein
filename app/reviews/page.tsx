@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Star, MapPin, ArrowRight, Shield } from "lucide-react";
+import Image from "next/image";
+import { Star, MapPin, ArrowRight, Shield, MessageSquare, TrendingUp, Building2 } from "lucide-react";
 import { Navbar } from "@/components/ui/Navbar";
 import { Footer } from "@/components/ui/Footer";
-import { ReviewCard } from "@/components/ui/ReviewCard";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
+import { StarRating } from "@/components/ui/StarRating";
 import {
   placeholderBusinesses,
   placeholderReviews,
@@ -12,6 +13,7 @@ import {
   formatTimeAgo,
 } from "@/lib/placeholder-data";
 import { getCityBySlug } from "@/lib/data";
+import { ReviewsContent } from "./ReviewsContent";
 
 export const metadata: Metadata = {
   title: "Reviews per Bedrijf",
@@ -20,11 +22,12 @@ export const metadata: Metadata = {
 };
 
 export default function ReviewsPage() {
-  // Group reviews by business, sorted by most reviews
   const businessesWithReviews = placeholderBusinesses
     .map((biz) => ({
       business: biz,
-      reviews: getPlaceholderReviewsByBusiness(biz.id),
+      reviews: getPlaceholderReviewsByBusiness(biz.id).sort(
+        (a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime()
+      ),
       city: getCityBySlug(biz.city_slug),
     }))
     .filter((b) => b.reviews.length > 0)
@@ -32,6 +35,14 @@ export default function ReviewsPage() {
 
   const totalReviews = placeholderReviews.length;
   const totalBusinesses = businessesWithReviews.length;
+  const avgRating = placeholderReviews.reduce((s, r) => s + r.rating, 0) / totalReviews;
+
+  // Serialize reviews with timeAgo for client component
+  const serialized = businessesWithReviews.map(({ business, reviews, city }) => ({
+    business,
+    city: city ? { name: city.name, slug: city.slug } : null,
+    reviews: reviews.map((r) => ({ ...r, timeAgo: formatTimeAgo(r.created_at) })),
+  }));
 
   return (
     <>
@@ -40,7 +51,7 @@ export default function ReviewsPage() {
         <div className="max-w-7xl mx-auto px-6">
           <Breadcrumbs items={[{ label: "Reviews" }]} />
 
-          <div className="mb-12">
+          <div className="mb-10">
             <span className="text-xs font-medium text-fuchsia-400/80 tracking-widest uppercase mb-3 block">
               Community
             </span>
@@ -49,82 +60,43 @@ export default function ReviewsPage() {
               <span className="text-fuchsia-400">bedrijf</span>
             </h1>
             <p className="text-lg text-gray-400 max-w-2xl">
-              {totalReviews} eerlijke reviews over {totalBusinesses} bedrijven.
-              Lees ervaringen van echte bezoekers.
+              Eerlijke ervaringen van echte bezoekers, gegroepeerd per bedrijf.
             </p>
           </div>
 
-          {/* Business review sections */}
-          <div className="space-y-12">
-            {businessesWithReviews.map(({ business, reviews, city }) => (
-              <section
-                key={business.id}
-                className="rounded-2xl border border-white/[0.06] bg-white/[0.02] overflow-hidden"
-              >
-                {/* Business header */}
-                <div className="p-6 border-b border-white/[0.06]">
-                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                    <div>
-                      <div className="flex items-center gap-3 mb-2">
-                        <h2 className="text-xl font-bold text-white">
-                          {business.name}
-                        </h2>
-                        {business.is_verified && (
-                          <span className="flex items-center gap-1 px-2 py-0.5 bg-fuchsia-500/10 border border-fuchsia-500/20 rounded-full text-xs text-fuchsia-400">
-                            <Shield className="w-3 h-3" />
-                            Geverifieerd
-                          </span>
-                        )}
-                      </div>
-                      <div className="flex items-center gap-4 text-sm text-gray-400">
-                        <span className="flex items-center gap-1">
-                          <MapPin className="w-3.5 h-3.5" />
-                          {business.address}{city ? `, ${city.name}` : ""}
-                        </span>
-                        <span className="flex items-center gap-1">
-                          <Star className="w-3.5 h-3.5 text-fuchsia-400 fill-fuchsia-400" />
-                          <span className="text-fuchsia-400 font-semibold">
-                            {business.average_rating.toFixed(1)}
-                          </span>
-                          ({business.review_count} reviews)
-                        </span>
-                        <span>
-                          {"€".repeat(business.price_range)}
-                          <span className="text-gray-600">
-                            {"€".repeat(4 - business.price_range)}
-                          </span>
-                        </span>
-                      </div>
-                    </div>
-                    <Link
-                      href={`/${business.city_slug}/${business.primary_category}/${business.slug}`}
-                      className="flex items-center gap-2 px-5 py-2.5 rounded-xl border border-white/[0.06] text-sm font-medium text-white/60 hover:text-fuchsia-400 hover:border-fuchsia-500/30 transition-all shrink-0"
-                    >
-                      Bekijk bedrijf
-                      <ArrowRight className="w-4 h-4" />
-                    </Link>
-                  </div>
-                </div>
-
-                {/* Reviews for this business */}
-                <div className="p-6 space-y-4">
-                  {reviews
-                    .sort(
-                      (a, b) =>
-                        new Date(b.created_at).getTime() -
-                        new Date(a.created_at).getTime()
-                    )
-                    .map((review) => (
-                      <ReviewCard
-                        key={review.id}
-                        review={review}
-                        timeAgo={formatTimeAgo(review.created_at)}
-                      />
-                    ))}
-                </div>
-              </section>
-            ))}
+          {/* Stats */}
+          <div className="grid grid-cols-3 gap-4 mb-10">
+            <div className="rounded-xl border border-white/[0.06] bg-white/[0.02] p-5 flex items-center gap-3">
+              <div className="w-10 h-10 rounded-lg bg-fuchsia-500/10 flex items-center justify-center">
+                <MessageSquare className="w-5 h-5 text-fuchsia-400" />
+              </div>
+              <div>
+                <div className="text-2xl font-bold text-white">{totalReviews}</div>
+                <div className="text-xs text-gray-400">Reviews</div>
+              </div>
+            </div>
+            <div className="rounded-xl border border-white/[0.06] bg-white/[0.02] p-5 flex items-center gap-3">
+              <div className="w-10 h-10 rounded-lg bg-purple-500/10 flex items-center justify-center">
+                <Building2 className="w-5 h-5 text-purple-400" />
+              </div>
+              <div>
+                <div className="text-2xl font-bold text-white">{totalBusinesses}</div>
+                <div className="text-xs text-gray-400">Bedrijven</div>
+              </div>
+            </div>
+            <div className="rounded-xl border border-white/[0.06] bg-white/[0.02] p-5 flex items-center gap-3">
+              <div className="w-10 h-10 rounded-lg bg-pink-500/10 flex items-center justify-center">
+                <TrendingUp className="w-5 h-5 text-pink-400" />
+              </div>
+              <div>
+                <div className="text-2xl font-bold text-white">{avgRating.toFixed(1)}</div>
+                <div className="text-xs text-gray-400">Gem. score</div>
+              </div>
+            </div>
           </div>
+
+          {/* Client component with expandable reviews */}
+          <ReviewsContent data={serialized} />
 
           {/* CTA */}
           <div className="mt-16 rounded-2xl border border-fuchsia-500/20 bg-fuchsia-500/5 p-8 text-center">
