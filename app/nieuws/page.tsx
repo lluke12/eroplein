@@ -34,7 +34,7 @@ export default function NieuwsPage() {
           </div>
 
           <div className="glass-card rounded-2xl p-12 text-center">
-            <p className="text-gray-500 mb-4">
+            <p className="text-gray-400 mb-4">
               Binnenkort verschijnen hier de eerste artikelen.
             </p>
             <Link

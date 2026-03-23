@@ -29,7 +29,7 @@ export function BusinessCard({ business }: BusinessCardProps) {
             <Heart className="w-4 h-4" />
           </button>
         </div>
-        <div className="absolute bottom-0 inset-x-0 h-20 bg-gradient-to-t from-[#0a0a0a] to-transparent" />
+        <div className="absolute bottom-0 inset-x-0 h-20 bg-gradient-to-t from-[#0c0c0e] to-transparent" />
       </div>
       <div className="p-5">
         <div className="flex items-start justify-between mb-3">
@@ -38,8 +38,8 @@ export function BusinessCard({ business }: BusinessCardProps) {
               {business.name}
             </h3>
             <div className="flex items-center gap-1.5 mt-1">
-              <MapPin className="w-3.5 h-3.5 text-gray-500" />
-              <span className="text-sm text-gray-500">{business.address}</span>
+              <MapPin className="w-3.5 h-3.5 text-gray-400" />
+              <span className="text-sm text-gray-400">{business.address}</span>
             </div>
           </div>
           <div className="flex items-center gap-1 px-2.5 py-1 bg-fuchsia-500/10 rounded-lg">
@@ -49,17 +49,17 @@ export function BusinessCard({ business }: BusinessCardProps) {
             </span>
           </div>
         </div>
-        <p className="text-sm text-gray-500 leading-relaxed mb-4">
+        <p className="text-sm text-gray-400 leading-relaxed mb-4">
           {business.short_description}
         </p>
         <div className="flex items-center justify-between pt-4 border-t border-white/[0.06]">
           <div className="flex items-center gap-1.5">
             {"€".repeat(business.price_range)}
-            <span className="text-gray-600">
+            <span className="text-gray-500">
               {"€".repeat(4 - business.price_range)}
             </span>
           </div>
-          <span className="text-xs text-gray-500">
+          <span className="text-xs text-gray-400">
             {business.review_count} reviews
           </span>
         </div>

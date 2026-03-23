@@ -75,25 +75,25 @@ export default function HomePage() {
               <div className="text-3xl md:text-4xl font-bold text-white">
                 2.847
               </div>
-              <div className="text-sm text-gray-500 mt-1">Bedrijven</div>
+              <div className="text-sm text-gray-400 mt-1">Bedrijven</div>
             </div>
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-white">
                 18.3K
               </div>
-              <div className="text-sm text-gray-500 mt-1">Reviews</div>
+              <div className="text-sm text-gray-400 mt-1">Reviews</div>
             </div>
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-white">
                 42
               </div>
-              <div className="text-sm text-gray-500 mt-1">Steden</div>
+              <div className="text-sm text-gray-400 mt-1">Steden</div>
             </div>
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-fuchsia-400">
                 4.8
               </div>
-              <div className="text-sm text-gray-500 mt-1">Gem. Score</div>
+              <div className="text-sm text-gray-400 mt-1">Gem. Score</div>
             </div>
           </div>
         </div>
@@ -116,7 +116,7 @@ export default function HomePage() {
               <h3 className="text-base font-semibold text-white mb-2">
                 Zoek & vergelijk
               </h3>
-              <p className="text-sm text-gray-500 leading-relaxed">
+              <p className="text-sm text-gray-400 leading-relaxed">
                 Zoek op stad of categorie en vergelijk bedrijven op basis van reviews, prijs en score.
               </p>
             </div>
@@ -127,7 +127,7 @@ export default function HomePage() {
               <h3 className="text-base font-semibold text-white mb-2">
                 Lees ervaringen
               </h3>
-              <p className="text-sm text-gray-500 leading-relaxed">
+              <p className="text-sm text-gray-400 leading-relaxed">
                 Lees eerlijke reviews van echte bezoekers. Met voor- en nadelen, scores en foto's.
               </p>
             </div>
@@ -138,7 +138,7 @@ export default function HomePage() {
               <h3 className="text-base font-semibold text-white mb-2">
                 Kies met vertrouwen
               </h3>
-              <p className="text-sm text-gray-500 leading-relaxed">
+              <p className="text-sm text-gray-400 leading-relaxed">
                 Maak een weloverwogen keuze op basis van de community. Geverifieerde bedrijven herken je aan het badge.
               </p>
             </div>
@@ -235,14 +235,14 @@ export default function HomePage() {
                       <span className="px-3 py-1 bg-fuchsia-500/10 border border-fuchsia-500/20 rounded-full text-xs font-medium text-fuchsia-400">
                         Trending
                       </span>
-                      <span className="text-xs text-gray-500">
+                      <span className="text-xs text-gray-400">
                         {placeholderArticles[0].published_at}
                       </span>
                     </div>
                     <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-fuchsia-300 transition-colors leading-snug">
                       {placeholderArticles[0].title}
                     </h3>
-                    <p className="text-sm text-gray-500 leading-relaxed mb-4">
+                    <p className="text-sm text-gray-400 leading-relaxed mb-4">
                       {placeholderArticles[0].excerpt}
                     </p>
                     <div className="flex items-center gap-3">
@@ -253,7 +253,7 @@ export default function HomePage() {
                         <p className="text-sm font-medium text-white/80">
                           {placeholderArticles[0].author_name}
                         </p>
-                        <p className="text-xs text-gray-500">
+                        <p className="text-xs text-gray-400">
                           {placeholderArticles[0].reading_time} min leestijd
                         </p>
                       </div>
@@ -274,14 +274,14 @@ export default function HomePage() {
                       <span className="px-2.5 py-1 bg-purple-500/10 border border-purple-500/20 rounded-full text-xs font-medium text-purple-400">
                         {article.tags[1] || article.tags[0]}
                       </span>
-                      <span className="text-xs text-gray-500">
+                      <span className="text-xs text-gray-400">
                         {article.published_at}
                       </span>
                     </div>
                     <h3 className="text-base font-semibold text-white mb-2 group-hover:text-fuchsia-300 transition-colors leading-snug">
                       {article.title}
                     </h3>
-                    <p className="text-sm text-gray-500 leading-relaxed">
+                    <p className="text-sm text-gray-400 leading-relaxed">
                       {article.excerpt}
                     </p>
                   </Link>

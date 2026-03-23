@@ -156,7 +156,7 @@ export default async function CategoryDetailPage({
             )}
 
             <div>
-              <h3 className="text-sm font-medium text-gray-500 mb-4">
+              <h3 className="text-sm font-medium text-gray-400 mb-4">
                 Alle steden
               </h3>
               <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-2">

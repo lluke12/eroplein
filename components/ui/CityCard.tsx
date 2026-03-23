@@ -16,7 +16,7 @@ export function CityCard({ city, businessCount = 0, reviewCount }: CityCardProps
     >
       {/* Top color accent */}
       <div className="h-24 bg-gradient-to-br from-fuchsia-900/40 via-purple-900/30 to-pink-900/40 relative">
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0c0c0e] to-transparent" />
         {city.featured && (
           <span className="absolute top-2.5 right-2.5 px-2 py-0.5 bg-fuchsia-500/20 border border-fuchsia-500/30 rounded text-[10px] font-medium text-fuchsia-300">
             Populair
@@ -30,7 +30,7 @@ export function CityCard({ city, businessCount = 0, reviewCount }: CityCardProps
           {city.name}
         </h3>
         <div className="flex items-center gap-1 mt-1">
-          <MapPin className="w-3 h-3 text-gray-600" />
+          <MapPin className="w-3 h-3 text-gray-500" />
           <span className="text-white/40 text-xs">{city.province}</span>
         </div>
 

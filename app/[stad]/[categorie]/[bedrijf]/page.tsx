@@ -100,7 +100,7 @@ export default async function BedrijfPage({ params }: BedrijfPageProps) {
                 </h1>
                 <div className="flex flex-wrap items-center gap-4 text-sm text-gray-400">
                   <div className="flex items-center gap-1.5">
-                    <MapPin className="w-4 h-4 text-gray-500" />
+                    <MapPin className="w-4 h-4 text-gray-400" />
                     {business.address}, {city.name}
                   </div>
                   <div className="flex items-center gap-1.5">
@@ -112,7 +112,7 @@ export default async function BedrijfPage({ params }: BedrijfPageProps) {
                   </div>
                   <div className="text-sm">
                     {"€".repeat(business.price_range)}
-                    <span className="text-gray-600">
+                    <span className="text-gray-500">
                       {"€".repeat(4 - business.price_range)}
                     </span>
                   </div>
@@ -159,7 +159,7 @@ export default async function BedrijfPage({ params }: BedrijfPageProps) {
                         {avgRating.toFixed(1)}
                       </div>
                       <StarRating rating={Math.round(avgRating)} size="md" />
-                      <p className="text-sm text-gray-500 mt-2">
+                      <p className="text-sm text-gray-400 mt-2">
                         Gebaseerd op {business.review_count} reviews
                       </p>
                     </div>
@@ -179,7 +179,7 @@ export default async function BedrijfPage({ params }: BedrijfPageProps) {
                               style={{ width: `${item.percentage}%` }}
                             />
                           </div>
-                          <span className="text-xs text-gray-500 w-10 text-right">
+                          <span className="text-xs text-gray-400 w-10 text-right">
                             {item.percentage}%
                           </span>
                         </div>
@@ -201,7 +201,7 @@ export default async function BedrijfPage({ params }: BedrijfPageProps) {
 
                 {reviews.length === 0 && (
                   <div className="glass-card rounded-2xl p-10 text-center">
-                    <p className="text-gray-500 mb-4">
+                    <p className="text-gray-400 mb-4">
                       Nog geen reviews voor {business.name}.
                     </p>
                     <Link
@@ -225,19 +225,19 @@ export default async function BedrijfPage({ params }: BedrijfPageProps) {
                   </h3>
                   <div className="space-y-4">
                     <div className="flex items-center gap-3">
-                      <MapPin className="w-5 h-5 text-gray-500 flex-shrink-0" />
+                      <MapPin className="w-5 h-5 text-gray-400 flex-shrink-0" />
                       <div>
                         <p className="text-sm text-white/80">
                           {business.address}
                         </p>
-                        <p className="text-xs text-gray-500">
+                        <p className="text-xs text-gray-400">
                           {business.postal_code} {city.name}
                         </p>
                       </div>
                     </div>
                     {business.phone && (
                       <div className="flex items-center gap-3">
-                        <Phone className="w-5 h-5 text-gray-500 flex-shrink-0" />
+                        <Phone className="w-5 h-5 text-gray-400 flex-shrink-0" />
                         <a
                           href={`tel:${business.phone}`}
                           className="text-sm text-white/80 hover:text-fuchsia-400 transition-colors"
@@ -248,7 +248,7 @@ export default async function BedrijfPage({ params }: BedrijfPageProps) {
                     )}
                     {business.website && (
                       <div className="flex items-center gap-3">
-                        <Globe className="w-5 h-5 text-gray-500 flex-shrink-0" />
+                        <Globe className="w-5 h-5 text-gray-400 flex-shrink-0" />
                         <a
                           href={business.website}
                           target="_blank"
@@ -270,7 +270,7 @@ export default async function BedrijfPage({ params }: BedrijfPageProps) {
                   </h3>
                   <div className="space-y-4">
                     <div className="flex items-center justify-between">
-                      <span className="text-sm text-gray-500">Rating</span>
+                      <span className="text-sm text-gray-400">Rating</span>
                       <div className="flex items-center gap-1">
                         <Star className="w-4 h-4 text-fuchsia-400 fill-fuchsia-400" />
                         <span className="text-sm font-semibold text-fuchsia-400">
@@ -279,19 +279,19 @@ export default async function BedrijfPage({ params }: BedrijfPageProps) {
                       </div>
                     </div>
                     <div className="flex items-center justify-between">
-                      <span className="text-sm text-gray-500">Reviews</span>
+                      <span className="text-sm text-gray-400">Reviews</span>
                       <span className="text-sm text-white/80">
                         {business.review_count}
                       </span>
                     </div>
                     <div className="flex items-center justify-between">
-                      <span className="text-sm text-gray-500">Prijsklasse</span>
+                      <span className="text-sm text-gray-400">Prijsklasse</span>
                       <span className="text-sm text-white/80">
                         {"€".repeat(business.price_range)}
                       </span>
                     </div>
                     <div className="flex items-center justify-between">
-                      <span className="text-sm text-gray-500">Status</span>
+                      <span className="text-sm text-gray-400">Status</span>
                       <span className="text-sm text-white/80">
                         {business.is_verified ? "Geverifieerd" : "Niet geverifieerd"}
                       </span>

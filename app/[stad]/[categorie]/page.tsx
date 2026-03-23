@@ -114,7 +114,7 @@ export default async function CategoriePage({ params }: CategoriePageProps) {
             <button className="px-4 py-2 rounded-full border border-white/[0.06] text-sm text-white/40 hover:text-white/60 transition-colors">
               Meest reviews
             </button>
-            <div className="ml-auto flex items-center gap-2 text-sm text-gray-500">
+            <div className="ml-auto flex items-center gap-2 text-sm text-gray-400">
               <span>{businesses.length} resultaten</span>
             </div>
           </div>
@@ -141,7 +141,7 @@ export default async function CategoriePage({ params }: CategoriePageProps) {
                 <h3 className="text-lg font-semibold text-white mb-2">
                   Nog geen {category.name.toLowerCase()} in {city.name}
                 </h3>
-                <p className="text-gray-500 mb-6 max-w-md mx-auto">
+                <p className="text-gray-400 mb-6 max-w-md mx-auto">
                   Wees de eerste die een {category.name.toLowerCase()} toevoegt
                   in {city.name} en help anderen de juiste keuze te maken.
                 </p>
@@ -206,7 +206,7 @@ export default async function CategoriePage({ params }: CategoriePageProps) {
                     <h3 className="text-base font-semibold text-white group-hover:text-fuchsia-300 transition-colors">
                       {nearCity.name}
                     </h3>
-                    <p className="text-sm text-gray-500 mt-1">
+                    <p className="text-sm text-gray-400 mt-1">
                       {category.name} in {nearCity.name}
                     </p>
                   </Link>

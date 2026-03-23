@@ -57,7 +57,7 @@ export default function ReviewsPage() {
                 </div>
                 <div>
                   <div className="text-2xl font-bold text-white">{totalReviews}</div>
-                  <div className="text-xs text-gray-500">Totaal reviews</div>
+                  <div className="text-xs text-gray-400">Totaal reviews</div>
                 </div>
               </div>
             </div>
@@ -68,7 +68,7 @@ export default function ReviewsPage() {
                 </div>
                 <div>
                   <div className="text-2xl font-bold text-white">{avgRating.toFixed(1)}</div>
-                  <div className="text-xs text-gray-500">Gem. score</div>
+                  <div className="text-xs text-gray-400">Gem. score</div>
                 </div>
               </div>
             </div>
@@ -81,7 +81,7 @@ export default function ReviewsPage() {
                   <div className="text-2xl font-bold text-white">
                     {placeholderReviews.reduce((s, r) => s + r.helpful_count, 0)}
                   </div>
-                  <div className="text-xs text-gray-500">Keer nuttig</div>
+                  <div className="text-xs text-gray-400">Keer nuttig</div>
                 </div>
               </div>
             </div>
@@ -94,7 +94,7 @@ export default function ReviewsPage() {
                   <div className="text-2xl font-bold text-white">
                     {placeholderBusinesses.length}
                   </div>
-                  <div className="text-xs text-gray-500">Bedrijven beoordeeld</div>
+                  <div className="text-xs text-gray-400">Bedrijven beoordeeld</div>
                 </div>
               </div>
             </div>
@@ -172,7 +172,7 @@ export default function ReviewsPage() {
                           <p className="text-sm font-medium text-white truncate group-hover:text-fuchsia-300 transition-colors">
                             {biz.name}
                           </p>
-                          <p className="text-xs text-gray-500">
+                          <p className="text-xs text-gray-400">
                             {biz.review_count} reviews
                           </p>
                         </div>
@@ -209,7 +209,7 @@ export default function ReviewsPage() {
                             style={{ width: `${pct}%` }}
                           />
                         </div>
-                        <span className="text-xs text-gray-500 w-6 text-right">
+                        <span className="text-xs text-gray-400 w-6 text-right">
                           {count}
                         </span>
                       </div>

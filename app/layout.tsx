@@ -48,7 +48,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="nl" className={`${inter.variable} ${playfair.variable}`}>
-      <body className="bg-[#050505] text-white min-h-screen overflow-x-hidden selection:bg-fuchsia-500/30 grain font-sans antialiased">
+      <body className="bg-[#0c0c0e] text-white min-h-screen overflow-x-hidden selection:bg-fuchsia-500/30 grain font-sans antialiased">
         {/* Subtle background glow */}
         <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden">
           <div className="absolute -top-[30%] -left-[20%] w-[60vw] h-[60vw] md:w-[40vw] md:h-[40vw] rounded-full bg-fuchsia-900/15 blur-[180px]" />

@@ -41,7 +41,7 @@ export default function CategorieenPage() {
             {categories.map((cat) => (
               <div key={cat.slug} className="flex flex-col">
                 <CategoryCard category={cat} />
-                <p className="mt-3 text-sm text-gray-500 leading-relaxed px-2">
+                <p className="mt-3 text-sm text-gray-400 leading-relaxed px-2">
                   {cat.description}
                 </p>
               </div>

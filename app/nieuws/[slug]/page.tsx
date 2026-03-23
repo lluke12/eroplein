@@ -79,11 +79,11 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                   </p>
                 </div>
               </div>
-              <div className="flex items-center gap-1.5 text-sm text-gray-500">
+              <div className="flex items-center gap-1.5 text-sm text-gray-400">
                 <Calendar className="w-4 h-4" />
                 {article.published_at}
               </div>
-              <div className="flex items-center gap-1.5 text-sm text-gray-500">
+              <div className="flex items-center gap-1.5 text-sm text-gray-400">
                 <Clock className="w-4 h-4" />
                 {article.reading_time} min leestijd
               </div>
@@ -135,14 +135,14 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                       <span className="px-2.5 py-1 bg-purple-500/10 border border-purple-500/20 rounded-full text-xs font-medium text-purple-400">
                         {other.tags[0]}
                       </span>
-                      <span className="text-xs text-gray-500">
+                      <span className="text-xs text-gray-400">
                         {other.published_at}
                       </span>
                     </div>
                     <h3 className="text-base font-semibold text-white mb-2 group-hover:text-fuchsia-300 transition-colors leading-snug">
                       {other.title}
                     </h3>
-                    <p className="text-sm text-gray-500 leading-relaxed">
+                    <p className="text-sm text-gray-400 leading-relaxed">
                       {other.excerpt}
                     </p>
                   </Link>

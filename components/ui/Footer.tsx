@@ -12,7 +12,7 @@ export function Footer() {
                 ero<span className="text-fuchsia-400">plein</span>
               </span>
             </Link>
-            <p className="text-sm text-gray-500 leading-relaxed max-w-xs">
+            <p className="text-sm text-gray-400 leading-relaxed max-w-xs">
               Eerlijke ervaringen en reviews. Ontdek, beleef en deel.
             </p>
           </div>
@@ -21,10 +21,10 @@ export function Footer() {
           <div>
             <h4 className="text-sm font-semibold text-white mb-4">Directory</h4>
             <ul className="space-y-3">
-              <li><Link href="/steden" className="text-sm text-gray-500 hover:text-fuchsia-400 transition-colors">Alle steden</Link></li>
-              <li><Link href="/categorieen" className="text-sm text-gray-500 hover:text-fuchsia-400 transition-colors">Categorie&euml;n</Link></li>
-              <li><Link href="/steden" className="text-sm text-gray-500 hover:text-fuchsia-400 transition-colors">Nieuw toegevoegd</Link></li>
-              <li><Link href="/steden" className="text-sm text-gray-500 hover:text-fuchsia-400 transition-colors">Meest beoordeeld</Link></li>
+              <li><Link href="/steden" className="text-sm text-gray-400 hover:text-fuchsia-400 transition-colors">Alle steden</Link></li>
+              <li><Link href="/categorieen" className="text-sm text-gray-400 hover:text-fuchsia-400 transition-colors">Categorie&euml;n</Link></li>
+              <li><Link href="/steden" className="text-sm text-gray-400 hover:text-fuchsia-400 transition-colors">Nieuw toegevoegd</Link></li>
+              <li><Link href="/steden" className="text-sm text-gray-400 hover:text-fuchsia-400 transition-colors">Meest beoordeeld</Link></li>
             </ul>
           </div>
 
@@ -32,9 +32,9 @@ export function Footer() {
           <div>
             <h4 className="text-sm font-semibold text-white mb-4">Community</h4>
             <ul className="space-y-3">
-              <li><Link href="/reviews" className="text-sm text-gray-500 hover:text-fuchsia-400 transition-colors">Recente reviews</Link></li>
-              <li><Link href="/nieuws" className="text-sm text-gray-500 hover:text-fuchsia-400 transition-colors">Nieuws</Link></li>
-              <li><Link href="/schrijf-review" className="text-sm text-gray-500 hover:text-fuchsia-400 transition-colors">Review schrijven</Link></li>
+              <li><Link href="/reviews" className="text-sm text-gray-400 hover:text-fuchsia-400 transition-colors">Recente reviews</Link></li>
+              <li><Link href="/nieuws" className="text-sm text-gray-400 hover:text-fuchsia-400 transition-colors">Nieuws</Link></li>
+              <li><Link href="/schrijf-review" className="text-sm text-gray-400 hover:text-fuchsia-400 transition-colors">Review schrijven</Link></li>
             </ul>
           </div>
 
@@ -42,10 +42,10 @@ export function Footer() {
           <div>
             <h4 className="text-sm font-semibold text-white mb-4">Over Eroplein</h4>
             <ul className="space-y-3">
-              <li><Link href="/over-ons" className="text-sm text-gray-500 hover:text-fuchsia-400 transition-colors">Over ons</Link></li>
-              <li><Link href="/contact" className="text-sm text-gray-500 hover:text-fuchsia-400 transition-colors">Contact</Link></li>
-              <li><Link href="/privacy" className="text-sm text-gray-500 hover:text-fuchsia-400 transition-colors">Privacybeleid</Link></li>
-              <li><Link href="/voorwaarden" className="text-sm text-gray-500 hover:text-fuchsia-400 transition-colors">Voorwaarden</Link></li>
+              <li><Link href="/over-ons" className="text-sm text-gray-400 hover:text-fuchsia-400 transition-colors">Over ons</Link></li>
+              <li><Link href="/contact" className="text-sm text-gray-400 hover:text-fuchsia-400 transition-colors">Contact</Link></li>
+              <li><Link href="/privacy" className="text-sm text-gray-400 hover:text-fuchsia-400 transition-colors">Privacybeleid</Link></li>
+              <li><Link href="/voorwaarden" className="text-sm text-gray-400 hover:text-fuchsia-400 transition-colors">Voorwaarden</Link></li>
             </ul>
           </div>
 
@@ -53,15 +53,15 @@ export function Footer() {
           <div>
             <h4 className="text-sm font-semibold text-white mb-4">Voor bedrijven</h4>
             <ul className="space-y-3">
-              <li><Link href="/claim" className="text-sm text-gray-500 hover:text-fuchsia-400 transition-colors">Claim je pagina</Link></li>
-              <li><Link href="/adverteren" className="text-sm text-gray-500 hover:text-fuchsia-400 transition-colors">Adverteren</Link></li>
+              <li><Link href="/claim" className="text-sm text-gray-400 hover:text-fuchsia-400 transition-colors">Claim je pagina</Link></li>
+              <li><Link href="/adverteren" className="text-sm text-gray-400 hover:text-fuchsia-400 transition-colors">Adverteren</Link></li>
             </ul>
           </div>
         </div>
 
         {/* Bottom */}
         <div className="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-white/[0.06] gap-4">
-          <p className="text-sm text-gray-600">
+          <p className="text-sm text-gray-500">
             &copy; {new Date().getFullYear()} Eroplein. Alle rechten voorbehouden. 18+
           </p>
         </div>

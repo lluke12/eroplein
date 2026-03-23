@@ -104,7 +104,7 @@ export default function VergelijkPage() {
                               <p className="text-sm font-medium text-white">
                                 {biz.name}
                               </p>
-                              <p className="text-xs text-gray-500">
+                              <p className="text-xs text-gray-400">
                                 {city?.name}
                               </p>
                             </div>
@@ -140,22 +140,22 @@ export default function VergelijkPage() {
               <table className="w-full">
                 <thead>
                   <tr className="border-b border-white/[0.06]">
-                    <th className="text-left text-sm font-medium text-gray-500 pb-4 pr-6 w-64">
+                    <th className="text-left text-sm font-medium text-gray-400 pb-4 pr-6 w-64">
                       Bedrijf
                     </th>
-                    <th className="text-left text-sm font-medium text-gray-500 pb-4 px-4">
+                    <th className="text-left text-sm font-medium text-gray-400 pb-4 px-4">
                       Score
                     </th>
-                    <th className="text-left text-sm font-medium text-gray-500 pb-4 px-4">
+                    <th className="text-left text-sm font-medium text-gray-400 pb-4 px-4">
                       Reviews
                     </th>
-                    <th className="text-left text-sm font-medium text-gray-500 pb-4 px-4">
+                    <th className="text-left text-sm font-medium text-gray-400 pb-4 px-4">
                       Prijs
                     </th>
-                    <th className="text-left text-sm font-medium text-gray-500 pb-4 px-4">
+                    <th className="text-left text-sm font-medium text-gray-400 pb-4 px-4">
                       Categorie
                     </th>
-                    <th className="text-left text-sm font-medium text-gray-500 pb-4 px-4">
+                    <th className="text-left text-sm font-medium text-gray-400 pb-4 px-4">
                       Status
                     </th>
                     <th className="pb-4 px-4"></th>
@@ -178,8 +178,8 @@ export default function VergelijkPage() {
                               {biz.name}
                             </p>
                             <div className="flex items-center gap-1 mt-1">
-                              <MapPin className="w-3 h-3 text-gray-600" />
-                              <span className="text-xs text-gray-500">
+                              <MapPin className="w-3 h-3 text-gray-500" />
+                              <span className="text-xs text-gray-400">
                                 {city?.name}
                               </span>
                             </div>
@@ -213,7 +213,7 @@ export default function VergelijkPage() {
                               Geverifieerd
                             </span>
                           ) : (
-                            <span className="text-xs text-gray-600">
+                            <span className="text-xs text-gray-500">
                               Niet geverifieerd
                             </span>
                           )}
@@ -251,8 +251,8 @@ export default function VergelijkPage() {
                           {biz.name}
                         </h3>
                         <div className="flex items-center gap-1 mt-1">
-                          <MapPin className="w-3 h-3 text-gray-600" />
-                          <span className="text-xs text-gray-500">
+                          <MapPin className="w-3 h-3 text-gray-500" />
+                          <span className="text-xs text-gray-400">
                             {city?.name}
                           </span>
                         </div>
@@ -264,7 +264,7 @@ export default function VergelijkPage() {
                         </span>
                       </div>
                     </div>
-                    <div className="flex items-center gap-4 text-xs text-gray-500">
+                    <div className="flex items-center gap-4 text-xs text-gray-400">
                       <span>{biz.review_count} reviews</span>
                       <PriceIndicator range={biz.price_range} />
                       <span>{cat?.name}</span>
@@ -302,7 +302,7 @@ export default function VergelijkPage() {
                     <h3 className="text-sm font-semibold text-white group-hover:text-fuchsia-300 transition-colors">
                       {cat.name}
                     </h3>
-                    <p className="text-xs text-gray-500 mt-1">
+                    <p className="text-xs text-gray-400 mt-1">
                       {cat.count} bedrijven
                     </p>
                   </div>

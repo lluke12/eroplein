@@ -109,7 +109,7 @@ export default async function StadPage({ params }: StadPageProps) {
                   </div>
                   <div>
                     <div className="text-2xl font-bold text-white">{businesses.length}</div>
-                    <div className="text-xs text-gray-500">Bedrijven</div>
+                    <div className="text-xs text-gray-400">Bedrijven</div>
                   </div>
                 </div>
               </div>
@@ -120,7 +120,7 @@ export default async function StadPage({ params }: StadPageProps) {
                   </div>
                   <div>
                     <div className="text-2xl font-bold text-white">{totalReviews}</div>
-                    <div className="text-xs text-gray-500">Reviews</div>
+                    <div className="text-xs text-gray-400">Reviews</div>
                   </div>
                 </div>
               </div>
@@ -131,7 +131,7 @@ export default async function StadPage({ params }: StadPageProps) {
                   </div>
                   <div>
                     <div className="text-2xl font-bold text-white">{avgRating.toFixed(1)}</div>
-                    <div className="text-xs text-gray-500">Gem. score</div>
+                    <div className="text-xs text-gray-400">Gem. score</div>
                   </div>
                 </div>
               </div>
@@ -142,7 +142,7 @@ export default async function StadPage({ params }: StadPageProps) {
                   </div>
                   <div>
                     <div className="text-2xl font-bold text-white">{categories.length}</div>
-                    <div className="text-xs text-gray-500">Categorieën</div>
+                    <div className="text-xs text-gray-400">Categorieën</div>
                   </div>
                 </div>
               </div>
@@ -201,7 +201,7 @@ export default async function StadPage({ params }: StadPageProps) {
               </div>
             ) : (
               <div className="rounded-2xl border border-white/[0.06] bg-white/[0.02] p-12 text-center">
-                <p className="text-gray-500 mb-4">
+                <p className="text-gray-400 mb-4">
                   Nog geen bedrijven gevonden in {city.name}.
                 </p>
                 <Link

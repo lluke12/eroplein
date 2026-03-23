@@ -33,13 +33,13 @@ export function ReviewCard({ review, businessName, timeAgo }: ReviewCardProps) {
               {review.user_display_name}
             </span>
             {timeAgo && (
-              <span className="text-xs text-gray-500">{timeAgo}</span>
+              <span className="text-xs text-gray-400">{timeAgo}</span>
             )}
           </div>
           <div className="flex items-center gap-2 mb-2">
             <StarRating rating={review.rating} />
             {businessName && (
-              <span className="text-xs text-gray-500 ml-1">
+              <span className="text-xs text-gray-400 ml-1">
                 {businessName}
               </span>
             )}
@@ -53,11 +53,11 @@ export function ReviewCard({ review, businessName, timeAgo }: ReviewCardProps) {
             &ldquo;{review.content}&rdquo;
           </p>
           <div className="flex items-center gap-4 mt-3">
-            <button className="flex items-center gap-1 text-xs text-gray-500 hover:text-fuchsia-400 transition-colors">
+            <button className="flex items-center gap-1 text-xs text-gray-400 hover:text-fuchsia-400 transition-colors">
               <ThumbsUp className="w-3.5 h-3.5" />
               <span>{review.helpful_count}</span>
             </button>
-            <button className="flex items-center gap-1 text-xs text-gray-500 hover:text-white transition-colors">
+            <button className="flex items-center gap-1 text-xs text-gray-400 hover:text-white transition-colors">
               <MessageCircle className="w-3.5 h-3.5" />
               <span>{review.reply_count}</span>
             </button>

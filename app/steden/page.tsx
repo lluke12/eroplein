@@ -73,7 +73,7 @@ export default function StedenPage() {
                 <h2 className="text-lg font-semibold text-white mb-4 flex items-center gap-3">
                   <span className="w-2 h-2 rounded-full bg-fuchsia-400" />
                   {province}
-                  <span className="text-sm font-normal text-gray-500">
+                  <span className="text-sm font-normal text-gray-400">
                     {byProvince[province].length} steden
                   </span>
                 </h2>
