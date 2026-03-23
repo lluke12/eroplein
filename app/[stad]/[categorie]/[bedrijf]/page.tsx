@@ -19,6 +19,7 @@ import { ReviewCard } from "@/components/ui/ReviewCard";
 import { StarRating } from "@/components/ui/StarRating";
 import { getCityBySlug, getCategoryBySlug } from "@/lib/data";
 import {
+  placeholderBusinesses,
   getPlaceholderBusinessBySlug,
   getPlaceholderReviewsByBusiness,
   formatTimeAgo,
@@ -26,6 +27,14 @@ import {
 
 interface BedrijfPageProps {
   params: Promise<{ stad: string; categorie: string; bedrijf: string }>;
+}
+
+export async function generateStaticParams() {
+  return placeholderBusinesses.map((b) => ({
+    stad: b.city_slug,
+    categorie: b.primary_category,
+    bedrijf: b.slug,
+  }));
 }
 
 export async function generateMetadata({
