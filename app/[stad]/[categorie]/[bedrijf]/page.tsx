@@ -171,7 +171,7 @@ export default async function BedrijfPage({ params }: BedrijfPageProps) {
                 </div>
 
                 {/* Rating Overview */}
-                <div className="glass-card rounded-2xl p-6 mb-8">
+                <div className="rounded-2xl border border-white/[0.06] bg-white/[0.02] p-6 mb-8">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div className="text-center md:text-left">
                       <div className="text-5xl font-bold text-fuchsia-400 mb-2">
@@ -219,7 +219,7 @@ export default async function BedrijfPage({ params }: BedrijfPageProps) {
                 </div>
 
                 {reviews.length === 0 && (
-                  <div className="glass-card rounded-2xl p-10 text-center">
+                  <div className="rounded-2xl border border-white/[0.06] bg-white/[0.02] p-10 text-center">
                     <p className="text-gray-400 mb-4">
                       Nog geen reviews voor {business.name}.
                     </p>
@@ -238,7 +238,7 @@ export default async function BedrijfPage({ params }: BedrijfPageProps) {
             <div className="lg:col-span-1">
               <div className="sticky top-8 space-y-6">
                 {/* Contact Card */}
-                <div className="glass-card rounded-2xl p-6">
+                <div className="rounded-2xl border border-white/[0.06] bg-white/[0.02] p-6">
                   <h3 className="text-lg font-semibold text-white mb-5">
                     Contactgegevens
                   </h3>
@@ -283,7 +283,7 @@ export default async function BedrijfPage({ params }: BedrijfPageProps) {
                 </div>
 
                 {/* Quick Stats */}
-                <div className="glass-card rounded-2xl p-6">
+                <div className="rounded-2xl border border-white/[0.06] bg-white/[0.02] p-6">
                   <h3 className="text-lg font-semibold text-white mb-5">
                     Statistieken
                   </h3>
@@ -319,7 +319,7 @@ export default async function BedrijfPage({ params }: BedrijfPageProps) {
                 </div>
 
                 {/* CTA */}
-                <div className="glass-card rounded-2xl p-6 text-center">
+                <div className="rounded-2xl border border-white/[0.06] bg-white/[0.02] p-6 text-center">
                   <p className="text-sm text-gray-400 mb-4">
                     Is dit jouw bedrijf?
                   </p>

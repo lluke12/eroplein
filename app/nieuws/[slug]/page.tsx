@@ -129,7 +129,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                   <Link
                     key={other.id}
                     href={`/nieuws/${other.slug}`}
-                    className="glass-card rounded-2xl p-5 group cursor-pointer block"
+                    className="rounded-2xl border border-white/[0.06] bg-white/[0.02] p-5 group cursor-pointer block"
                   >
                     <div className="flex items-center gap-3 mb-4">
                       <span className="px-2.5 py-1 bg-purple-500/10 border border-purple-500/20 rounded-full text-xs font-medium text-purple-400">

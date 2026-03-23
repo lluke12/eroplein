@@ -20,7 +20,7 @@ export function ReviewCard({ review, businessName, timeAgo }: ReviewCardProps) {
     review.user_initial.charCodeAt(0) % gradients.length;
 
   return (
-    <div className="glass-card rounded-2xl p-5 group cursor-pointer">
+    <div className="rounded-2xl border border-white/[0.06] bg-white/[0.02] p-5 group cursor-pointer">
       <div className="flex items-start gap-4">
         <div
           className={`w-10 h-10 rounded-full bg-gradient-to-br ${gradients[gradientIdx]} flex-shrink-0 flex items-center justify-center text-sm font-semibold`}
