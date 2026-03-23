@@ -145,7 +145,7 @@ export function SearchBar({ cities }: SearchBarProps) {
 
           {/* Suggestions dropdown */}
           {showSuggestions && (
-            <div className="absolute top-full left-0 right-0 mt-2 rounded-xl border border-white/[0.08] bg-[#141416] shadow-2xl shadow-black/50 overflow-hidden z-50">
+            <div className="absolute top-full left-0 right-0 mt-2 rounded-xl border border-white/[0.08] bg-[#18181b] shadow-2xl shadow-black/50 overflow-hidden z-50">
               {suggestions.map((s) => {
                 const [type, , label] = s.split(":");
                 return (

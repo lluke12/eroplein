@@ -382,6 +382,39 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* JSON-LD WebSite Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            name: "Eroplein",
+            url: "https://eroplein.com",
+            description:
+              "Nederlands platform voor eerlijke reviews en ervaringen over escorts, clubs, massage en meer in 42+ steden.",
+            potentialAction: {
+              "@type": "SearchAction",
+              target: "https://eroplein.com/{search_term_string}",
+              "query-input": "required name=search_term_string",
+            },
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: "Eroplein",
+            url: "https://eroplein.com",
+            logo: "https://eroplein.com/logo.png",
+            sameAs: [],
+          }),
+        }}
+      />
+
       <Footer />
     </>
   );

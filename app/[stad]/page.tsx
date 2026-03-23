@@ -39,9 +39,11 @@ export async function generateMetadata({
   const city = getCityBySlug(stad);
   if (!city) return {};
 
+  const bizCount = getPlaceholderBusinessesByCity(stad).length;
   return {
-    title: `${city.name} - Escorts, Clubs & Meer`,
-    description: `Ontdek de beste erotische bedrijven in ${city.name}. Lees eerlijke ervaringen over escorts, clubs, massage en meer in ${city.name}, ${city.province}.`,
+    title: `${city.name} Erotisch - Reviews & Beoordelingen`,
+    description: `Bekijk ${bizCount > 0 ? bizCount + "+ " : ""}escorts, clubs, massage en meer in ${city.name}. Lees eerlijke reviews en ervaringen van echte bezoekers in ${city.name}, ${city.province}.`,
+    alternates: { canonical: `https://eroplein.com/${city.slug}` },
   };
 }
 

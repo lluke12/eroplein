@@ -16,7 +16,7 @@ export function CityCard({ city, businessCount = 0, reviewCount }: CityCardProps
     >
       {/* Top color accent */}
       <div className="h-24 bg-gradient-to-br from-fuchsia-900/40 via-purple-900/30 to-pink-900/40 relative">
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0c0c0e] to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#111114] to-transparent" />
         {city.featured && (
           <span className="absolute top-2.5 right-2.5 px-2 py-0.5 bg-fuchsia-500/20 border border-fuchsia-500/30 rounded text-[10px] font-medium text-fuchsia-300">
             Populair

@@ -29,7 +29,7 @@ export function BusinessCard({ business }: BusinessCardProps) {
             <Heart className="w-4 h-4" />
           </button>
         </div>
-        <div className="absolute bottom-0 inset-x-0 h-20 bg-gradient-to-t from-[#0c0c0e] to-transparent" />
+        <div className="absolute bottom-0 inset-x-0 h-20 bg-gradient-to-t from-[#111114] to-transparent" />
       </div>
       <div className="p-5">
         <div className="flex items-start justify-between mb-3">

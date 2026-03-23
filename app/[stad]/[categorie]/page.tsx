@@ -45,8 +45,9 @@ export async function generateMetadata({
   if (!city || !category) return {};
 
   return {
-    title: `${category.name} in ${city.name}`,
-    description: `Beste ${category.name.toLowerCase()} in ${city.name}. ${category.description} Lees ervaringen en reviews.`,
+    title: `${category.name} ${city.name} - Reviews & Ervaringen`,
+    description: `Beste ${category.name.toLowerCase()} in ${city.name}. Vergelijk beoordelingen, lees eerlijke reviews en vind de beste ${category.name.toLowerCase()} bij jou in de buurt.`,
+    alternates: { canonical: `https://eroplein.com/${city.slug}/${category.slug}` },
   };
 }
 
