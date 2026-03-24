@@ -41,6 +41,12 @@
     { "name": "Vlaardingen", "slug": "vlaardingen", "province": "Zuid-Holland", "lat": 51.9125, "lng": 4.3420, "population": 73000 },
     { "name": "Alphen aan den Rijn", "slug": "alphen-aan-den-rijn", "province": "Zuid-Holland", "lat": 52.1293, "lng": 4.6564, "population": 112000 },
     { "name": "Schiedam", "slug": "schiedam", "province": "Zuid-Holland", "lat": 51.9217, "lng": 4.4000, "population": 79000 },
-    { "name": "Hoorn", "slug": "hoorn", "province": "Noord-Holland", "lat": 52.6424, "lng": 5.0602, "population": 73000 }
+    { "name": "Hoorn", "slug": "hoorn", "province": "Noord-Holland", "lat": 52.6424, "lng": 5.0602, "population": 73000 },
+    { "name": "Assen", "slug": "assen", "province": "Drenthe", "lat": 52.9925, "lng": 6.5625, "population": 68000 },
+    { "name": "Middelburg", "slug": "middelburg", "province": "Zeeland", "lat": 51.4988, "lng": 3.6109, "population": 48000 },
+    { "name": "Roermond", "slug": "roermond", "province": "Limburg", "lat": 51.1946, "lng": 5.9860, "population": 58000 },
+    { "name": "Weert", "slug": "weert", "province": "Limburg", "lat": 51.2517, "lng": 5.7078, "population": 50000 },
+    { "name": "Uden", "slug": "uden", "province": "Noord-Brabant", "lat": 51.6601, "lng": 5.6198, "population": 42000 },
+    { "name": "Veghel", "slug": "veghel", "province": "Noord-Brabant", "lat": 51.6158, "lng": 5.5465, "population": 38000 }
   ]
 }
