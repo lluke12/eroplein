@@ -5,7 +5,7 @@ import { guides } from "@/lib/guides-data";
 import { placeholderArticles } from "@/lib/placeholder-data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://eroplein.com";
+  const baseUrl = "https://www.eroplein.com";
   const cities = getCities();
   const categories = getCategories();
   const now = new Date().toISOString();

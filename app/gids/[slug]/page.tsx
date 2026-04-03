@@ -108,11 +108,11 @@ export default async function GuidePage({ params }: GuidePageProps) {
     publisher: {
       "@type": "Organization",
       name: "Eroplein",
-      url: "https://eroplein.com",
+      url: "https://www.eroplein.com",
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://eroplein.com/gids/${guide.slug}`,
+      "@id": `https://www.eroplein.com/gids/${guide.slug}`,
     },
   };
 

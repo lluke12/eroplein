@@ -361,7 +361,7 @@ export default async function BedrijfPage({ params }: BedrijfPageProps) {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
-            "@id": `https://eroplein.com/${city.slug}/${category.slug}/${business.slug}`,
+            "@id": `https://www.eroplein.com/${city.slug}/${category.slug}/${business.slug}`,
             name: business.name,
             description: business.short_description,
             ...(business.image_url && { image: business.image_url }),

@@ -350,11 +350,11 @@ export default async function ProvinciePage({ params }: ProvinciePageProps) {
                 "@type": "CollectionPage",
                 name: `Erotische bedrijven in ${province.name}`,
                 description: province.description,
-                url: `https://eroplein.com/provincie/${province.slug}`,
+                url: `https://www.eroplein.com/provincie/${province.slug}`,
                 isPartOf: {
                   "@type": "WebSite",
                   name: "Eroplein",
-                  url: "https://eroplein.com",
+                  url: "https://www.eroplein.com",
                 },
                 about: {
                   "@type": "AdministrativeArea",

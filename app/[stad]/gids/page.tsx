@@ -62,7 +62,7 @@ export async function generateMetadata({
       siteName: "Eroplein",
     },
     alternates: {
-      canonical: `https://eroplein.com/${city.slug}/gids`,
+      canonical: `https://www.eroplein.com/${city.slug}/gids`,
     },
   };
 }
@@ -101,16 +101,16 @@ export default async function GidsPage({ params }: GidsPageProps) {
     author: {
       "@type": "Organization",
       name: "Eroplein",
-      url: "https://eroplein.com",
+      url: "https://www.eroplein.com",
     },
     publisher: {
       "@type": "Organization",
       name: "Eroplein",
-      url: "https://eroplein.com",
+      url: "https://www.eroplein.com",
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://eroplein.com/${city.slug}/gids`,
+      "@id": `https://www.eroplein.com/${city.slug}/gids`,
     },
     datePublished: "2026-01-01",
     dateModified: "2026-03-23",

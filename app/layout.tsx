@@ -15,7 +15,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://eroplein.com"),
+  metadataBase: new URL("https://www.eroplein.com"),
   title: {
     default: "Eroplein - Reviews Erotische Diensten Nederland",
     template: "%s | Eroplein",

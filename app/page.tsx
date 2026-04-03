@@ -390,12 +390,12 @@ export default function HomePage() {
             "@context": "https://schema.org",
             "@type": "WebSite",
             name: "Eroplein",
-            url: "https://eroplein.com",
+            url: "https://www.eroplein.com",
             description:
               "Nederlands platform voor eerlijke reviews en ervaringen over escorts, clubs, massage en meer in 42+ steden.",
             potentialAction: {
               "@type": "SearchAction",
-              target: "https://eroplein.com/{search_term_string}",
+              target: "https://www.eroplein.com/{search_term_string}",
               "query-input": "required name=search_term_string",
             },
           }),
@@ -408,8 +408,8 @@ export default function HomePage() {
             "@context": "https://schema.org",
             "@type": "Organization",
             name: "Eroplein",
-            url: "https://eroplein.com",
-            logo: "https://eroplein.com/logo.png",
+            url: "https://www.eroplein.com",
+            logo: "https://www.eroplein.com/logo.png",
             sameAs: [],
           }),
         }}

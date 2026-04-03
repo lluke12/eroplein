@@ -115,7 +115,7 @@ export default function GidsOverviewPage() {
             name: "Gidsen & Informatie",
             description:
               "Praktische gidsen over escorts, parenclubs, raamprostitutie en meer in Nederland.",
-            url: "https://eroplein.com/gids",
+            url: "https://www.eroplein.com/gids",
             publisher: {
               "@type": "Organization",
               name: "Eroplein",
@@ -125,7 +125,7 @@ export default function GidsOverviewPage() {
               itemListElement: guides.map((guide, i) => ({
                 "@type": "ListItem",
                 position: i + 1,
-                url: `https://eroplein.com/gids/${guide.slug}`,
+                url: `https://www.eroplein.com/gids/${guide.slug}`,
                 name: guide.title,
               })),
             },

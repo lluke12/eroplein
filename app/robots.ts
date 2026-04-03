@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/api/", "/schrijf-review", "/claim"],
       },
     ],
-    sitemap: "https://eroplein.com/sitemap.xml",
+    sitemap: "https://www.eroplein.com/sitemap.xml",
   };
 }
