@@ -19,6 +19,20 @@ export const metadata: Metadata = {
   title: "Reviews per Bedrijf",
   description:
     "Lees reviews en ervaringen per bedrijf. Eerlijke beoordelingen over escorts, clubs, massage en meer in heel Nederland.",
+  alternates: { canonical: "/reviews" },
+  openGraph: {
+    title: "Reviews per Bedrijf",
+    description:
+      "Lees reviews en ervaringen per bedrijf. Eerlijke beoordelingen over escorts, clubs, massage en meer in heel Nederland.",
+    url: "/reviews",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Reviews per Bedrijf",
+    description:
+      "Lees reviews en ervaringen per bedrijf. Eerlijke beoordelingen over escorts, clubs, massage en meer in heel Nederland.",
+  },
 };
 
 export default function ReviewsPage() {

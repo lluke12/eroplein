@@ -135,13 +135,15 @@ export async function generateMetadata({
   const cities = getCitiesByProvince(province.name);
   const cityNames = cities.slice(0, 4).map((c) => c.name).join(", ");
 
+  const url = `/provincie/${province.slug}`;
+  const title = `${province.name} - Escorts, clubs & meer`;
+  const description = `Ontdek het erotisch aanbod in ${province.name}. ${cities.length} steden waaronder ${cityNames}. Escorts, clubs, privéhuizen en meer.`;
   return {
-    title: `${province.name} — Escorts, Clubs & Meer | Eroplein`,
-    description: `Ontdek het erotisch aanbod in ${province.name}. ${cities.length} steden waaronder ${cityNames}. Escorts, clubs, privéhuizen en meer.`,
-    openGraph: {
-      title: `${province.name} — Erotische Directory | Eroplein`,
-      description: `Bekijk alle ${cities.length} steden in ${province.name} met escorts, clubs, massage en meer.`,
-    },
+    title,
+    description,
+    alternates: { canonical: url },
+    openGraph: { title, description, url, type: "website" },
+    twitter: { card: "summary_large_image", title, description },
   };
 }
 

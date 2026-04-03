@@ -7,13 +7,19 @@ export const metadata: Metadata = {
   title: "Algemene Voorwaarden",
   description:
     "Lees de algemene voorwaarden van Eroplein. Gebruiksregels, verantwoordelijkheden en contentbeleid.",
+  alternates: { canonical: "/voorwaarden" },
   openGraph: {
     title: "Algemene Voorwaarden | Eroplein",
     description:
       "De algemene voorwaarden voor het gebruik van Eroplein.",
+    url: "/voorwaarden",
+    type: "website",
   },
-  alternates: {
-    canonical: "https://eroplein.com/voorwaarden",
+  twitter: {
+    card: "summary_large_image",
+    title: "Algemene Voorwaarden",
+    description:
+      "Lees de algemene voorwaarden van Eroplein. Gebruiksregels, verantwoordelijkheden en contentbeleid.",
   },
 };
 

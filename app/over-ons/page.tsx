@@ -9,13 +9,19 @@ export const metadata: Metadata = {
   title: "Over Ons",
   description:
     "Eroplein is het onafhankelijke reviewplatform voor erotische diensten in Nederland. Lees over onze missie, ons team en hoe we werken.",
+  alternates: { canonical: "/over-ons" },
   openGraph: {
     title: "Over Ons | Eroplein",
     description:
       "Eroplein is het onafhankelijke reviewplatform voor erotische diensten in Nederland.",
+    url: "/over-ons",
+    type: "website",
   },
-  alternates: {
-    canonical: "https://eroplein.com/over-ons",
+  twitter: {
+    card: "summary_large_image",
+    title: "Over Ons",
+    description:
+      "Eroplein is het onafhankelijke reviewplatform voor erotische diensten in Nederland. Lees over onze missie, ons team en hoe we werken.",
   },
 };
 

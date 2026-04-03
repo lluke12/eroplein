@@ -11,10 +11,19 @@ export const metadata: Metadata = {
   title: "Provincies | Eroplein",
   description:
     "Bekijk het erotisch aanbod per provincie. Van Noord-Holland tot Limburg — ontdek escorts, clubs, massage en meer in alle Nederlandse provincies.",
+  alternates: { canonical: "/provincie" },
   openGraph: {
     title: "Alle Provincies — Eroplein",
     description:
       "Bekijk het erotisch aanbod per provincie. Ontdek escorts, clubs, massage en meer in alle Nederlandse provincies.",
+    url: "/provincie",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Provincies | Eroplein",
+    description:
+      "Bekijk het erotisch aanbod per provincie. Van Noord-Holland tot Limburg — ontdek escorts, clubs, massage en meer in alle Nederlandse provincies.",
   },
 };
 

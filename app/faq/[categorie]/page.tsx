@@ -23,11 +23,20 @@ export async function generateMetadata({
   const category = getFaqCategoryBySlug(categorie);
   if (!category) return {};
 
+  const url = `/faq/${category.slug}`;
   return {
-    title: `FAQ ${category.name} - Veelgestelde Vragen`,
+    title: `FAQ ${category.name} - Veelgestelde vragen`,
     description: category.description,
+    alternates: { canonical: url },
     openGraph: {
-      title: `Veelgestelde Vragen over ${category.name} | Eroplein`,
+      title: `Veelgestelde vragen over ${category.name} | Eroplein`,
+      description: category.description,
+      url,
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `FAQ ${category.name}`,
       description: category.description,
     },
   };

@@ -47,9 +47,26 @@ export async function generateMetadata({
 
   if (!city || !business) return {};
 
+  const title = `${business.name} - ${city.name} | Ervaringen & reviews`;
+  const description = `${business.short_description} Lees ${business.review_count} eerlijke reviews over ${business.name} in ${city.name}.`;
+  const url = `/${city.slug}/${business.primary_category}/${business.slug}`;
   return {
-    title: `${business.name} - ${city.name} | Ervaringen & Reviews`,
-    description: `${business.short_description} Lees ${business.review_count} eerlijke reviews over ${business.name} in ${city.name}.`,
+    title,
+    description,
+    alternates: { canonical: url },
+    openGraph: {
+      title,
+      description,
+      url,
+      type: "website",
+      ...(business.image_url && { images: [{ url: business.image_url, width: 400, height: 300, alt: business.name }] }),
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      ...(business.image_url && { images: [business.image_url] }),
+    },
   };
 }
 
@@ -337,20 +354,23 @@ export default async function BedrijfPage({ params }: BedrijfPageProps) {
         </div>
       </main>
 
-      {/* JSON-LD Schema.org */}
+      {/* JSON-LD Schema.org - LocalBusiness */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
+            "@id": `https://eroplein.com/${city.slug}/${category.slug}/${business.slug}`,
             name: business.name,
             description: business.short_description,
+            ...(business.image_url && { image: business.image_url }),
             address: {
               "@type": "PostalAddress",
               streetAddress: business.address,
-              postalCode: business.postal_code,
+              ...(business.postal_code && { postalCode: business.postal_code }),
               addressLocality: city.name,
+              addressRegion: city.province,
               addressCountry: "NL",
             },
             ...(business.phone && { telephone: business.phone }),
@@ -363,6 +383,21 @@ export default async function BedrijfPage({ params }: BedrijfPageProps) {
               worstRating: 1,
             },
             priceRange: "€".repeat(business.price_range),
+            ...(reviews.length > 0 && {
+              review: reviews.slice(0, 5).map((r) => ({
+                "@type": "Review",
+                author: { "@type": "Person", name: r.user_display_name },
+                datePublished: r.created_at,
+                reviewRating: {
+                  "@type": "Rating",
+                  ratingValue: r.rating,
+                  bestRating: 5,
+                  worstRating: 1,
+                },
+                ...(r.title && { name: r.title }),
+                reviewBody: r.content,
+              })),
+            }),
           }),
         }}
       />

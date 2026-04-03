@@ -1,6 +1,8 @@
 import type { MetadataRoute } from "next";
 import { getCities, getCategories } from "@/lib/data";
 import { placeholderBusinesses } from "@/lib/placeholder-data";
+import { guides } from "@/lib/guides-data";
+import { placeholderArticles } from "@/lib/placeholder-data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://eroplein.com";
@@ -20,9 +22,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/vergelijk`, lastModified: now, changeFrequency: "weekly", priority: 0.7 },
     { url: `${baseUrl}/faq`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
     { url: `${baseUrl}/gids`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${baseUrl}/over-ons`, lastModified: now, changeFrequency: "monthly", priority: 0.4 },
+    { url: `${baseUrl}/contact`, lastModified: now, changeFrequency: "monthly", priority: 0.4 },
+    { url: `${baseUrl}/privacy`, lastModified: now, changeFrequency: "monthly", priority: 0.3 },
+    { url: `${baseUrl}/voorwaarden`, lastModified: now, changeFrequency: "monthly", priority: 0.3 },
+    { url: `${baseUrl}/adverteren`, lastModified: now, changeFrequency: "monthly", priority: 0.5 },
   );
 
-  // City pages (42 cities)
+  // City pages
   cities.forEach((city) => {
     routes.push({
       url: `${baseUrl}/${city.slug}`,
@@ -32,7 +39,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   });
 
-  // City + Category pages (42 x 8 = 336 pages)
+  // City + Category pages
   cities.forEach((city) => {
     categories.forEach((cat) => {
       routes.push({
@@ -64,13 +71,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   });
 
-  // Business pages
+  // ALL business pages
   placeholderBusinesses.forEach((biz) => {
     routes.push({
       url: `${baseUrl}/${biz.city_slug}/${biz.primary_category}/${biz.slug}`,
       lastModified: biz.updated_at,
       changeFrequency: "weekly",
-      priority: 0.7,
+      priority: biz.is_featured ? 0.8 : 0.7,
     });
   });
 
@@ -85,6 +92,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.5,
     });
   });
+
+  // Guide pages
+  if (typeof guides !== "undefined" && Array.isArray(guides)) {
+    guides.forEach((guide: { slug: string }) => {
+      routes.push({
+        url: `${baseUrl}/gids/${guide.slug}`,
+        lastModified: now,
+        changeFrequency: "monthly",
+        priority: 0.6,
+      });
+    });
+  }
+
+  // News articles
+  if (typeof placeholderArticles !== "undefined" && Array.isArray(placeholderArticles)) {
+    placeholderArticles.forEach((article) => {
+      routes.push({
+        url: `${baseUrl}/nieuws/${article.slug}`,
+        lastModified: article.published_at,
+        changeFrequency: "monthly",
+        priority: 0.5,
+      });
+    });
+  }
 
   return routes;
 }

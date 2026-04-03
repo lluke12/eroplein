@@ -25,9 +25,24 @@ export async function generateMetadata({
   const article = getPlaceholderArticleBySlug(slug);
   if (!article) return {};
 
+  const url = `/nieuws/${article.slug}`;
   return {
     title: article.title,
     description: article.excerpt,
+    alternates: { canonical: url },
+    openGraph: {
+      title: article.title,
+      description: article.excerpt,
+      url,
+      type: "article",
+      publishedTime: article.published_at,
+      ...(article.image_url && { images: [{ url: article.image_url, alt: article.title }] }),
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: article.title,
+      description: article.excerpt,
+    },
   };
 }
 

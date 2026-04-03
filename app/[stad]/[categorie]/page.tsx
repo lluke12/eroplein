@@ -44,10 +44,15 @@ export async function generateMetadata({
   const category = getCategoryBySlug(categorie);
   if (!city || !category) return {};
 
+  const title = `${category.name} ${city.name} - Reviews & ervaringen`;
+  const description = `Beste ${category.name.toLowerCase()} in ${city.name}. Vergelijk beoordelingen, lees eerlijke reviews en vind de beste ${category.name.toLowerCase()} bij jou in de buurt.`;
+  const url = `/${city.slug}/${category.slug}`;
   return {
-    title: `${category.name} ${city.name} - Reviews & Ervaringen`,
-    description: `Beste ${category.name.toLowerCase()} in ${city.name}. Vergelijk beoordelingen, lees eerlijke reviews en vind de beste ${category.name.toLowerCase()} bij jou in de buurt.`,
-    alternates: { canonical: `https://eroplein.com/${city.slug}/${category.slug}` },
+    title,
+    description,
+    alternates: { canonical: url },
+    openGraph: { title, description, url, type: "website" },
+    twitter: { card: "summary_large_image", title, description },
   };
 }
 

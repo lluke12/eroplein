@@ -18,13 +18,19 @@ export const metadata: Metadata = {
   title: "Adverteren",
   description:
     "Vergroot je zichtbaarheid op Eroplein. Ontdek onze advertentiemogelijkheden voor escorts, clubs en andere erotische bedrijven.",
+  alternates: { canonical: "/adverteren" },
   openGraph: {
     title: "Adverteren op Eroplein",
     description:
       "Bereik duizenden bezoekers per maand. Ontdek onze advertentiepakketten voor erotische bedrijven.",
+    url: "/adverteren",
+    type: "website",
   },
-  alternates: {
-    canonical: "https://eroplein.com/adverteren",
+  twitter: {
+    card: "summary_large_image",
+    title: "Adverteren",
+    description:
+      "Vergroot je zichtbaarheid op Eroplein. Ontdek onze advertentiemogelijkheden voor escorts, clubs en andere erotische bedrijven.",
   },
 };
 

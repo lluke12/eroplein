@@ -9,13 +9,19 @@ export const metadata: Metadata = {
   title: "Contact",
   description:
     "Neem contact op met Eroplein. Vragen over het platform, adverteren of je bedrijfspagina? We helpen je graag.",
+  alternates: { canonical: "/contact" },
   openGraph: {
     title: "Contact | Eroplein",
     description:
       "Neem contact op met Eroplein voor vragen, feedback of samenwerkingen.",
+    url: "/contact",
+    type: "website",
   },
-  alternates: {
-    canonical: "https://eroplein.com/contact",
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact",
+    description:
+      "Neem contact op met Eroplein. Vragen over het platform, adverteren of je bedrijfspagina? We helpen je graag.",
   },
 };
 

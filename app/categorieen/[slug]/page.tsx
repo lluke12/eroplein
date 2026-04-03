@@ -33,9 +33,15 @@ export async function generateMetadata({
   const category = getCategoryBySlug(slug);
   if (!category) return {};
 
+  const title = `${category.name} in Nederland - Reviews & ervaringen`;
+  const description = `${category.description} Vind de beste ${category.name.toLowerCase()} in heel Nederland met eerlijke reviews en ervaringen.`;
+  const url = `/categorieen/${category.slug}`;
   return {
-    title: `${category.name} in Nederland`,
-    description: `${category.description} Vind de beste ${category.name.toLowerCase()} in heel Nederland met eerlijke reviews en ervaringen.`,
+    title,
+    description,
+    alternates: { canonical: url },
+    openGraph: { title, description, url, type: "website" },
+    twitter: { card: "summary_large_image", title, description },
   };
 }
 

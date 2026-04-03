@@ -43,7 +43,12 @@ export async function generateMetadata({
       modifiedTime: guide.updatedAt,
     },
     alternates: {
-      canonical: `https://eroplein.com/gids/${guide.slug}`,
+      canonical: `/gids/${guide.slug}`,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: guide.metaTitle,
+      description: guide.metaDescription,
     },
   };
 }

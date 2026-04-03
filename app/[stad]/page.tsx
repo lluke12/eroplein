@@ -40,10 +40,19 @@ export async function generateMetadata({
   if (!city) return {};
 
   const bizCount = getPlaceholderBusinessesByCity(stad).length;
+  const title = `Erotische diensten in ${city.name} - Reviews & beoordelingen`;
+  const description = `Bekijk ${bizCount > 0 ? bizCount + "+ " : ""}escorts, clubs, massage en meer in ${city.name}. Lees eerlijke reviews en ervaringen van echte bezoekers in ${city.name}, ${city.province}.`;
   return {
-    title: `${city.name} Erotisch - Reviews & Beoordelingen`,
-    description: `Bekijk ${bizCount > 0 ? bizCount + "+ " : ""}escorts, clubs, massage en meer in ${city.name}. Lees eerlijke reviews en ervaringen van echte bezoekers in ${city.name}, ${city.province}.`,
-    alternates: { canonical: `https://eroplein.com/${city.slug}` },
+    title,
+    description,
+    alternates: { canonical: `/${city.slug}` },
+    openGraph: {
+      title,
+      description,
+      url: `/${city.slug}`,
+      type: "website",
+    },
+    twitter: { card: "summary_large_image", title, description },
   };
 }
 
@@ -93,11 +102,12 @@ export default async function StadPage({ params }: StadPageProps) {
               {city.province}
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-pink-50 mb-4">
-              {city.name}
+              Erotische diensten in{" "}
+              <span className="text-fuchsia-400">{city.name}</span>
             </h1>
             <p className="text-lg text-gray-400 max-w-2xl">
-              Ontdek escorts, clubs, massage salons en meer in {city.name}. Lees
-              eerlijke ervaringen van echte bezoekers.
+              Ontdek {businesses.length > 0 ? `${businesses.length}+ ` : ""}escorts, clubs, massagesalons en meer in {city.name}, {city.province}. Lees
+              eerlijke ervaringen van echte bezoekers en vergelijk beoordelingen.
             </p>
           </div>
 

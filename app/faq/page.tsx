@@ -9,10 +9,19 @@ export const metadata: Metadata = {
   title: "Veelgestelde Vragen (FAQ)",
   description:
     "Antwoorden op veelgestelde vragen over escorts, clubs, privehuizen, erotische massage, ramen, seksshops, stripclubs en saunaclubs in Nederland.",
+  alternates: { canonical: "/faq" },
   openGraph: {
     title: "Veelgestelde Vragen | Eroplein",
     description:
       "Alles wat je wilt weten over de erotische branche in Nederland. Van kosten en veiligheid tot etiquette en regelgeving.",
+    url: "/faq",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Veelgestelde Vragen (FAQ)",
+    description:
+      "Antwoorden op veelgestelde vragen over escorts, clubs, privehuizen, erotische massage, ramen, seksshops, stripclubs en saunaclubs in Nederland.",
   },
 };
 

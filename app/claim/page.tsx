@@ -18,13 +18,19 @@ export const metadata: Metadata = {
   title: "Claim je Bedrijf",
   description:
     "Claim je bedrijfspagina op Eroplein. Beheer je vermelding, reageer op reviews en vergroot je zichtbaarheid.",
+  alternates: { canonical: "/claim" },
   openGraph: {
     title: "Claim je Bedrijf | Eroplein",
     description:
       "Neem de controle over je bedrijfspagina op Eroplein. Gratis te claimen.",
+    url: "/claim",
+    type: "website",
   },
-  alternates: {
-    canonical: "https://eroplein.com/claim",
+  twitter: {
+    card: "summary_large_image",
+    title: "Claim je Bedrijf",
+    description:
+      "Claim je bedrijfspagina op Eroplein. Beheer je vermelding, reageer op reviews en vergroot je zichtbaarheid.",
   },
 };
 

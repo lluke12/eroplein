@@ -15,6 +15,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://eroplein.com"),
   title: {
     default: "Eroplein - Reviews Erotische Diensten Nederland",
     template: "%s | Eroplein",
@@ -36,22 +37,16 @@ export const metadata: Metadata = {
     type: "website",
     locale: "nl_NL",
     siteName: "Eroplein",
-    title: "Eroplein - Reviews Erotische Diensten Nederland",
-    description:
-      "Eerlijke reviews en ervaringen over escorts, clubs, massage en meer in 42+ Nederlandse steden.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Eroplein - Reviews Erotische Diensten Nederland",
-    description:
-      "Eerlijke reviews en ervaringen over escorts, clubs, massage en meer in 42+ Nederlandse steden.",
   },
   robots: {
     index: true,
     follow: true,
   },
   alternates: {
-    canonical: "https://eroplein.com",
+    canonical: "/",
   },
 };
 

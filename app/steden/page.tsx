@@ -10,6 +10,20 @@ export const metadata: Metadata = {
   title: "Alle Steden",
   description:
     "Ontdek erotische bedrijven in 42+ Nederlandse steden. Van Amsterdam tot Maastricht — vind escorts, clubs, massage en meer bij jou in de buurt.",
+  alternates: { canonical: "/steden" },
+  openGraph: {
+    title: "Alle Steden",
+    description:
+      "Ontdek erotische bedrijven in 42+ Nederlandse steden. Van Amsterdam tot Maastricht — vind escorts, clubs, massage en meer bij jou in de buurt.",
+    url: "/steden",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Alle Steden",
+    description:
+      "Ontdek erotische bedrijven in 42+ Nederlandse steden. Van Amsterdam tot Maastricht — vind escorts, clubs, massage en meer bij jou in de buurt.",
+  },
 };
 
 export default function StedenPage() {

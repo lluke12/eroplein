@@ -10,6 +10,20 @@ export const metadata: Metadata = {
   title: "Nieuws",
   description:
     "Het laatste nieuws en updates over de erotische scene in Nederland. Tips, guides en trending onderwerpen.",
+  alternates: { canonical: "/nieuws" },
+  openGraph: {
+    title: "Nieuws",
+    description:
+      "Het laatste nieuws en updates over de erotische scene in Nederland. Tips, guides en trending onderwerpen.",
+    url: "/nieuws",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Nieuws",
+    description:
+      "Het laatste nieuws en updates over de erotische scene in Nederland. Tips, guides en trending onderwerpen.",
+  },
 };
 
 export default function NieuwsPage() {

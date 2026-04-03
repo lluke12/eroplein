@@ -10,16 +10,21 @@ export const metadata: Metadata = {
   title: "Gidsen & Informatie | Eroplein",
   description:
     "Praktische gidsen over escorts, parenclubs, raamprostitutie en meer. Prijzen, regels, etiquette en tips voor beginners in Nederland.",
+  alternates: { canonical: "/gids" },
   openGraph: {
     title: "Gidsen & Informatie | Eroplein",
     description:
       "Praktische gidsen over escorts, parenclubs, raamprostitutie en meer. Prijzen, regels, etiquette en tips voor beginners.",
+    url: "/gids",
     type: "website",
     locale: "nl_NL",
     siteName: "Eroplein",
   },
-  alternates: {
-    canonical: "https://eroplein.com/gids",
+  twitter: {
+    card: "summary_large_image",
+    title: "Gidsen & Informatie | Eroplein",
+    description:
+      "Praktische gidsen over escorts, parenclubs, raamprostitutie en meer. Prijzen, regels, etiquette en tips voor beginners in Nederland.",
   },
 };
 

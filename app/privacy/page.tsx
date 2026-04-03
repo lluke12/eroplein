@@ -7,13 +7,19 @@ export const metadata: Metadata = {
   title: "Privacybeleid",
   description:
     "Lees hoe Eroplein omgaat met je persoonsgegevens. Ons privacybeleid conform de AVG/GDPR.",
+  alternates: { canonical: "/privacy" },
   openGraph: {
     title: "Privacybeleid | Eroplein",
     description:
       "Hoe Eroplein omgaat met persoonsgegevens, cookies en je rechten onder de AVG.",
+    url: "/privacy",
+    type: "website",
   },
-  alternates: {
-    canonical: "https://eroplein.com/privacy",
+  twitter: {
+    card: "summary_large_image",
+    title: "Privacybeleid",
+    description:
+      "Lees hoe Eroplein omgaat met je persoonsgegevens. Ons privacybeleid conform de AVG/GDPR.",
   },
 };
 

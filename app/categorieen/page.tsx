@@ -9,6 +9,20 @@ export const metadata: Metadata = {
   title: "Categorieën",
   description:
     "Blader door alle categorieën op Eroplein. Escorts, privéhuizen, clubs, erotische massage, ramen, seksshops, stripclubs en saunaclubs.",
+  alternates: { canonical: "/categorieen" },
+  openGraph: {
+    title: "Categorieën",
+    description:
+      "Blader door alle categorieën op Eroplein. Escorts, privéhuizen, clubs, erotische massage, ramen, seksshops, stripclubs en saunaclubs.",
+    url: "/categorieen",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Categorieën",
+    description:
+      "Blader door alle categorieën op Eroplein. Escorts, privéhuizen, clubs, erotische massage, ramen, seksshops, stripclubs en saunaclubs.",
+  },
 };
 
 export default function CategorieenPage() {

@@ -15,6 +15,20 @@ export const metadata: Metadata = {
   title: "Vergelijk Bedrijven",
   description:
     "Vergelijk erotische bedrijven naast elkaar. Bekijk scores, reviews, prijzen en meer om de beste keuze te maken.",
+  alternates: { canonical: "/vergelijk" },
+  openGraph: {
+    title: "Vergelijk Bedrijven",
+    description:
+      "Vergelijk erotische bedrijven naast elkaar. Bekijk scores, reviews, prijzen en meer om de beste keuze te maken.",
+    url: "/vergelijk",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Vergelijk Bedrijven",
+    description:
+      "Vergelijk erotische bedrijven naast elkaar. Bekijk scores, reviews, prijzen en meer om de beste keuze te maken.",
+  },
 };
 
 function PriceIndicator({ range }: { range: number }) {
