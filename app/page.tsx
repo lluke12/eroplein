@@ -36,17 +36,18 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl sm:text-5xl md:text-6xl leading-[0.95] font-bold tracking-tight mb-6">
-              <span className="text-white">Echte </span>
-              <span className="text-fuchsia-400">ervaringen</span>
-              <span className="text-white">,</span>
+              <span className="text-white">Reviews </span>
+              <span className="text-fuchsia-400">escorts</span>
+              <span className="text-white">, </span>
+              <span className="text-fuchsia-400">clubs</span>
               <br />
-              <span className="text-white">eerlijke </span>
-              <span className="text-fuchsia-400">reviews</span>
+              <span className="text-white">& meer in </span>
+              <span className="text-fuchsia-400">Nederland</span>
             </h1>
 
             <p className="text-base md:text-lg text-gray-400 leading-relaxed max-w-xl mx-auto mb-10">
-              Lees ervaringen van echte bezoekers en deel jouw verhaal.
-              Escorts, clubs, massage en meer in 42+ steden.
+              Eerlijke ervaringen van echte bezoekers. Vergelijk escorts, clubs,
+              massage en meer in 42+ steden en maak de beste keuze.
             </p>
 
             <SearchBar cities={allCities} />
@@ -409,8 +410,7 @@ export default function HomePage() {
             "@type": "Organization",
             name: "Eroplein",
             url: "https://www.eroplein.com",
-            logo: "https://www.eroplein.com/logo.png",
-            sameAs: [],
+            logo: "https://www.eroplein.com/icon.svg",
           }),
         }}
       />

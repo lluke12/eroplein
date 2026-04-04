@@ -11,7 +11,7 @@ interface BreadcrumbsProps {
 }
 
 export function Breadcrumbs({ items }: BreadcrumbsProps) {
-  const baseUrl = "https://eroplein.com";
+  const baseUrl = "https://www.eroplein.com";
 
   const schemaItems = [
     {
