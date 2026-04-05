@@ -85,28 +85,6 @@ export const realBusinesses: Business[] = [
     updated_at: "2026-03-01",
   },
   {
-    id: "real-004",
-    name: "Bananenbar",
-    slug: "bananenbar",
-    city_slug: "amsterdam",
-    category_slugs: ["stripclubs"],
-    primary_category: "stripclubs",
-    description:
-      "De Bananenbar is de bekendste topless bar van Amsterdam, gelegen in het hart van de Wallen. Al decennialang vermaard om de gedurfde live shows en levendige sfeer. Een iconische bestemming voor toeristen en locals die het nachtleven van de Red Light District willen ervaren.",
-    short_description:
-      "Iconische topless bar in de Wallen, beroemd om gedurfde live shows en levendige sfeer.",
-    address: "De Wallen, Amsterdam",
-    postal_code: "1012 AB",
-    image_url: getCategoryImage("stripclubs", 1),
-    average_rating: 3.6,
-    review_count: 487,
-    price_range: 3,
-    is_verified: true,
-    is_featured: false,
-    created_at: "2025-01-01",
-    updated_at: "2026-03-01",
-  },
-  {
     id: "real-005",
     name: "Casa Rosso",
     slug: "casa-rosso",
@@ -120,7 +98,7 @@ export const realBusinesses: Business[] = [
     address: "Oudezijds Achterburgwal, Amsterdam",
     postal_code: "1012 DS",
     website: "https://www.casarosso.nl",
-    image_url: getCategoryImage("stripclubs", 2),
+    image_url: getCategoryImage("stripclubs", 1),
     average_rating: 3.8,
     review_count: 621,
     price_range: 3,
@@ -155,28 +133,6 @@ export const realBusinesses: Business[] = [
     updated_at: "2026-03-01",
   },
   {
-    id: "real-007",
-    name: "Jan Bik",
-    slug: "jan-bik",
-    city_slug: "amsterdam",
-    category_slugs: ["privehuizen"],
-    primary_category: "privehuizen",
-    description:
-      "Jan Bik is een van de grootste bordeelketens van Nederland met meerdere vestigingen. De Amsterdamse locatie aan de Buitenwieringenstraat is dagelijks geopend van 12:00 tot 06:00. Staat bekend als een van de meest betaalbare seksclubs van Amsterdam.",
-    short_description:
-      "Bekende bordeelketen, een van de meest betaalbare seksclubs van Amsterdam.",
-    address: "Buitenwieringenstraat 3-5, Amsterdam",
-    postal_code: "1013 GH",
-    image_url: getCategoryImage("privehuizen", 1),
-    average_rating: 3.5,
-    review_count: 234,
-    price_range: 1,
-    is_verified: true,
-    is_featured: false,
-    created_at: "2025-01-01",
-    updated_at: "2026-03-01",
-  },
-  {
     id: "real-008",
     name: "Asmara",
     slug: "asmara",
@@ -191,7 +147,7 @@ export const realBusinesses: Business[] = [
     postal_code: "1056 JT",
     phone: "+31 20 618 4069",
     website: "https://www.bordello.amsterdam",
-    image_url: getCategoryImage("privehuizen", 2),
+    image_url: getCategoryImage("privehuizen", 1),
     average_rating: 4.2,
     review_count: 198,
     price_range: 3,
@@ -297,54 +253,6 @@ export const realBusinesses: Business[] = [
     updated_at: "2026-03-01",
   },
   {
-    id: "real-013",
-    name: "Mail & Female",
-    slug: "mail-and-female",
-    city_slug: "amsterdam",
-    category_slugs: ["seksshops"],
-    primary_category: "seksshops",
-    description:
-      "Mail & Female is een innovatieve seksshop gericht op vrouwen, gelegen aan de Nieuwe Vijzelstraat in Amsterdam. De winkel onderscheidt zich door een toegankelijke, niet-intimiderende sfeer en een zorgvuldig geselecteerd assortiment.",
-    short_description:
-      "Innovatieve seksshop voor vrouwen aan de Nieuwe Vijzelstraat met een toegankelijke sfeer.",
-    address: "Nieuwe Vijzelstraat, Amsterdam",
-    postal_code: "1017 HN",
-    image_url: getCategoryImage("seksshops", 2),
-    average_rating: 4.3,
-    review_count: 145,
-    price_range: 2,
-    is_verified: true,
-    is_featured: false,
-    created_at: "2025-01-01",
-    updated_at: "2026-03-01",
-  },
-
-  // === RAMEN ===
-  {
-    id: "real-014",
-    name: "De Wallen",
-    slug: "de-wallen",
-    city_slug: "amsterdam",
-    category_slugs: ["ramen"],
-    primary_category: "ramen",
-    description:
-      "De Wallen is het beroemdste en grootste raamprostitutiegebied van Amsterdam en Nederland. Gelegen in het historische centrum omvat het gebied de Oudezijds Achterburgwal en omliggende straten. Een iconisch deel van Amsterdam met honderden ramen.",
-    short_description:
-      "Het beroemdste raamprostitutiegebied van Nederland in het historische centrum van Amsterdam.",
-    address: "Oudezijds Achterburgwal, Amsterdam",
-    postal_code: "1012 DS",
-    image_url: getCategoryImage("ramen", 0),
-    average_rating: 3.9,
-    review_count: 1023,
-    price_range: 2,
-    is_verified: true,
-    is_featured: true,
-    created_at: "2025-01-01",
-    updated_at: "2026-03-01",
-  },
-
-  // === EROTISCHE MASSAGE ===
-  {
     id: "real-015",
     name: "Samaya Kashmiri Tantra",
     slug: "samaya-kashmiri-tantra",
@@ -412,7 +320,7 @@ export const realBusinesses: Business[] = [
     address: "Rotterdam Centrum",
     postal_code: "3011 AB",
     website: "https://www.stripclub-bonton.com",
-    image_url: getCategoryImage("stripclubs", 3),
+    image_url: getCategoryImage("stripclubs", 2),
     average_rating: 4.2,
     review_count: 134,
     price_range: 4,
@@ -421,30 +329,6 @@ export const realBusinesses: Business[] = [
     created_at: "2025-01-01",
     updated_at: "2026-03-01",
   },
-  {
-    id: "real-018",
-    name: "Club OQ",
-    slug: "club-oq",
-    city_slug: "rotterdam",
-    category_slugs: ["stripclubs", "clubs"],
-    primary_category: "stripclubs",
-    description:
-      "Club OQ is een unieke en exclusieve nachtclub in het centrum van Rotterdam aan de 's-Gravendijkwal. Biedt een mix van entertainment, shows en een exclusieve sfeer voor een volwassen publiek.",
-    short_description:
-      "Exclusieve nachtclub met shows en entertainment in het centrum van Rotterdam.",
-    address: "'s-Gravendijkwal 115b, Rotterdam",
-    postal_code: "3021 EK",
-    image_url: getCategoryImage("stripclubs", 4),
-    average_rating: 3.9,
-    review_count: 167,
-    price_range: 3,
-    is_verified: true,
-    is_featured: false,
-    created_at: "2025-01-01",
-    updated_at: "2026-03-01",
-  },
-
-  // === PRIVEHUIZEN ===
   {
     id: "real-019",
     name: "Cristal Prive",
@@ -460,7 +344,7 @@ export const realBusinesses: Business[] = [
     postal_code: "3081 KE",
     phone: "+31 10 210 8368",
     website: "https://cristalprive.nl",
-    image_url: getCategoryImage("privehuizen", 3),
+    image_url: getCategoryImage("privehuizen", 2),
     average_rating: 4.0,
     review_count: 198,
     price_range: 2,
@@ -469,52 +353,6 @@ export const realBusinesses: Business[] = [
     created_at: "2025-01-01",
     updated_at: "2026-03-01",
   },
-  {
-    id: "real-020",
-    name: "Body Touch",
-    slug: "body-touch",
-    city_slug: "rotterdam",
-    category_slugs: ["privehuizen", "erotische-massage"],
-    primary_category: "privehuizen",
-    description:
-      "Body Touch is een seksclub en privehuis gelegen aan de Mijnsherenlaan in Rotterdam. Biedt diverse diensten waaronder priveontvangst en erotische massage in een discrete setting.",
-    short_description:
-      "Seksclub en privehuis aan de Mijnsherenlaan in Rotterdam met diverse diensten.",
-    address: "Mijnsherenlaan 113a, Rotterdam",
-    postal_code: "3081 GC",
-    image_url: getCategoryImage("privehuizen", 4),
-    average_rating: 3.7,
-    review_count: 112,
-    price_range: 2,
-    is_verified: true,
-    is_featured: false,
-    created_at: "2025-01-01",
-    updated_at: "2026-03-01",
-  },
-  {
-    id: "real-021",
-    name: "Le Cave",
-    slug: "le-cave",
-    city_slug: "rotterdam",
-    category_slugs: ["privehuizen"],
-    primary_category: "privehuizen",
-    description:
-      "Le Cave is een seksclub gelegen aan de Scheepstimmerlaan in Rotterdam. Biedt een intieme sfeer en professionele service in een discrete omgeving in het centrum van de stad.",
-    short_description:
-      "Seksclub aan de Scheepstimmerlaan in Rotterdam met intieme sfeer en discrete service.",
-    address: "Scheepstimmerlaan 23, Rotterdam",
-    postal_code: "3011 BS",
-    image_url: getCategoryImage("privehuizen", 5),
-    average_rating: 3.8,
-    review_count: 87,
-    price_range: 2,
-    is_verified: true,
-    is_featured: false,
-    created_at: "2025-01-01",
-    updated_at: "2026-03-01",
-  },
-
-  // === EROTISCHE MASSAGE ===
   {
     id: "real-022",
     name: "IsabellaStella",
@@ -584,7 +422,7 @@ export const realBusinesses: Business[] = [
     postal_code: "2513 CS",
     phone: "+31 70 360 7996",
     website: "https://www.mayfair.nl",
-    image_url: getCategoryImage("stripclubs", 5),
+    image_url: getCategoryImage("stripclubs", 3),
     average_rating: 4.0,
     review_count: 198,
     price_range: 4,
@@ -609,7 +447,7 @@ export const realBusinesses: Business[] = [
     address: "Zeeheldenkwartier, Den Haag",
     postal_code: "2518 AB",
     website: "https://www.stoutprive.nl",
-    image_url: getCategoryImage("privehuizen", 6),
+    image_url: getCategoryImage("privehuizen", 3),
     average_rating: 4.2,
     review_count: 145,
     price_range: 3,
@@ -618,150 +456,6 @@ export const realBusinesses: Business[] = [
     created_at: "2025-01-01",
     updated_at: "2026-03-01",
   },
-  {
-    id: "real-026",
-    name: "Maison Monty",
-    slug: "maison-monty",
-    city_slug: "den-haag",
-    category_slugs: ["privehuizen"],
-    primary_category: "privehuizen",
-    description:
-      "Maison Monty is een privehuis in Rijswijk, vlakbij Den Haag. Biedt discrete ontvangst en professionele service in een comfortabele omgeving.",
-    short_description:
-      "Privehuis in Rijswijk bij Den Haag met discrete ontvangst en professionele service.",
-    address: "Rijswijk (bij Den Haag)",
-    postal_code: "2288 AB",
-    image_url: getCategoryImage("privehuizen", 7),
-    average_rating: 3.8,
-    review_count: 89,
-    price_range: 2,
-    is_verified: true,
-    is_featured: false,
-    created_at: "2025-01-01",
-    updated_at: "2026-03-01",
-  },
-
-  // === RAMEN ===
-  {
-    id: "real-027",
-    name: "Doubletstraat Ramen",
-    slug: "doubletstraat-ramen",
-    city_slug: "den-haag",
-    category_slugs: ["ramen"],
-    primary_category: "ramen",
-    description:
-      "De Doubletstraat in het oude centrum van Den Haag is een van de twee raamprostitutiegebieden van de stad, met circa 190 ramen. Een gevestigd onderdeel van het Haagse nachtleven en een van de grotere raambuurten van Nederland.",
-    short_description:
-      "Raamprostitutiegebied in het oude centrum van Den Haag met circa 190 ramen.",
-    address: "Doubletstraat, Den Haag",
-    postal_code: "2511 AB",
-    image_url: getCategoryImage("ramen", 1),
-    average_rating: 3.7,
-    review_count: 234,
-    price_range: 2,
-    is_verified: true,
-    is_featured: false,
-    created_at: "2025-01-01",
-    updated_at: "2026-03-01",
-  },
-  {
-    id: "real-028",
-    name: "Geleenstraat Ramen",
-    slug: "geleenstraat-ramen",
-    city_slug: "den-haag",
-    category_slugs: ["ramen"],
-    primary_category: "ramen",
-    description:
-      "De Geleenstraat en aangrenzende Hunsestraat in de Rivierenbuurt vormen het tweede raamprostitutiegebied van Den Haag, met circa 140 ramen. Een bekend gebied voor raamprostitutie in de stad.",
-    short_description:
-      "Raamprostitutiegebied in de Rivierenbuurt van Den Haag met circa 140 ramen.",
-    address: "Geleenstraat / Hunsestraat, Den Haag",
-    postal_code: "2522 AB",
-    image_url: getCategoryImage("ramen", 2),
-    average_rating: 3.5,
-    review_count: 156,
-    price_range: 2,
-    is_verified: true,
-    is_featured: false,
-    created_at: "2025-01-01",
-    updated_at: "2026-03-01",
-  },
-
-  // ────────────────────────────────────────────────────────────────────────────
-  // UTRECHT
-  // ────────────────────────────────────────────────────────────────────────────
-
-  // === CLUBS / PARENCLUBS ===
-  {
-    id: "real-029",
-    name: "Club Organza",
-    slug: "club-organza",
-    city_slug: "utrecht",
-    category_slugs: ["clubs"],
-    primary_category: "clubs",
-    description:
-      "Club Organza in Breukelen (bij Utrecht) is geen traditionele parenclub maar eerder een erotische discotheek. Bekend om de afterparty's zoals de Morning Mission op zondag vanaf 06:00 uur. Een populaire bestemming voor het uitgaanspubliek.",
-    short_description:
-      "Erotische discotheek bij Utrecht, beroemd om afterparty's en de Morning Mission.",
-    address: "Laan van Duuring 1, Breukelen",
-    postal_code: "3621 LH",
-    image_url: getCategoryImage("clubs", 3),
-    average_rating: 4.1,
-    review_count: 234,
-    price_range: 3,
-    is_verified: true,
-    is_featured: true,
-    created_at: "2025-01-01",
-    updated_at: "2026-03-01",
-  },
-
-  // === STRIPCLUBS / PRIVEHUIZEN ===
-  {
-    id: "real-030",
-    name: "La Cloche",
-    slug: "la-cloche",
-    city_slug: "utrecht",
-    category_slugs: ["privehuizen", "stripclubs"],
-    primary_category: "privehuizen",
-    description:
-      "La Cloche is geopend in 2018 op de locatie van de oudste gentlemen's club van Utrecht aan de Amsterdamsestraatweg. Het huis beschikt over tien kamers met verschillende thema's, allemaal voorzien van bad, doucheruimte en spiegels.",
-    short_description:
-      "Privehuis op de plek van de oudste gentlemen's club van Utrecht, met tien themakamers.",
-    address: "Amsterdamsestraatweg 287D, Utrecht",
-    postal_code: "3551 CE",
-    image_url: getCategoryImage("privehuizen", 8),
-    average_rating: 4.0,
-    review_count: 112,
-    price_range: 3,
-    is_verified: true,
-    is_featured: false,
-    created_at: "2025-01-01",
-    updated_at: "2026-03-01",
-  },
-  {
-    id: "real-031",
-    name: "Utrecht Prive",
-    slug: "utrecht-prive",
-    city_slug: "utrecht",
-    category_slugs: ["privehuizen"],
-    primary_category: "privehuizen",
-    description:
-      "Utrecht Prive is een gevestigd privehuis aan de Vleutenseweg in Utrecht. Biedt discrete ontvangst met diverse dames in een comfortabele omgeving.",
-    short_description:
-      "Gevestigd privehuis aan de Vleutenseweg in Utrecht met discrete ontvangst.",
-    address: "Vleutenseweg 249, Utrecht",
-    postal_code: "3532 HE",
-    image_url: getCategoryImage("privehuizen", 9),
-    average_rating: 3.7,
-    review_count: 78,
-    price_range: 2,
-    is_verified: true,
-    is_featured: false,
-    created_at: "2025-01-01",
-    updated_at: "2026-03-01",
-  },
-
-  // === ESCORTS ===
   {
     id: "real-032",
     name: "Velvet Elegance",
@@ -805,7 +499,7 @@ export const realBusinesses: Business[] = [
     address: "Eindhoven Centrum",
     postal_code: "5611 AB",
     website: "https://www.rouge-eindhoven.nl",
-    image_url: getCategoryImage("stripclubs", 6),
+    image_url: getCategoryImage("stripclubs", 4),
     average_rating: 3.8,
     review_count: 98,
     price_range: 3,
@@ -830,7 +524,7 @@ export const realBusinesses: Business[] = [
     address: "Eindhoven",
     postal_code: "5611 AB",
     website: "https://cupidoeindhoven.nl",
-    image_url: getCategoryImage("seksshops", 3),
+    image_url: getCategoryImage("seksshops", 2),
     average_rating: 4.0,
     review_count: 87,
     price_range: 2,
@@ -841,34 +535,6 @@ export const realBusinesses: Business[] = [
   },
 
   // === CLUBS (NABIJ EINDHOVEN) ===
-  {
-    id: "real-035",
-    name: "Inn Joy",
-    slug: "inn-joy",
-    city_slug: "eindhoven",
-    category_slugs: ["clubs", "saunaclubs"],
-    primary_category: "clubs",
-    description:
-      "Inn Joy is een parenclub in Budel, op 21 kilometer van Eindhoven, gerund door Ton en Nans. De club fungeert als zowel parenclub als gayclub met diverse thema-avonden waaronder Gay & Bi Party, All Mixed Up Friday en Steamy Sunday. Beschikt over 6 erotische kamers en een sauna.",
-    short_description:
-      "Parenclub bij Eindhoven in Budel met diverse thema-avonden en saunafaciliteiten.",
-    address: "Budel (bij Eindhoven)",
-    postal_code: "6021 AB",
-    image_url: getCategoryImage("clubs", 4),
-    average_rating: 4.0,
-    review_count: 145,
-    price_range: 2,
-    is_verified: true,
-    is_featured: false,
-    created_at: "2025-01-01",
-    updated_at: "2026-03-01",
-  },
-
-  // ────────────────────────────────────────────────────────────────────────────
-  // GRONINGEN
-  // ────────────────────────────────────────────────────────────────────────────
-
-  // === PRIVEHUIZEN / SEXCLUBS ===
   {
     id: "real-036",
     name: "Gold Rianda",
@@ -883,7 +549,7 @@ export const realBusinesses: Business[] = [
     address: "Hoofdweg 73, Nieuw Beerta",
     postal_code: "9687 PK",
     website: "https://www.goldrianda.nl",
-    image_url: getCategoryImage("privehuizen", 10),
+    image_url: getCategoryImage("privehuizen", 4),
     average_rating: 4.1,
     review_count: 167,
     price_range: 3,
@@ -936,7 +602,7 @@ export const realBusinesses: Business[] = [
     postal_code: "4715 SC",
     phone: "+31 165 343 280",
     website: "https://www.parenclub-mystique.nl",
-    image_url: getCategoryImage("clubs", 5),
+    image_url: getCategoryImage("clubs", 3),
     average_rating: 4.2,
     review_count: 189,
     price_range: 3,
@@ -986,7 +652,7 @@ export const realBusinesses: Business[] = [
     address: "Heuvel 48-A, Tilburg",
     postal_code: "5038 CL",
     website: "https://de-nacht.nl",
-    image_url: getCategoryImage("stripclubs", 7),
+    image_url: getCategoryImage("stripclubs", 5),
     average_rating: 3.7,
     review_count: 156,
     price_range: 2,
@@ -997,30 +663,6 @@ export const realBusinesses: Business[] = [
   },
 
   // === NIJMEGEN ===
-  {
-    id: "real-041",
-    name: "Ramen Nieuwe Markt",
-    slug: "ramen-nieuwe-markt-nijmegen",
-    city_slug: "nijmegen",
-    category_slugs: ["ramen"],
-    primary_category: "ramen",
-    description:
-      "De raamprostitutie in Nijmegen vindt plaats aan de Nieuwe Markt, ten noorden van het Kronenburgerpark. Bedrijfsvoering is alleen toegestaan in panden met huisnummers 24 tot en met 40 (even nummers). Een van de bekendere raambuurten buiten de Randstad.",
-    short_description:
-      "Raamprostitutiegebied aan de Nieuwe Markt in Nijmegen, ten noorden van het Kronenburgerpark.",
-    address: "Nieuwe Markt 24-40, Nijmegen",
-    postal_code: "6511 AB",
-    image_url: getCategoryImage("ramen", 3),
-    average_rating: 3.6,
-    review_count: 89,
-    price_range: 2,
-    is_verified: true,
-    is_featured: false,
-    created_at: "2025-01-01",
-    updated_at: "2026-03-01",
-  },
-
-  // === ROERMOND (LIMBURG) - SAUNACLUB ===
   {
     id: "real-042",
     name: "Saunaclub YinYang",
@@ -1060,7 +702,7 @@ export const realBusinesses: Business[] = [
     address: "Beesel (Limburg)",
     postal_code: "5954 AB",
     website: "https://www.kasteelwaterloo.nl",
-    image_url: getCategoryImage("clubs", 6),
+    image_url: getCategoryImage("clubs", 4),
     average_rating: 4.4,
     review_count: 198,
     price_range: 3,
@@ -1085,7 +727,7 @@ export const realBusinesses: Business[] = [
     address: "Heerewaardensestraat 40, Heerewaarden",
     postal_code: "6624 KK",
     website: "https://www.clublebaron.nl",
-    image_url: getCategoryImage("clubs", 7),
+    image_url: getCategoryImage("clubs", 5),
     average_rating: 3.9,
     review_count: 134,
     price_range: 2,
@@ -1110,7 +752,7 @@ export const realBusinesses: Business[] = [
     address: "Kerkrade, Limburg",
     postal_code: "6461 AB",
     website: "https://www.privehuisyvonne.com",
-    image_url: getCategoryImage("privehuizen", 11),
+    image_url: getCategoryImage("privehuizen", 5),
     average_rating: 4.1,
     review_count: 112,
     price_range: 2,
@@ -1147,76 +789,6 @@ export const realBusinesses: Business[] = [
 
   // === AMSTERDAM - EXTRA ===
   {
-    id: "real-047",
-    name: "Moulin Rouge Amsterdam",
-    slug: "moulin-rouge-amsterdam",
-    city_slug: "amsterdam",
-    category_slugs: ["stripclubs"],
-    primary_category: "stripclubs",
-    description:
-      "Moulin Rouge Amsterdam is een intiem erotisch theater in de Red Light District, op 10 minuten lopen van Centraal Station. De shows hebben een meer theatrale sfeer met minder publieksinteractie. Verwelkomt ook vrouwelijke bezoekers.",
-    short_description:
-      "Intiem erotisch theater in de Red Light District met theatrale live shows.",
-    address: "De Wallen, Amsterdam",
-    postal_code: "1012 AB",
-    image_url: getCategoryImage("stripclubs", 8),
-    average_rating: 3.7,
-    review_count: 345,
-    price_range: 3,
-    is_verified: true,
-    is_featured: false,
-    created_at: "2025-01-01",
-    updated_at: "2026-03-01",
-  },
-  {
-    id: "real-048",
-    name: "Hospital Bar",
-    slug: "hospital-bar",
-    city_slug: "amsterdam",
-    category_slugs: ["stripclubs"],
-    primary_category: "stripclubs",
-    description:
-      "Hospital Bar is een originele stripclub in de Red Light District waar de dames verkleed zijn als verpleegsters. Bekend om het fantastische interieur en voornamelijk gericht op mannen en vrijgezellenfeesten.",
-    short_description:
-      "Originele stripclub in de Wallen met ziekenhuisthema en verpleegster-outfits.",
-    address: "De Wallen, Amsterdam",
-    postal_code: "1012 AB",
-    image_url: getCategoryImage("stripclubs", 9),
-    average_rating: 3.5,
-    review_count: 278,
-    price_range: 3,
-    is_verified: true,
-    is_featured: false,
-    created_at: "2025-01-01",
-    updated_at: "2026-03-01",
-  },
-
-  // === NIEUWEGEIN (BIJ UTRECHT) ===
-  {
-    id: "real-049",
-    name: "Dynamite Prive",
-    slug: "dynamite-prive",
-    city_slug: "utrecht",
-    category_slugs: ["privehuizen"],
-    primary_category: "privehuizen",
-    description:
-      "Dynamite Prive is een privehuis in Nieuwegein, vlakbij Utrecht. Biedt discrete ontvangst en diverse diensten in een comfortabele omgeving.",
-    short_description:
-      "Privehuis in Nieuwegein bij Utrecht met discrete ontvangst en comfortabele kamers.",
-    address: "Nieuwegein (bij Utrecht)",
-    postal_code: "3430 AB",
-    image_url: getCategoryImage("privehuizen", 12),
-    average_rating: 3.6,
-    review_count: 67,
-    price_range: 2,
-    is_verified: true,
-    is_featured: false,
-    created_at: "2025-01-01",
-    updated_at: "2026-03-01",
-  },
-
-  // === AMERSFOORT (BIJ UTRECHT) ===
-  {
     id: "real-050",
     name: "Parenclub Monique",
     slug: "parenclub-monique",
@@ -1230,7 +802,7 @@ export const realBusinesses: Business[] = [
     address: "Regio Utrecht",
     postal_code: "3800 AB",
     website: "https://parenclub-monique.nl",
-    image_url: getCategoryImage("clubs", 8),
+    image_url: getCategoryImage("clubs", 6),
     average_rating: 4.2,
     review_count: 178,
     price_range: 3,

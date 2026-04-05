@@ -74,27 +74,27 @@ export default function HomePage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-white">
-                2.847
+                {placeholderBusinesses.length}
               </div>
               <div className="text-sm text-gray-400 mt-1">Bedrijven</div>
             </div>
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-white">
-                18.3K
-              </div>
-              <div className="text-sm text-gray-400 mt-1">Reviews</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-white">
-                42
+                {allCities.length}
               </div>
               <div className="text-sm text-gray-400 mt-1">Steden</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-fuchsia-400">
-                4.8
+              <div className="text-3xl md:text-4xl font-bold text-white">
+                {categories.length}
               </div>
-              <div className="text-sm text-gray-400 mt-1">Gem. Score</div>
+              <div className="text-sm text-gray-400 mt-1">Categorieën</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-fuchsia-400">
+                100%
+              </div>
+              <div className="text-sm text-gray-400 mt-1">Geverifieerd</div>
             </div>
           </div>
         </div>
