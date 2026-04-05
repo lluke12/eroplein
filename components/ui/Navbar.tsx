@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { LogIn, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
 
 const navItems = [
@@ -52,10 +52,6 @@ export function Navbar() {
 
         {/* Right side */}
         <div className="flex items-center gap-3">
-          <button className="hidden md:flex items-center gap-2 px-5 py-2.5 rounded-full border border-white/10 text-white/70 text-sm font-medium hover:bg-white/5 hover:text-white transition-all">
-            <LogIn className="w-4 h-4" />
-            Login
-          </button>
           <Link
             href="/schrijf-review"
             className="hidden md:block px-5 py-2.5 rounded-full bg-fuchsia-500 text-white text-sm font-medium hover:bg-fuchsia-600 transition-colors active:scale-95"
