@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/api/", "/schrijf-review", "/claim"],
+        disallow: ["/api/", "/admin", "/admin/*", "/schrijf-review", "/claim"],
       },
     ],
     sitemap: "https://www.eroplein.com/sitemap.xml",
