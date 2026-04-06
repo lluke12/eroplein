@@ -1740,7 +1740,7 @@ export const realBusinesses: Business[] = [
   {
     id: "excel-146",
     name: "Escort Service Venlo",
-    slug: "escort-service-venlo",
+    slug: "escort-service-venlo-2",
     city_slug: "venlo",
     category_slugs: ["escorts"],
     primary_category: "escorts",
@@ -1782,7 +1782,7 @@ export const realBusinesses: Business[] = [
   {
     id: "excel-148",
     name: "Escort Service Breda",
-    slug: "escort-service-breda",
+    slug: "escort-service-breda-2",
     city_slug: "breda",
     category_slugs: ["escorts"],
     primary_category: "escorts",
@@ -1803,7 +1803,7 @@ export const realBusinesses: Business[] = [
   {
     id: "excel-149",
     name: "Escort Service Helmond",
-    slug: "escort-service-helmond",
+    slug: "escort-service-helmond-2",
     city_slug: "helmond",
     category_slugs: ["escorts"],
     primary_category: "escorts",

@@ -10,9 +10,15 @@ const Users: CollectionConfig = {
   slug: "users",
   auth: true,
   admin: { useAsTitle: "email", group: "Instellingen" },
+  access: {
+    read: ({ req }) => Boolean(req.user),
+    create: ({ req }) => Boolean(req.user),
+    update: ({ req }) => Boolean(req.user),
+    delete: ({ req }) => Boolean(req.user),
+  },
   fields: [
     { name: "name", type: "text", label: "Naam" },
-    { name: "role", type: "select", label: "Rol", defaultValue: "admin", options: [{ label: "Admin", value: "admin" }, { label: "Redacteur", value: "editor" }] },
+    { name: "role", type: "select", label: "Rol", defaultValue: "admin", required: false, options: [{ label: "Admin", value: "admin" }, { label: "Redacteur", value: "editor" }] },
   ],
 };
 
