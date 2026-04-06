@@ -144,6 +144,7 @@ const Media: CollectionConfig = {
 // ── Config ──────────────────────────────────────────────────────────────
 
 export default buildConfig({
+  serverURL: process.env.NEXT_PUBLIC_SITE_URL || "https://www.eroplein.com",
   admin: {
     user: Users.slug,
     meta: { titleSuffix: " — Eroplein Admin" },
