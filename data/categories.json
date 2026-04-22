@@ -2,66 +2,254 @@
   "categories": [
     {
       "name": "Escorts",
+      "singular": "Escort",
+      "search_term": "escort",
       "slug": "escorts",
       "icon": "crown",
       "color": "fuchsia",
       "description": "Onafhankelijke escorts en escortbureaus. Lees ervaringen en vind de beste begeleiding bij jou in de buurt.",
+      "seo_title_template": "Escort {city}: bureaus, prijzen & reviews 2026",
+      "seo_description_template": "Beste escort in {city}: vergelijk {count} escortbureaus en onafhankelijke escorts op basis van echte reviews. Prijzen, beschikbaarheid en ervaringen op een plek.",
+      "intro_copy": "Een escort in Nederland boek je via een bureau of rechtstreeks bij een onafhankelijke dame of heer. Bureaus nemen de planning, verificatie en facturatie uit handen, zijn vergund door de gemeente en hebben meerdere dames beschikbaar. Onafhankelijke escorts adverteren zelf en bouwen vaak een vaste klantenkring op. Op Eroplein vind je beide typen, gefilterd per stad en voorzien van echte reviews.",
+      "long_intro": "De Nederlandse escortbranche is strikt gereguleerd. Gemeenten geven vergunningen uit op basis van de Algemene Plaatselijke Verordening en de Wet regulering sekswerk (WRS). Een vergund escortbureau betekent dat het adres bekend is bij de gemeente, dat de boekhouding controleerbaar is en dat werknemers onder betere condities werken. Dit is belangrijk voor zowel klanten als escorts: je boekt bij een bedrijf dat transparant opereert, en je draagt bij aan een veilige branche. Eroplein toont bij elk bureau of het is geverifieerd als vergund.\n\nPrijzen voor een escort lopen uiteen van 120 tot 400 euro per uur. De variatie komt door locatie (Amsterdam en Utrecht liggen hoger), ervaring van de escort, of het incall of outcall betreft, en eventuele extra's. Outcall-boekingen zijn meestal 30 tot 80 euro duurder vanwege reistijd. Langere boekingen (2+ uur, overnight) krijgen vrijwel altijd een staffelkorting.",
+      "faq_questions": [
+        {
+          "q": "Wat kost een escort gemiddeld in Nederland?",
+          "a": "De gemiddelde uurprijs voor een escort in Nederland ligt tussen 150 en 300 euro. Amsterdam en Utrecht zijn iets duurder (gemiddeld 200-350 euro), terwijl kleinere steden en onafhankelijke escorts vanaf 120 euro beschikbaar zijn. Outcall is meestal 30 tot 80 euro duurder dan incall."
+        },
+        {
+          "q": "Hoe herken ik een betrouwbaar escortbureau?",
+          "a": "Betrouwbare bureaus hebben een gemeentelijke vergunning, een vast kantooradres, duidelijke prijzen, geverifieerde foto's, meerdere positieve reviews, en een transparant annuleringsbeleid. Vermijd bureaus zonder online aanwezigheid, onrealistische foto's of zonder contactpersoon."
+        },
+        {
+          "q": "Wat is het verschil tussen incall en outcall?",
+          "a": "Incall betekent dat jij naar de locatie van de escort of het bureau komt. Outcall houdt in dat de escort naar jou komt (hotel, thuisadres). Incall is goedkoper, outcall geeft meer privacy maar kost 30 tot 80 euro extra aan reisvergoeding."
+        },
+        {
+          "q": "Moet ik vooraf betalen?",
+          "a": "De meeste bureaus vragen bij een eerste boeking een aanbetaling via Tikkie of bankoverschrijving, het restant contant of via pin ter plaatse. Nooit een volledige vooruitbetaling via tegoedbonnen, crypto of money transfer. Dat zijn oplichtingssignalen."
+        },
+        {
+          "q": "Is een escort boeken in Nederland legaal?",
+          "a": "Ja. Het boeken van een sekswerker is legaal voor meerderjarigen in Nederland, mits via een vergund bureau of bij een ingeschreven zelfstandige. Werken zonder vergunning is verboden en kan straf opleveren voor het bureau (niet voor de klant, tenzij die weet dat er sprake is van mensenhandel)."
+        }
+      ],
       "sort_order": 1
     },
     {
-      "name": "Priv\u00e9huizen",
+      "name": "Privehuizen",
+      "singular": "Privehuis",
+      "search_term": "privehuis",
       "slug": "privehuizen",
       "icon": "home",
       "color": "pink",
-      "description": "Priv\u00e9huizen en relaxhuizen in heel Nederland. Bekijk ervaringen en beoordelingen.",
+      "description": "Privehuizen en relaxhuizen in heel Nederland. Bekijk ervaringen en beoordelingen.",
+      "seo_title_template": "Privehuis {city}: 2026 reviews, prijzen & adressen",
+      "seo_description_template": "Privehuizen in {city} vergelijken: {count} huizen met echte bezoekersreviews. Prijzen, dames, openingstijden en sfeer per locatie overzichtelijk.",
+      "intro_copy": "Een privehuis is een vaste locatie waar meerdere dames werken, in een huiselijke setting. Je kiest ter plaatse uit de aanwezige dames, spreekt de prijs en duur af, en wordt naar een kamer begeleid. Privehuizen zijn vergund door de gemeente en hebben meestal vaste openingstijden (vanaf ongeveer 11:00 tot middernacht).",
+      "long_intro": "Privehuizen zijn ontstaan als tussenoplossing tussen raamprostitutie en bordeel. Ze bieden meer privacy dan ramen (geen etalage, gesloten entree) maar toegankelijker dan een luxe club (geen dresscode, geen lidmaatschap). De Nederlandse branche kent ruim 150 vergunde privehuizen, geconcentreerd in het westen en zuiden van het land.\n\nBij binnenkomst word je ontvangen door een gastvrouw of host. Die legt uit welke dames werken, laat foto's of een album zien, en je kiest in alle rust. Prijzen voor een standaard 30-minuten-sessie liggen meestal rond 50 tot 80 euro, een uur kost typisch 120 tot 180 euro. Extra's (speciale handelingen) worden apart afgesproken met de dame zelf. Betalen gebeurt vrijwel altijd contant of met pin; cash is nog altijd koning in deze sector.",
+      "faq_questions": [
+        {
+          "q": "Wat kost een bezoek aan een privehuis?",
+          "a": "Een standaardbezoek van 30 minuten kost meestal 50 tot 80 euro. Een uur ligt tussen 120 en 180 euro. Amsterdamse privehuizen zijn vaak 20 tot 40 euro duurder dan in kleinere steden."
+        },
+        {
+          "q": "Moet ik reserveren bij een privehuis?",
+          "a": "Nee, bij de meeste privehuizen loop je gewoon binnen tijdens openingsuren. Reserveren kan wel bij specifieke dames of op drukke momenten (weekendavonden). Bel het huis even van tevoren voor beschikbaarheid."
+        },
+        {
+          "q": "Kan ik ter plaatse kiezen uit meerdere dames?",
+          "a": "Ja, dat is juist het concept van een privehuis. Je krijgt een introductie van de aanwezige dames, of kijkt een portfolio door. Geen druk: je mag ook weer weglopen als er niemand bij past."
+        },
+        {
+          "q": "Is het anoniem?",
+          "a": "Privehuizen bewaren geen klantgegevens. Betaal contant of met een anonieme pinpas voor maximale discretie. De entree is meestal aan de zijkant of achterkant van het pand, niet direct zichtbaar vanaf de straat."
+        }
+      ],
       "sort_order": 2
     },
     {
       "name": "Clubs",
+      "singular": "Seksclub",
+      "search_term": "seksclub",
       "slug": "clubs",
       "icon": "sparkles",
       "color": "purple",
       "description": "Seksclubs, parenclubs en swingersclubs. Ontdek de beste clubs en lees eerlijke ervaringen.",
+      "seo_title_template": "Seksclub & parenclub {city}: reviews + prijzen 2026",
+      "seo_description_template": "Seks- en parenclubs in {city}: {count} clubs vergeleken op reviews, sfeer, prijzen en faciliteiten. Van swingersclub tot luxe gentlemen's club.",
+      "intro_copy": "Clubs zijn er in allerlei smaken: parenclubs waar je heen gaat met je partner, seksclubs waar je dames kunt ontmoeten, en swingersclubs waar bezoekers zelf actief worden. Elke club heeft eigen huisregels, dresscode en entreeprijzen. Op Eroplein vind je ze per stad, gesorteerd op sfeer en beoordeling.",
+      "long_intro": "Een goede clubkeuze hangt af van waar je naar zoekt. Parenclubs zoals Fata Morgana of The Chalet zijn exclusief voor paren en trio's. Singles (met name singlemannen) worden geweerd of krijgen beperkte avonden. Seksclubs en hostessclubs zoals Yab Yum of Villa Banns ontvangen juist alleenstaande gasten en hebben dames in dienst. Swingersclubs hebben vaak thema-avonden (fetish, bi-only, nudistisch) en vereisen lidmaatschap of ballotage.\n\nEntreeprijzen lopen uiteen. Een parenclub kost meestal 50 tot 100 euro per paar, drankjes inclusief of apart. Een luxe seksclub met alles-inclusief arrangement (drank, dame, kamer) gaat naar 250 tot 500 euro of meer. Lees de huisregels vooraf; vrijwel elke serieuze club publiceert ze duidelijk op de eigen website.",
+      "faq_questions": [
+        {
+          "q": "Wat is het verschil tussen een parenclub en seksclub?",
+          "a": "Een parenclub is voor paren (en eventueel trio's of singles op specifieke avonden) waar bezoekers zelf seksueel actief worden met andere bezoekers. Een seksclub heeft betaalde dames in dienst waar je als klant gebruik van maakt. Vergelijkbaar met een luxe bordeel."
+        },
+        {
+          "q": "Mag ik als single naar een parenclub?",
+          "a": "Meestal niet, of alleen op specifieke single-avonden en vaak met wachtlijst of ballotage. Fata Morgana, De Kastelein en andere topclubs zijn in principe paren-only. Check altijd de website of bel voor beleid."
+        },
+        {
+          "q": "Wat is de dresscode?",
+          "a": "Bij de meeste serieuze clubs: nette kleding bij aankomst (smart casual minimaal, geen sportkleding of slippers). Binnen mag je vaak in badjas, handdoek of lingerie. Dat hangt af van het thema. Swingers- en fetish-avonden hebben vaak expliciete dress codes (leder, lingerie, naaktentree)."
+        },
+        {
+          "q": "Kost een drankje in een seksclub veel meer?",
+          "a": "In een seksclub met dames zijn drankjes voor dames vaak duurder dan voor gasten (de dames-drink van 10-20 euro). Bij een parenclub betaal je normale horecaprijzen of is drank inbegrepen in het entree."
+        }
+      ],
       "sort_order": 3
     },
     {
-      "name": "Erotische Massage",
+      "name": "Erotische massage",
+      "singular": "Erotische massage",
+      "search_term": "erotische massage",
       "slug": "erotische-massage",
       "icon": "heart",
       "color": "rose",
       "description": "Erotische massagesalons en tantra. Vind de beste salons op basis van echte ervaringen.",
+      "seo_title_template": "Erotische massage {city}: salons, prijzen & reviews",
+      "seo_description_template": "Erotische massage in {city}: {count} salons met echte reviews. Tantra, nuru, body-to-body, lingam. Vind de beste massage per techniek en prijs.",
+      "intro_copy": "Erotische massage is een breed begrip: van sensuele ontspanning en body-to-body tot tantra en lingam. Elke techniek heeft een eigen focus. Tantra gaat over energie en ademhaling, body-to-body is fysiek en intens, nuru is Japans en gebruikt zeewier-gel. Salons adverteren altijd welke massages ze aanbieden; lees reviews om te zien of de uitvoering ook matcht.",
+      "long_intro": "Erotische massagesalons vallen in Nederland onder dezelfde regels als andere sekswerk-gerelateerde bedrijven: vergunning van de gemeente, controleerbare boekhouding, leeftijdsverificatie bij masseuses. Een goede salon werkt met vaste masseuses, gebruikt schone handdoeken en linnengoed per sessie, en heeft een douchefaciliteit beschikbaar.\n\nTarieven starten rond 80 euro voor een 30-minuten sessie met 1 masseuse. Een uur kost meestal 120 tot 180 euro, een twee-handen-massage (Four Hands) vanaf 200 euro. Tantra-sessies zijn doorgaans langer (90-120 min) en duurder (180 tot 280 euro) omdat de opbouw meer tijd vraagt. Veel salons bieden ook koppelmassage, waarbij partners samen een sessie nemen of naast elkaar masseuses krijgen.",
+      "faq_questions": [
+        {
+          "q": "Wat is het verschil tussen tantra en erotische massage?",
+          "a": "Tantra is een spirituele massagevorm gericht op energie-geleiding, ademhaling en langdurige opbouw. Een reguliere erotische massage is directer fysiek en focust op ontspanning en sensualiteit. Tantra duurt doorgaans 90-120 minuten, erotische massage 30-60 minuten."
+        },
+        {
+          "q": "Moet ik naakt zijn bij een erotische massage?",
+          "a": "Ja, bij bijna alle erotische massagevormen werk je onbedekt. Je krijgt een douche en handdoek vooraf. De masseuse werkt professioneel, ongemak bespreek je van tevoren."
+        },
+        {
+          "q": "Is er een happy end?",
+          "a": "Dat verschilt per salon en masseuse. Veel salons bieden het als optie aan; bij tantra en sommige wellness-georienteerde salons is het juist niet inbegrepen. Vraag het altijd expliciet bij de boeking."
+        },
+        {
+          "q": "Wat kost body-to-body massage?",
+          "a": "Body-to-body (waarbij de masseuse haar lichaam gebruikt om je te masseren) kost meestal 150 tot 220 euro per uur. Met twee masseuses (Four Hands body-to-body) loopt het naar 300 tot 400 euro."
+        }
+      ],
       "sort_order": 4
     },
     {
       "name": "Ramen",
+      "singular": "Raamprostitutie",
+      "search_term": "raamprostitutie",
       "slug": "ramen",
       "icon": "door-open",
       "color": "fuchsia",
       "description": "Raamprostitutie en walletjes in Nederlandse steden. Eerlijke reviews en informatie.",
+      "seo_title_template": "Raamprostitutie {city}: wallen, prijzen & 2026 info",
+      "seo_description_template": "Raamprostitutie in {city}: waar vind je ramen, wat kost het, openingstijden en reviews. Complete gids voor de walletjes van {city}.",
+      "intro_copy": "Raamprostitutie is de meest zichtbare vorm van sekswerk in Nederland. Vrouwen (en soms mannen) huren een werkraam met rood licht en eigen kamer. Je spreekt de prijs en handelingen aan de deur af en betaalt vooraf. Ramengebieden zijn er in Amsterdam (Wallen, Singelgebied), Alkmaar (Achterdam), Den Haag (Geleenstraat, Doubletstraat) en Groningen (Nieuwstad).",
+      "long_intro": "De werkraam-industrie is sterk gekrompen in de laatste 20 jaar. Amsterdam sloot tientallen ramen in Project 1012 (2008-2020) om witwassen en mensenhandel aan te pakken. In 2024-2025 werd gediscussieerd over verplaatsing naar een Erotisch Centrum buiten de binnenstad. Definitieve besluitvorming loopt nog. Voor klanten betekent dit: minder aanbod in Amsterdam, groter belang van reviews om kwaliteit te vinden.\n\nPrijzen voor een standaard 15-20 minuten sessie achter het raam liggen al jaren stabiel rond 50 euro. Langer of speciale handelingen kosten extra en worden aan de deur besproken. Anders dan bij een bureau of privehuis is hier geen host-figuur; je onderhandelt rechtstreeks met de werker zelf. Respectvolle communicatie is essentieel.",
+      "faq_questions": [
+        {
+          "q": "Hoe werkt raamprostitutie praktisch?",
+          "a": "Je loopt langs de ramen in de aangewezen zones. Bij interesse klop je op het raam of opent de werker de deur zelf. Je bespreekt handelingen, tijd en prijs. Akkoord betekent naar binnen, betaal vooraf, daarna de afspraak. Niet akkoord betekent vriendelijk doorlopen."
+        },
+        {
+          "q": "Wat kost raamprostitutie?",
+          "a": "Standaardtarief voor 15-20 minuten ligt rond 50 euro. Een half uur kost 80 tot 100 euro, een uur 150 tot 200 euro. Speciale handelingen kosten extra, altijd voor binnengaan afgesproken."
+        },
+        {
+          "q": "Mag ik foto's maken?",
+          "a": "Absoluut niet. Fotograferen van ramen of werkers is bij wet verboden (privacy) en wordt streng gehandhaafd in Amsterdam. Je kunt een boete krijgen en in sommige gebieden je telefoon laten innemen."
+        },
+        {
+          "q": "Waar zijn de ramen in Amsterdam?",
+          "a": "Amsterdam heeft drie actieve gebieden: De Wallen (Oudezijds Achterburgwal en Voorburgwal), het Singelgebied (rondom Spuistraat) en een kleine zone aan de Ruysdaelkade. Het Singelgebied is rustiger en toegankelijker voor beginners."
+        }
+      ],
       "sort_order": 5
     },
     {
       "name": "Seksshops",
+      "singular": "Seksshop",
+      "search_term": "seksshop",
       "slug": "seksshops",
       "icon": "shopping-bag",
       "color": "pink",
       "description": "Erotiekwinkels en adult stores. Vergelijk aanbod, service en ervaringen.",
+      "seo_title_template": "Seksshop {city}: adressen, aanbod & reviews 2026",
+      "seo_description_template": "Seksshops in {city}: {count} erotische winkels met reviews. Vibrators, lingerie, BDSM, film. Vergelijk aanbod, prijzen en service.",
+      "intro_copy": "Seksshops zijn er in verschillende categorieen: algemene erotiekwinkels (Christine le Duc, Leonisa), specialistische BDSM-winkels, lingerie-boutiques en niche-shops. De grote ketens hebben ruim aanbod en goede service; de specialisten bieden eerlijk advies en expertise waar je online moeilijk aan komt.",
+      "long_intro": "Fysieke seksshops hebben een eigen meerwaarde: vibrators aanraken om de sterkte te voelen, lingerie passen, en vooral: persoonlijk advies van een verkoper die weet waar je het over hebt. Voor beginners is dit enorm waardevol; online reviews helpen maar beperkt bij intieme keuzes. Ervaren verkopers vragen door op wat je zoekt (soft of krachtig, stil of oke met geluid, USB-oplaadbaar of batterij).\n\nKwaliteitswinkels verkopen alleen body-safe materialen (medisch silicone, ABS, glas). Vermijd winkels die veel goedkope jelly- of PVC-speeltjes aanbieden; deze materialen zijn vaak poreus en kunnen allergische reacties of erger veroorzaken. Merken zoals LELO, We-Vibe, Fun Factory, Doxy en Magic Wand zijn industriestandaard voor veiligheid en duurzaamheid.",
+      "faq_questions": [
+        {
+          "q": "Kan ik anoniem kopen in een seksshop?",
+          "a": "Ja. Alle grote seksshops accepteren contant of pin zonder persoonsregistratie. Bij online bestelling kun je neutraal verpakte bezorging kiezen. Geen bonuskaart-dwang."
+        },
+        {
+          "q": "Mag ik speeltjes terugbrengen?",
+          "a": "Bijna alle shops hanteren open-is-gekocht voor intieme producten om hygienische redenen; niet retourneerbaar na opening. Lingerie in originele verpakking met prijskaartje kan meestal wel binnen 14 dagen terug."
+        },
+        {
+          "q": "Verkoopt een seksshop ook medicijnen zoals Viagra?",
+          "a": "Nee. Erectiepillen zijn receptplichtig en alleen via apotheken of huisarts verkrijgbaar. Kruidenvariaties (vaak met ongeteste ingredienten) worden afgeraden. Voor legale alternatieven: huisarts of online apotheek met e-recept."
+        }
+      ],
       "sort_order": 6
     },
     {
       "name": "Stripclubs",
+      "singular": "Stripclub",
+      "search_term": "stripclub",
       "slug": "stripclubs",
       "icon": "music",
       "color": "purple",
       "description": "Stripclubs en gentlemen's clubs. Lees ervaringen over sfeer, shows en service.",
+      "seo_title_template": "Stripclub {city}: gentlemen's clubs & shows 2026",
+      "seo_description_template": "Stripclubs in {city}: {count} clubs vergeleken op shows, prijzen en sfeer. Vind de beste gentlemen's club voor een avond uit of private party.",
+      "intro_copy": "Stripclubs en gentlemen's clubs combineren dans- en bar-ervaring met een volwassen show. Nederland heeft er ruim dertig, veelal in uitgaansgebieden van de grote steden. Shows varieren van klassieke pole dance tot moderne burlesque. Table dances (individuele dans naast je tafel) en VIP-rooms zijn standaard.",
+      "long_intro": "De Nederlandse stripclub-scene is relatief klein maar divers. Amsterdam kent de bekendste clubs (Yab Yum, Bananenbar, Casa Rosso, De Opening Nightclub), Rotterdam heeft Club Diva en enkele uitgaansclubs met podium, en in Eindhoven en Utrecht vind je meer intieme gentlemen's clubs. De entree ligt meestal tussen 20 en 50 euro. Een cola of fris in de meeste clubs kost 10 tot 15 euro; een dame-drink (om een danseres te trakteren en gezelschap te garanderen) 20 tot 40 euro.\n\nTable dance: 20 tot 50 euro voor een nummer aan je tafel. Private VIP-dans (in afgesloten ruimte): 100 tot 250 euro voor 15-30 minuten. Verder gaan dan dans gebeurt in de meeste gerenommeerde clubs niet; de scheidslijn met een seksclub is duidelijk. Voor seksuele diensten zijn club-dames vaak niet beschikbaar; daarvoor moet je naar een seks- of priveclub.",
+      "faq_questions": [
+        {
+          "q": "Wat is een redelijke fooi voor een dans?",
+          "a": "Bij een table dance (20-40 euro aan de kassa of aan de danser betaald): 10 tot 20 procent fooi extra is gepast als je het leuk vond. Bij een VIP-dans is de fooi vaak al ingerekend in het tarief."
+        },
+        {
+          "q": "Mogen stellen naar een stripclub?",
+          "a": "Ja, en het wordt in veel clubs juist gewaardeerd. Check of de club 'couple-friendly' of 'stellen welkom' vermeldt. Sommige clubs geven zelfs korting voor stellen op rustigere avonden."
+        },
+        {
+          "q": "Is aanraken toegestaan tijdens een dans?",
+          "a": "In Nederland geldt 'look but don't touch' als basis. Sommige clubs staan lichte aanraking toe (heup, bovenbeen) in VIP-setting, maar altijd met toestemming van de danser. Onbedoeld grensoverschrijdend gedrag betekent direct uit de club gezet worden."
+        }
+      ],
       "sort_order": 7
     },
     {
       "name": "Saunaclubs",
+      "singular": "Saunaclub",
+      "search_term": "saunaclub",
       "slug": "saunaclubs",
       "icon": "flame",
       "color": "rose",
       "description": "Erotische saunaclubs en wellnessclubs. Ontdek de beste clubs met eerlijke reviews.",
+      "seo_title_template": "Saunaclub {city}: erotische sauna & wellness 2026",
+      "seo_description_template": "Saunaclub in {city}: {count} clubs met reviews. Wellness, sauna, zwembad en dames onder een dak. FKK-stijl ontspanning voor een all-in prijs.",
+      "intro_copy": "Saunaclubs bieden FKK-stijl ontspanning: naturistische wellness, sauna, zwembad en gezelschap van dames, allemaal voor een vast all-in entreetarief. Bekende clubs zijn Club Fellini (Kerkdriel), Pascha Koln (NL-grens), en Colors (Venlo). Deze formule is populair bij Duitse en Nederlandse gasten en staat bekend om hygiene, rust en kwaliteit.",
+      "long_intro": "De FKK-sauna (Freikoerperkultur, naturistische lichaamscultuur) is een Duitse export die in Nederland vooral succes heeft net over de grens; Kerkdriel, Venlo, Enschede. Typische opzet: je betaalt een vaste prijs (80 tot 140 euro afhankelijk van club en dag) voor toegang tot alle wellnessfaciliteiten en lounge. Dames kies je in overleg; een afspraakje (sessie op een kamer) is extra, meestal 70 tot 120 euro voor 30 minuten.\n\nDe sfeer is opvallend ontspannen: iedereen is naakt of met handdoek om, drankjes worden besteld bij de bar, eten is in de meeste clubs inbegrepen (buffet). Voor beginners is de drempel om je eerste keer binnen te stappen groter dan je denkt: er is geen druk, dames benaderen je pas nadat je oogcontact maakt. Bezoek doordeweeks (woensdag of donderdag) voor de rustigste ervaring.",
+      "faq_questions": [
+        {
+          "q": "Wat kost een bezoek aan een saunaclub?",
+          "a": "Entree voor een saunaclub kost meestal 80 tot 140 euro, inclusief toegang tot wellness en buffet. Een sessie met een dame is extra: 70 tot 120 euro voor 30 minuten, 130 tot 220 euro voor een uur."
+        },
+        {
+          "q": "Is het verplicht om naakt te zijn?",
+          "a": "Ja, in FKK-stijl saunaclubs is naaktheid standaard in alle wellnessruimtes. Je krijgt een handdoek en kan die om heupen dragen op de lounges. Zwemkleding is niet toegestaan uit hygienische overwegingen."
+        },
+        {
+          "q": "Mag ik als koppel naar een saunaclub?",
+          "a": "Dat hangt van de club af. Puur-FKK clubs als Club Fellini werken met mannelijke gasten plus in-huis dames; koppels mogen vaak wel maar het is geen parenclub-setting. Pascha Koln heeft expliciete paren-dagen. Check de website."
+        },
+        {
+          "q": "Is een FKK-saunaclub hetzelfde als een bordeel?",
+          "a": "In essentie ja. Het is een vergund seksbedrijf, met dames in dienst of als freelancer. Het verschil met een klassiek bordeel is de wellness-component en het all-in entreeformat: je betaalt voor omgeving en sfeer, sessies zijn extra."
+        }
+      ],
       "sort_order": 8
     }
   ]

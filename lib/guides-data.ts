@@ -461,14 +461,305 @@ Let op: prijzen worden individueel bepaald door de sekswerker en kunnen variëre
       },
     ],
   },
+
+  // ── NEW GUIDE: Hoe kies je een betrouwbare escort ──
+  {
+    slug: "hoe-kies-je-betrouwbare-escort",
+    title: "Hoe kies je een betrouwbare escort in Nederland?",
+    metaTitle: "Betrouwbare escort kiezen — 8 checkpunten (2026) | Eroplein",
+    metaDescription:
+      "Hoe herken je een betrouwbaar escortbureau of zelfstandige escort? 8 concrete checkpunten, red flags om te vermijden en stappen voor een veilige boeking.",
+    excerpt:
+      "Van vergunning tot reviews, van foto's tot betalingsmethoden. Een gedetailleerde gids om oplichting, mensenhandel en teleurstelling te vermijden.",
+    publishedAt: "2026-04-10",
+    updatedAt: "2026-04-22",
+    readingTime: 8,
+    relatedCategory: "escorts",
+    relatedCategoryLabel: "Escorts",
+    relatedGuides: ["wat-kost-een-escort", "eerste-keer-escort", "regels-prostitutie-nederland"],
+    sections: [
+      {
+        id: "waarom-selectie",
+        title: "Waarom selectie belangrijk is",
+        content: `Een goede keuze vooraf scheelt je geld, tijd en — in het ergste geval — nare ervaringen. De Nederlandse escortbranche is grotendeels gereguleerd, maar daartussen opereren ook illegale aanbieders, oplichters en in enkele gevallen partijen die te maken hebben met mensenhandel. Dit laatste is zeldzaam maar komt voor: schat Fier (het landelijke hulpcentrum voor slachtoffers) in recente jaren op 3-7% van illegaal aangeboden sekswerk.
+
+Voor jou als klant is de vuistregel helder: kies alleen voor bureaus en zelfstandigen die transparant opereren, een vergunning hebben en waarvan eerdere klanten positieve reviews hebben achtergelaten. Dat is niet alleen een bescherming voor jou — het is ook het beste wat je kunt doen om de branche gezond te houden.`,
+      },
+      {
+        id: "checkpunten",
+        title: "De 8 checkpunten van een betrouwbare escort",
+        content: `**1. Vergunning en KVK-registratie.** Een professioneel escortbureau heeft een gemeentelijke exploitatievergunning. Een zelfstandige escort heeft een KVK-inschrijving. Beide zijn openbaar verifieerbaar. Bureaus die geen adres, geen KVK en geen vergunningsnummer vermelden: overslaan.
+
+**2. Duidelijke, consistente prijzen.** Vooraf communicatie over prijzen, inclusief reiskosten, meerwerk en annuleringsbeleid. Prijzen die "op aanvraag" zijn of enorm variëren per sessie zijn een rode vlag.
+
+**3. Geverifieerde foto's.** Echte foto's lijken nooit als magazinecovers. Lichte imperfecties, wisselende hoeken, soms een selfie tussen de professionele shoot door: dat zijn tekenen van authenticiteit. Te perfecte modelfoto's met waterwerk-logo's zijn vaak stockbeelden.
+
+**4. Reviews met details.** Meerdere reviews met specifieke details (personaliteit van de escort, sfeer van de locatie, concrete observaties) zijn een goed teken. Als alle reviews generiek zijn ("top ervaring, zeker terugkomen") is er kans op fake content.
+
+**5. Professioneel communicatiekanaal.** Een bereikbaar telefoonnummer, een bevestigingsmail, optioneel een gestandaardiseerd WhatsApp-boekingsformulier. Dit toont proces en serieusheid.
+
+**6. Transparant annuleringsbeleid.** 24-uurs annulering gratis, last-minute annulering met gedeeltelijke vergoeding is normaal. Een bureau dat geen annulering toestaat is op zijn minst klantonvriendelijk.
+
+**7. Redelijke betaalmethoden.** Tikkie-aanbetaling of bankoverschrijving van aanbetaling, rest contant of pin ter plaatse is standaard. Volledige vooruitbetaling via crypto, vouchers, Western Union of geschenkkaarten is altijd oplichting.
+
+**8. Tijd en grenzen worden gerespecteerd.** Sessietijd = daadwerkelijke tijd. Geen verborgen extra's voor normale dingen (douche, gesprek, afscheid nemen).`,
+      },
+      {
+        id: "red-flags",
+        title: "Red flags om direct af te haken",
+        content: `**Een onrealistisch lage prijs.** Een escort voor 40 euro per uur bestaat niet in Nederland — dat betekent of oplichting, of een dame die onder dwang werkt. De ondergrens voor een legitiem aanbod ligt rond 120 euro per uur.
+
+**Foto's die ouder lijken dan 10 jaar of overduidelijke stockbeelden zijn.** Zoek een foto reverse-image op Google (sleep de afbeelding naar images.google.com) om te checken of hij ergens anders opduikt.
+
+**Slechte Nederlandse taal gecombineerd met enthousiaste beschrijvingen.** Internationale escorts bestaan zeker, maar een bureauwebsite met gebroken Nederlands is verdacht — vaak doorgestuurd via call-centers.
+
+**Druk om snel te betalen of te reserveren.** "Er is nog één plek!" of "Ze is alleen vandaag beschikbaar": klassieke verkooptrucs die in de legitieme branche niet voorkomen.
+
+**Geen controle op jouw leeftijd of identiteit.** Serieuze bureaus stellen basisvragen of vragen soms om een ID-verificatie. Volstrekte anonimiteit aan beide kanten is in de praktijk zeldzaam.
+
+**Vraag om kamer in afgelegen woonwijk, motel aan snelweg zonder bekende ketennaam, of "privéadres dat later wordt gecommuniceerd".** Legitieme incall-locaties zijn vast en verifieerbaar.`,
+      },
+      {
+        id: "verificatie-stappen",
+        title: "Vier stappen om te verifiëren voor je boekt",
+        content: `**Stap 1 — Zoek de KVK-inschrijving.** Ga naar kvk.nl/zoeken en voer de bureau- of bedrijfsnaam in. Het moet een actieve registratie zijn met bedrijfsactiviteit die matcht (cateringdienst, entertainment, bedrijfsmassage of vergelijkbare codering).
+
+**Stap 2 — Check de Eroplein-reviews.** Minimaal 3 uiteenlopende reviews van verschillende klanten in de afgelopen 6 maanden is een gezonde indicator. Let op reactiepatronen: als alle reviews tegelijk verschijnen rond dezelfde data, kan dat review-bombing zijn.
+
+**Stap 3 — Zoek de bedrijfs- of escortnaam + "oplichting" of "scam" op Google.** Een bureau dat ooit negatief in het nieuws is geweest of op Kinky.nl-forum is afgebrand, vind je zo.
+
+**Stap 4 — Bel voor je boekt.** Een telefoongesprek van 5 minuten geeft enorm veel informatie. Spreekt iemand vlekkeloos Nederlands? Kan hij of zij direct antwoorden geven over prijzen, locatie, betaalvoorwaarden? Wordt er gevraagd naar jouw wensen in plaats van druk uit te oefenen? Dat is een goed begin.`,
+      },
+      {
+        id: "na-boeking",
+        title: "Na de boeking — blijf veilig",
+        content: `**Laat iemand weten waar je bent.** Vertel een vriend(in) waar je heen gaat, hoe laat en wanneer je verwacht thuis te zijn. Een "check-in"-berichtje na afloop is gewoon gezond.
+
+**Ga niet te ver in alcohol of middelen voor een sessie.** Niet alleen uit respect voor de escort — ook omdat je alert wilt blijven voor dingen die niet kloppen.
+
+**Respecteer afspraken over activiteiten.** Wat vooraf is besproken is de afspraak. Onderhandelen over extra's tijdens de sessie is onbeschaafd; onderhandelen over grenzen van de escort is grensoverschrijdend gedrag en kan juridische gevolgen hebben.
+
+**Als je getuige bent van iets dat niet pluis lijkt — iemand die duidelijk tegen haar wil werkt, angstig is, of tekenen van mishandeling vertoont — bel dan Meld Misdaad Anoniem op 0800-7000 of Meld.nl voor mensenhandel. Dat is de stap die het verschil maakt.**`,
+      },
+    ],
+  },
+
+  // ── NEW GUIDE: Wet regulering sekswerk ──
+  {
+    slug: "wet-regulering-sekswerk-2026",
+    title: "Wet regulering sekswerk (WRS) 2026 — wat moet je weten",
+    metaTitle: "Wet regulering sekswerk 2026 — complete uitleg | Eroplein",
+    metaDescription:
+      "De Wet regulering sekswerk (WRS) 2026 uitgelegd: wat verandert voor klanten, sekswerkers en bedrijven. Vergunningplicht, leeftijd, strafbare feiten.",
+    excerpt:
+      "Van de vergunningplicht voor zelfstandigen tot de leeftijdsgrens: hoe de Nederlandse wetgeving rond sekswerk in 2026 in elkaar zit, en wat dat betekent voor jou.",
+    publishedAt: "2026-04-15",
+    updatedAt: "2026-04-22",
+    readingTime: 7,
+    relatedCategory: undefined,
+    relatedCategoryLabel: "Wetgeving",
+    relatedGuides: ["regels-prostitutie-nederland", "hoe-kies-je-betrouwbare-escort"],
+    sections: [
+      {
+        id: "overzicht",
+        title: "Overzicht van de Nederlandse sekswerk-wetgeving",
+        content: `Sinds 2000 is prostitutie in Nederland gereguleerd in plaats van verboden. Dat bracht Nederland destijds uit de taboesfeer en gaf sekswerk dezelfde rechtspositie als andere beroepen: belastingplicht, arbeidsrechten, recht op veilige werkplek. In de praktijk bleken echter grote problemen: mensenhandel, uitbuiting, gemeenten die grote verschillen hadden in hun beleid.
+
+De Wet regulering sekswerk (WRS) is bedoeld om die problemen aan te pakken. Na jaren van politiek debat is de kern van de wet in fasen doorgevoerd. Voor klanten en sekswerkers is het essentieel te weten wat er geldt: onwetendheid is geen excuus, en verschillende regels hebben directe gevolgen voor hoe, waar en door wie sekswerk legaal uitgevoerd kan worden.`,
+      },
+      {
+        id: "vergunningplicht",
+        title: "Vergunningplicht voor alle sekswerkers",
+        content: `Onder de WRS moet elke zelfstandige sekswerker een vergunning hebben. Dit is nieuw: voorheen was alleen de exploitant (bordeel, bureau, clubhouder) vergunningplichtig en werkten zelfstandigen onder eigen verantwoordelijkheid.
+
+**Praktische consequenties:**
+- Zelfstandige escorts moeten zich inschrijven en krijgen een persoonlijke vergunning
+- De vergunning heeft een beperkte geldigheidsduur en moet verlengd worden
+- Werken zonder vergunning is een overtreding voor de sekswerker én strafbaar voor een klant die daarvan op de hoogte is
+
+**Kritiek en discussie:** Belangenvereniging PROUD en hulporganisatie De Rode Draad uiten al jaren zorgen: zij vrezen dat de registratie juist vrouwen dwingt in illegaliteit omdat ze niet willen dat hun echte naam geregistreerd staat als sekswerker. Gemeenten proberen dit op te vangen met privacywaarborgen, maar het debat blijft actueel.`,
+      },
+      {
+        id: "leeftijd-21",
+        title: "Leeftijdsgrens: 21 jaar",
+        content: `Onder de WRS is de minimumleeftijd voor sekswerk 21 jaar — verhoogd vanaf 18. Dit is internationaal opmerkelijk: Nederland gaat verder dan de EU-standaard. De verhoging is ingevoerd om jonge mensen beter te beschermen tegen uitbuiting en mensenhandel, die vooral in deze leeftijdsgroep voorkwam.
+
+**Voor klanten:** je mag geen seksuele diensten afnemen van iemand onder 21. Een bureau of club die jongere werkers inzet pleegt een strafbaar feit. Bij twijfel: vraag ID.
+
+**Voor sekswerkers onder 21:** alle vergunde bedrijven moeten de leeftijd controleren. Jongere sekswerkers die onder eigen beheer willen werken, kunnen dat in Nederland pas vanaf 21.
+
+**Voor klanten vanaf 18:** je mag gewoon als klant optreden vanaf 18, dat is ongewijzigd. De leeftijdsverhoging betreft alleen de aanbieder, niet de afnemer.`,
+      },
+      {
+        id: "strafbaarheid-klant",
+        title: "Wat is strafbaar voor een klant?",
+        content: `Over het algemeen geldt: als klant ben je niet strafbaar als je diensten afneemt bij een vergunde sekswerker of een vergund bedrijf. Maar er zijn belangrijke uitzonderingen.
+
+**Strafbaar voor de klant:**
+- Seksuele diensten afnemen van iemand die je wist of had moeten weten dat minderjarig (onder 18) was — dit is en blijft altijd strafbaar
+- Seksuele diensten afnemen van iemand die duidelijk onder dwang of door mensenhandel aan het werk is — artikel 273f Wetboek van Strafrecht strafbaarheid "klant van mensenhandelslachtoffer"
+- Seksuele diensten afnemen zonder registratie/vergunning in een gemeente waar dat specifiek verboden is (sommige gemeenten handhaven strenger)
+
+**Niet strafbaar voor de klant:**
+- Afnemen bij een vergunde escort, club, privehuis of bureau
+- Afnemen bij een geregistreerde zelfstandige sekswerker
+
+**Praktische betekenis:** kiezen voor vergunde aanbieders is niet alleen ethisch — het is ook juridisch je verzekering tegen onbedoelde strafbaarheid.`,
+      },
+      {
+        id: "mensenhandel",
+        title: "Signalen van mensenhandel — wat je kunt doen",
+        content: `Ondanks alle regulering blijft mensenhandel een realiteit. Signalen waarop je als klant kunt letten:
+
+- Iemand spreekt nauwelijks of geen Nederlands of Engels
+- Iemand lijkt niet zelf te bepalen hoe lang de sessie duurt, hoeveel kost of welke diensten worden aangeboden — alles gaat via een "bureau" of "boeker"
+- Zichtbare fysieke blauwe plekken, tekenen van verwaarlozing, of duidelijke angst
+- Iemand werkt zeer lange uren (zichtbaar uitgeput)
+- De locatie is vies, zonder normale faciliteiten, of voelt niet als een legitiem bedrijf
+
+**Wat doen bij twijfel:**
+- Ga weg zonder commentaar. Bel of whatsapp daarna discreet.
+- Meld anoniem bij Meld Misdaad Anoniem: 0800-7000
+- Meld via CoMensha (landelijk coördinatiepunt mensenhandel): 033-4481186
+- Bij acuut gevaar: 112
+
+Jouw melding kan iemand uit een uitzichtloze situatie halen. Signalen en adressen worden gebundeld door politie en Koninklijke Marechaussee.`,
+      },
+      {
+        id: "toekomst",
+        title: "Toekomstige wijzigingen en trends",
+        content: `De WRS is een groeiend wetgevend kader. Enkele punten in ontwikkeling (stand: 2026):
+
+- **Digitale handhaving:** gemeenten en politie zetten meer in op monitoring van advertenties op platforms. Eroplein en vergelijkbare sites zijn gehouden aan verificatie van adverteerders.
+- **Amsterdam Erotisch Centrum:** plannen om raamprostitutie uit de Wallen te verplaatsen naar een speciaal gebouwde locatie buiten de binnenstad. Besluitvorming loopt; ingangsdatum onbekend.
+- **EU-richtlijnen:** de EU werkt aan harmonisatie van sekswerk-regelgeving over landsgrenzen. Nederland zet actief in op het behoud van het regulering-model versus het "Zweedse model" (waarin klanten strafbaar worden gesteld).
+- **Evaluaties:** elke 4 jaar wordt de wet geëvalueerd. De eerste evaluatie wordt verwacht in 2028.`,
+      },
+    ],
+  },
+
+  // ── NEW GUIDE: Verschil privehuis vs escortbureau ──
+  {
+    slug: "verschil-privehuis-escortbureau",
+    title: "Privehuis of escortbureau: welke past bij jou?",
+    metaTitle: "Privehuis vs escortbureau — verschillen uitgelegd | Eroplein",
+    metaDescription:
+      "Het verschil tussen privehuis, relaxhuis en escortbureau. Welke past bij jouw wensen, budget en privacy-voorkeur. Alle voor- en nadelen op een rij.",
+    excerpt:
+      "Incall of outcall, huiselijk of luxe, kiezen ter plekke of vooraf boeken? Een complete vergelijking om de juiste vorm te kiezen.",
+    publishedAt: "2026-04-18",
+    updatedAt: "2026-04-22",
+    readingTime: 6,
+    relatedCategory: "privehuizen",
+    relatedCategoryLabel: "Privehuizen",
+    relatedGuides: ["wat-kost-een-escort", "hoe-kies-je-betrouwbare-escort"],
+    sections: [
+      {
+        id: "kernverschil",
+        title: "Het kernverschil",
+        content: `Een **escortbureau** werkt vanuit een centraal kantoor of callcenter, heeft meerdere dames of heren in de rol van zelfstandige of freelancer, en regelt boekingen op afstand. Je maakt vooraf een afspraak, kiest op foto of beschrijving, en je ontmoet elkaar bij jou (outcall) of in een afgehuurde locatie (incall). Alles wordt gepland.
+
+Een **privehuis** (soms relaxhuis) is een fysiek adres waar meerdere dames werken in een huiselijke setting. Je loopt binnen, kiest ter plaatse uit de aanwezige dames en wordt naar een kamer gebracht. Geen voorafgaande afspraak, geen bekendmaking van je keuze — je ziet en besluit in het moment.
+
+Dit kernverschil stuurt vrijwel alle andere keuzes: prijs, privacy, spontaniteit, ervaring.`,
+      },
+      {
+        id: "vergelijking",
+        title: "Directe vergelijking",
+        content: `**Boekingsproces**
+- Bureau: vooraf boeken, keuze op foto, planning
+- Privehuis: walk-in, keuze ter plaatse, spontaan
+
+**Prijs (indicatief)**
+- Bureau incall: vanaf 120 euro per uur
+- Bureau outcall: vanaf 150 euro per uur + reiskosten
+- Privehuis 30 min: 50-80 euro
+- Privehuis 1 uur: 120-180 euro
+
+**Locatie**
+- Bureau: jouw locatie (thuis, hotel) of bureau-eigen kamer
+- Privehuis: vaste huislocatie, meestal aparte ingang voor discretie
+
+**Privacy voor klant**
+- Bureau: hoog als outcall, je kiest je locatie
+- Privehuis: hoog op de plek, maar je wordt op het adres gezien
+
+**Keuzeruimte**
+- Bureau: grote portfolio online, precieze match mogelijk
+- Privehuis: 3-8 dames ter plaatse, meer serendipiteit
+
+**Sfeer**
+- Bureau: professional, vaak high-end
+- Privehuis: huiselijk, gezellig, minder formeel
+
+**Kwaliteitscontrole**
+- Bureau: variabel, afhankelijk van reputatie bureau
+- Privehuis: vast personeel, consistente dames, bekende gezichten`,
+      },
+      {
+        id: "kies-bureau",
+        title: "Kies een escortbureau als...",
+        content: `Een bureau is waarschijnlijk beter voor jou als:
+
+- **Je hecht aan discretie thuis of in een hotel.** Outcall-boeking betekent dat je zelf de locatie bepaalt.
+- **Je specifieke voorkeuren hebt** (uiterlijk, nationaliteit, talen, specialisaties). Een bureau heeft vaak een portfolio waarin je precies vindt wat je zoekt.
+- **Je plant graag vooruit.** Een romantisch diner-date, een business trip, een verjaardag — het bureau regelt het hele pakket.
+- **Je langere boekingen wilt** (overnachting, weekend). Privehuizen werken vrijwel altijd in uurblokken; een bureau biedt multi-hour packages met staffelkorting.
+- **Je reviewgericht bent.** Individuele bureau-escorts en bureaus hebben online reviews, waardoor je gerichter kunt kiezen.`,
+      },
+      {
+        id: "kies-privehuis",
+        title: "Kies een privehuis als...",
+        content: `Een privehuis is beter voor jou als:
+
+- **Je spontaan wilt gaan.** Zonder appointment, op het moment dat jij tijd hebt of zin krijgt.
+- **Je ter plekke wilt beslissen.** Foto's online kunnen misleiden; in een privehuis zie je meteen met wie je klikt — persoonlijkheid, geur, energie.
+- **Je het huiselijke en toegankelijke waardeert.** Geen koude hotelkamer of zakelijk bureau — maar een ingerichte kamer in een huis dat ook zo aanvoelt.
+- **Je kort wilt blijven.** Een 30-minuten sessie is bij veel privehuizen standaard en past in een lunch break of zijpad tijdens een dag in de stad.
+- **Je kosten wilt beperken.** 30 minuten in een privehuis is vaak goedkoper dan een uur bij een escortbureau, en een uur in een privehuis ligt meestal lager dan een uur escort outcall.`,
+      },
+      {
+        id: "relaxhuis",
+        title: "Wat is een relaxhuis precies?",
+        content: `"Relaxhuis" is in Nederland grofweg een synoniem voor "privehuis" — de termen worden inwisselbaar gebruikt. Historisch benadrukt "relaxhuis" de welness-component en een iets meer ontspannen, bredere service (nekmassage, gezellig kletsen met drankje, sauna in sommige gevallen). "Privehuis" benadrukt meer de privacy en huiselijke setting.
+
+In de praktijk: de ene naam zegt niets over kwaliteit. Check altijd reviews en bel vooraf voor beschikbaarheid.`,
+      },
+      {
+        id: "faq",
+        title: "Veelgestelde vragen",
+        content: `**Kan ik bij een privehuis vooraf zien wie er werken?**
+Sommige privehuizen publiceren foto's van vaste dames op de website. De daadwerkelijke aanwezigheid wisselt per dag — bel vooraf of een specifieke dame werkt als dat belangrijk is.
+
+**Is een escortbureau duurder dan een privehuis?**
+Meestal wel, maar je krijgt er ook iets voor: keuze op maat, planning, locatie naar wens. Voor 120 euro een uur incall bij een bureau zit je op ongeveer hetzelfde prijspunt als een uur in een privehuis.
+
+**Mag ik meerdere dames kiezen in een privehuis?**
+Een duo-sessie (twee dames tegelijk) is mogelijk bij veel privehuizen tegen meerprijs. Bespreek dit bij binnenkomst.
+
+**Wat als ik twijfel in een privehuis?**
+Je bent onder geen enkele verplichting. Je mag na het zien van de dames besluiten dat niemand je aanspreekt en weggaan, zonder verklaring. Dat is sociaal geaccepteerd en gebruikelijk.`,
+      },
+    ],
+  },
 ];
 
+import { isPublished } from "./publishing";
+
+export function getPublishedGuides(): Guide[] {
+  return guides.filter((g) => isPublished(g.publishedAt));
+}
+
 export function getGuideBySlug(slug: string): Guide | undefined {
-  return guides.find((g) => g.slug === slug);
+  const g = guides.find((guide) => guide.slug === slug);
+  if (!g) return undefined;
+  // Scheduled voor toekomst: niet tonen
+  if (!isPublished(g.publishedAt)) return undefined;
+  return g;
 }
 
 export function getRelatedGuides(slugs: string[]): Guide[] {
   return slugs
     .map((s) => guides.find((g) => g.slug === s))
-    .filter((g): g is Guide => g !== undefined);
+    .filter((g): g is Guide => g !== undefined && isPublished(g.publishedAt));
 }

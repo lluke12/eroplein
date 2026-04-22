@@ -14,24 +14,30 @@ import {
 } from "@/lib/placeholder-data";
 import { getCityBySlug } from "@/lib/data";
 import { ReviewsContent } from "./ReviewsContent";
+import {
+  JsonLd,
+  breadcrumbListSchema,
+  collectionPageSchema,
+} from "@/components/ui/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Reviews per Bedrijf",
+  title: "Reviews — ervaringen per bedrijf op Eroplein",
   description:
-    "Lees reviews en ervaringen per bedrijf. Eerlijke beoordelingen over escorts, clubs, massage en meer in heel Nederland.",
+    "Alle reviews op Eroplein: eerlijke ervaringen van bezoekers over escorts, parenclubs, erotische massage en meer per bedrijf. Gesorteerd op meest reviews en hoogste score.",
   alternates: { canonical: "/reviews" },
   openGraph: {
-    title: "Reviews per Bedrijf",
+    title: "Reviews — ervaringen per bedrijf op Eroplein",
     description:
-      "Lees reviews en ervaringen per bedrijf. Eerlijke beoordelingen over escorts, clubs, massage en meer in heel Nederland.",
+      "Alle reviews op Eroplein: eerlijke ervaringen per bedrijf, geverifieerd en gemodereerd.",
     url: "/reviews",
     type: "website",
+    locale: "nl_NL",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Reviews per Bedrijf",
+    title: "Reviews — ervaringen per bedrijf op Eroplein",
     description:
-      "Lees reviews en ervaringen per bedrijf. Eerlijke beoordelingen over escorts, clubs, massage en meer in heel Nederland.",
+      "Alle reviews op Eroplein: eerlijke ervaringen per bedrijf.",
   },
 };
 
@@ -65,18 +71,38 @@ export default function ReviewsPage() {
         <div className="max-w-7xl mx-auto px-6">
           <Breadcrumbs items={[{ label: "Reviews" }]} />
 
-          <div className="mb-10">
+          <div className="mb-10 max-w-3xl">
             <span className="text-xs font-medium text-fuchsia-400/80 tracking-widest uppercase mb-3 block">
               Community
             </span>
-            <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-pink-50 mb-4">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-pink-50 mb-4">
               Reviews per{" "}
               <span className="text-fuchsia-400">bedrijf</span>
             </h1>
-            <p className="text-lg text-gray-400 max-w-2xl">
-              Eerlijke ervaringen van echte bezoekers, gegroepeerd per bedrijf.
+            <p className="text-lg text-gray-400">
+              Alle {totalReviews} reviews op Eroplein, gegroepeerd per bedrijf
+              en gesorteerd op activiteit. Elke review wordt handmatig
+              gemodereerd voor publicatie.
             </p>
           </div>
+
+          <section className="mb-10 max-w-3xl">
+            <div className="prose prose-invert max-w-none text-gray-400 leading-relaxed space-y-4">
+              <p>
+                Reviews zijn de ruggengraat van Eroplein. Bezoekers beschrijven
+                wat ze meegemaakt hebben: de sfeer bij aankomst, de
+                communicatie, de dame of heer, de prijs-kwaliteit en eventuele
+                verrassingen. Bedrijven kunnen reageren op reviews om
+                opmerkingen te erkennen of te corrigeren.
+              </p>
+              <p>
+                We hanteren strikte moderatie: geen grensoverschrijdende taal,
+                geen persoonlijke aanvallen, geen nep-reviews. Inhoudelijke
+                klachten over bedrijven worden gepubliceerd als ze redelijk en
+                respectvol geformuleerd zijn.
+              </p>
+            </div>
+          </section>
 
           {/* Stats */}
           <div className="grid grid-cols-3 gap-4 mb-10">
@@ -129,6 +155,27 @@ export default function ReviewsPage() {
           </div>
         </div>
       </main>
+
+      <JsonLd
+        data={breadcrumbListSchema([
+          { name: "Home", url: "/" },
+          { name: "Reviews", url: "/reviews" },
+        ])}
+        id="ld-breadcrumb"
+      />
+      <JsonLd
+        data={collectionPageSchema({
+          name: "Reviews op Eroplein",
+          description: `${totalReviews} reviews over ${totalBusinesses} bedrijven met gemiddelde score ${avgRating.toFixed(1)}/5.`,
+          url: "/reviews",
+          breadcrumbs: [
+            { name: "Home", url: "/" },
+            { name: "Reviews", url: "/reviews" },
+          ],
+        })}
+        id="ld-collection"
+      />
+
       <Footer />
     </>
   );

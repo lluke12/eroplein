@@ -15,22 +15,24 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Claim je Bedrijf",
+  title: "Claim je bedrijf op Eroplein — gratis beheer",
   description:
-    "Claim je bedrijfspagina op Eroplein. Beheer je vermelding, reageer op reviews en vergroot je zichtbaarheid.",
+    "Beheer je bedrijfspagina op Eroplein: foto's, openingstijden, contact, reageer op reviews. Claimen is gratis na verificatie van eigenaarschap.",
   alternates: { canonical: "/claim" },
+  robots: { index: false, follow: true },
   openGraph: {
-    title: "Claim je Bedrijf | Eroplein",
+    title: "Claim je bedrijf op Eroplein",
     description:
-      "Neem de controle over je bedrijfspagina op Eroplein. Gratis te claimen.",
+      "Neem controle over je bedrijfspagina. Gratis te claimen.",
     url: "/claim",
     type: "website",
+    locale: "nl_NL",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Claim je Bedrijf",
+    title: "Claim je bedrijf op Eroplein",
     description:
-      "Claim je bedrijfspagina op Eroplein. Beheer je vermelding, reageer op reviews en vergroot je zichtbaarheid.",
+      "Gratis bedrijfspagina beheren na verificatie.",
   },
 };
 

@@ -15,22 +15,23 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Adverteren",
+  title: "Adverteren op Eroplein — bereik sekswerk-zoekers in Nederland",
   description:
-    "Vergroot je zichtbaarheid op Eroplein. Ontdek onze advertentiemogelijkheden voor escorts, clubs en andere erotische bedrijven.",
+    "Adverteren op Eroplein: premium plaatsing voor escorts, parenclubs, massage en meer. Pakketten vanaf 49 euro per maand, met real-time statistieken en review-reacties.",
   alternates: { canonical: "/adverteren" },
   openGraph: {
     title: "Adverteren op Eroplein",
     description:
-      "Bereik duizenden bezoekers per maand. Ontdek onze advertentiepakketten voor erotische bedrijven.",
+      "Bereik duizenden geinteresseerde bezoekers per maand. Transparante pakketten, meetbare resultaten.",
     url: "/adverteren",
     type: "website",
+    locale: "nl_NL",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Adverteren",
+    title: "Adverteren op Eroplein",
     description:
-      "Vergroot je zichtbaarheid op Eroplein. Ontdek onze advertentiemogelijkheden voor escorts, clubs en andere erotische bedrijven.",
+      "Transparante advertentiepakketten voor erotische bedrijven. Vanaf 49 euro per maand.",
   },
 };
 

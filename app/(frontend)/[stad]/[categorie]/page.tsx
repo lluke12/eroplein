@@ -1,18 +1,34 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { ArrowRight, SlidersHorizontal, Star } from "lucide-react";
+import {
+  ArrowRight,
+  SlidersHorizontal,
+  Star,
+  ChevronRight,
+  MapPin,
+} from "lucide-react";
 import { Navbar } from "@/components/ui/Navbar";
 import { Footer } from "@/components/ui/Footer";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { BusinessCard } from "@/components/ui/BusinessCard";
 import { CityCard } from "@/components/ui/CityCard";
 import {
+  JsonLd,
+  breadcrumbListSchema,
+  collectionPageSchema,
+  itemListSchema,
+  faqPageSchema,
+} from "@/components/ui/JsonLd";
+import {
   getCities,
   getCityBySlug,
   getCategories,
   getCategoryBySlug,
   getNearbyCities,
+  formatCategoryTitle,
+  formatCategoryDescription,
+  provinceSlug,
 } from "@/lib/data";
 import {
   getPlaceholderBusinessByCityAndCategory,
@@ -44,15 +60,39 @@ export async function generateMetadata({
   const category = getCategoryBySlug(categorie);
   if (!city || !category) return {};
 
-  const title = `${category.name} ${city.name} - Reviews & ervaringen`;
-  const description = `Beste ${category.name.toLowerCase()} in ${city.name}. Vergelijk beoordelingen, lees eerlijke reviews en vind de beste ${category.name.toLowerCase()} bij jou in de buurt.`;
+  const businesses = getPlaceholderBusinessByCityAndCategory(
+    city.slug,
+    category.slug
+  );
+  const count = businesses.length;
+  const hasContent = count > 0;
+
+  const title = formatCategoryTitle(category, city.name, count);
+  const description = formatCategoryDescription(category, city.name, count);
   const url = `/${city.slug}/${category.slug}`;
+
   return {
     title,
     description,
     alternates: { canonical: url },
-    openGraph: { title, description, url, type: "website" },
-    twitter: { card: "summary_large_image", title, description },
+    openGraph: {
+      title,
+      description,
+      url,
+      type: "website",
+      locale: "nl_NL",
+      images: [{ url: `/cities/${city.slug}.jpg`, width: 1200, height: 630, alt: `${category.name} in ${city.name}` }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [`/cities/${city.slug}.jpg`],
+    },
+    // Pages without any listings: noindex to prevent thin-content penalty
+    robots: hasContent
+      ? { index: true, follow: true }
+      : { index: false, follow: true },
   };
 }
 
@@ -63,7 +103,7 @@ export default async function CategoriePage({ params }: CategoriePageProps) {
 
   if (!city || !category) notFound();
 
-  const nearbyCities = getNearbyCities(city.slug, 4);
+  const nearbyCities = getNearbyCities(city.slug, 6);
   const businesses = getPlaceholderBusinessByCityAndCategory(
     city.slug,
     category.slug
@@ -74,6 +114,44 @@ export default async function CategoriePage({ params }: CategoriePageProps) {
   const otherCityBusinesses = allCategoryBusinesses.filter(
     (b) => b.city_slug !== city.slug
   );
+
+  const sortedBusinesses = businesses
+    .slice()
+    .sort(
+      (a, b) =>
+        b.average_rating - a.average_rating ||
+        b.review_count - a.review_count
+    );
+
+  const searchTerm = category.search_term || category.name.toLowerCase();
+  const singular = category.singular || category.name;
+  const introCopy =
+    category.intro_copy ||
+    `${category.description} Op deze pagina zie je alle ${category.name.toLowerCase()} in ${city.name}.`;
+
+  const faqBase = category.faq_questions || [];
+  const cityFaqItems = [
+    {
+      q: `Hoeveel ${searchTerm}-opties zijn er in ${city.name}?`,
+      a:
+        businesses.length > 0
+          ? `Op Eroplein vind je op dit moment ${businesses.length} ${category.name.toLowerCase()} in ${city.name}, gesorteerd op reviewscore. Het aanbod breidt uit zodra nieuwe bedrijven zich aanmelden.`
+          : `Voor ${city.name} staan momenteel geen ${category.name.toLowerCase()} op Eroplein. Check naburige steden of voeg zelf een bedrijf toe.`,
+    },
+    {
+      q: `Wat is de beste ${singular.toLowerCase()} in ${city.name}?`,
+      a: `De best beoordeelde ${category.name.toLowerCase()} in ${city.name} wordt bepaald door het gemiddelde van alle reviews en het aantal beoordelingen. Sorteer op 'Best beoordeeld' bovenaan deze pagina voor de actuele ranking.`,
+    },
+    ...faqBase.map((f) => ({ q: f.q, a: f.a })),
+  ];
+
+  const breadcrumbs = [
+    { name: "Home", url: "/" },
+    { name: "Steden", url: "/steden" },
+    { name: city.province, url: `/provincie/${provinceSlug(city.province)}` },
+    { name: city.name, url: `/${city.slug}` },
+    { name: category.name, url: `/${city.slug}/${category.slug}` },
+  ];
 
   return (
     <>
@@ -93,14 +171,28 @@ export default async function CategoriePage({ params }: CategoriePageProps) {
             <span className="text-xs font-medium text-fuchsia-400/80 tracking-widest uppercase mb-3 block">
               {city.name}, {city.province}
             </span>
-            <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-pink-50 mb-4">
-              {category.name} in{" "}
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-pink-50 mb-4">
+              {singular}{" "}
               <span className="text-fuchsia-400">{city.name}</span>
             </h1>
             <p className="text-lg text-gray-400 max-w-2xl">
-              {category.description}
+              {businesses.length > 0
+                ? `${businesses.length} ${category.name.toLowerCase()} in ${city.name} met echte bezoekersreviews. Vergelijk op beoordeling, prijs en sfeer.`
+                : category.description}
             </p>
           </div>
+
+          {/* Intro SEO copy */}
+          <section className="mb-12 max-w-3xl">
+            <div className="prose prose-invert max-w-none text-gray-400 leading-relaxed space-y-4">
+              <p>{introCopy}</p>
+              {category.long_intro && (
+                <p>
+                  {category.long_intro.split("\n\n")[0]}
+                </p>
+              )}
+            </div>
+          </section>
 
           {/* Filter bar */}
           <div className="flex flex-wrap items-center gap-3 mb-8">
@@ -127,18 +219,17 @@ export default async function CategoriePage({ params }: CategoriePageProps) {
 
           {/* Listings */}
           <section className="mb-20">
-            {businesses.length > 0 ? (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {businesses
-                  .sort(
-                    (a, b) =>
-                      b.average_rating - a.average_rating ||
-                      b.review_count - a.review_count
-                  )
-                  .map((biz) => (
+            {sortedBusinesses.length > 0 ? (
+              <>
+                <h2 className="sr-only">
+                  {businesses.length} {category.name.toLowerCase()} in {city.name}
+                </h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {sortedBusinesses.map((biz) => (
                     <BusinessCard key={biz.id} business={biz} />
                   ))}
-              </div>
+                </div>
+              </>
             ) : (
               <div className="rounded-2xl border border-white/[0.06] bg-white/[0.02] p-12 text-center">
                 <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-white/[0.03] flex items-center justify-center">
@@ -148,8 +239,12 @@ export default async function CategoriePage({ params }: CategoriePageProps) {
                   Nog geen {category.name.toLowerCase()} in {city.name}
                 </h3>
                 <p className="text-gray-400 mb-6 max-w-md mx-auto">
-                  Wees de eerste die een {category.name.toLowerCase()} toevoegt
-                  in {city.name} en help anderen de juiste keuze te maken.
+                  Op dit moment staan er geen {category.name.toLowerCase()} in
+                  onze database voor {city.name}. Check{" "}
+                  {nearbyCities.length > 0
+                    ? `naburige steden als ${nearbyCities.slice(0, 2).map((c) => c.name).join(" of ")}`
+                    : "andere steden"}
+                  , of meld zelf een bedrijf aan.
                 </p>
                 <Link
                   href="/claim"
@@ -162,15 +257,43 @@ export default async function CategoriePage({ params }: CategoriePageProps) {
             )}
           </section>
 
-          {/* Same category in other cities */}
-          {otherCityBusinesses.length > 0 && (
-            <section className="mb-20">
-              <h2 className="text-xl font-semibold text-white mb-6">
-                {category.name} in andere steden
+          {/* Lange intro tekst */}
+          {category.long_intro && (
+            <section className="mb-20 max-w-3xl">
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
+                Over {category.name.toLowerCase()} in {city.name}
               </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {otherCityBusinesses.slice(0, 3).map((biz) => (
-                  <BusinessCard key={biz.id} business={biz} />
+              <div className="prose prose-invert max-w-none text-gray-400 leading-relaxed space-y-4">
+                {category.long_intro.split("\n\n").map((p, i) => (
+                  <p key={i}>{p}</p>
+                ))}
+              </div>
+            </section>
+          )}
+
+          {/* Same category in nearby cities */}
+          {nearbyCities.length > 0 && (
+            <section className="mb-20">
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-8">
+                {category.name} in de buurt van {city.name}
+              </h2>
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                {nearbyCities.map((nearCity) => (
+                  <Link
+                    key={nearCity.slug}
+                    href={`/${nearCity.slug}/${category.slug}`}
+                    className="rounded-2xl p-5 group cursor-pointer block border border-white/[0.06] bg-white/[0.02] hover:bg-white/[0.05] hover:border-white/[0.12] transition-all"
+                  >
+                    <div className="flex items-center gap-2 mb-2">
+                      <MapPin className="w-4 h-4 text-fuchsia-400" />
+                      <h3 className="text-base font-semibold text-white group-hover:text-fuchsia-300 transition-colors">
+                        {nearCity.name}
+                      </h3>
+                    </div>
+                    <p className="text-xs text-gray-400">
+                      {category.name} in {nearCity.name}
+                    </p>
+                  </Link>
                 ))}
               </div>
             </section>
@@ -178,8 +301,8 @@ export default async function CategoriePage({ params }: CategoriePageProps) {
 
           {/* Other categories in this city */}
           <section className="mb-20">
-            <h2 className="text-xl font-semibold text-white mb-6">
-              Andere categorieën in {city.name}
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
+              Andere categorieen in {city.name}
             </h2>
             <div className="flex flex-wrap gap-3">
               {getCategories()
@@ -190,38 +313,75 @@ export default async function CategoriePage({ params }: CategoriePageProps) {
                     href={`/${city.slug}/${cat.slug}`}
                     className="px-4 py-2 rounded-full border border-white/[0.06] text-sm text-white/50 hover:text-fuchsia-400 hover:border-fuchsia-500/30 transition-all"
                   >
-                    {cat.name}
+                    {cat.name} in {city.name}
                   </Link>
                 ))}
             </div>
           </section>
 
-          {/* Same category in nearby cities */}
-          {nearbyCities.length > 0 && (
-            <section>
-              <h2 className="text-xl font-semibold text-white mb-6">
-                {category.name} in de buurt
-              </h2>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                {nearbyCities.map((nearCity) => (
-                  <Link
-                    key={nearCity.slug}
-                    href={`/${nearCity.slug}/${category.slug}`}
-                    className="rounded-2xl p-5 group cursor-pointer block border border-white/[0.06] bg-white/[0.02] hover:bg-white/[0.05] hover:border-white/[0.12] transition-all"
-                  >
-                    <h3 className="text-base font-semibold text-white group-hover:text-fuchsia-300 transition-colors">
-                      {nearCity.name}
+          {/* FAQ */}
+          <section className="max-w-3xl">
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-8">
+              Veelgestelde vragen over {category.name.toLowerCase()} in {city.name}
+            </h2>
+            <div className="space-y-3">
+              {cityFaqItems.map((item, idx) => (
+                <details
+                  key={idx}
+                  className="group rounded-xl border border-white/[0.06] bg-white/[0.02] p-5 open:bg-white/[0.04] transition-colors"
+                >
+                  <summary className="flex items-center justify-between cursor-pointer list-none">
+                    <h3 className="text-base font-semibold text-white pr-4">
+                      {item.q}
                     </h3>
-                    <p className="text-sm text-gray-400 mt-1">
-                      {category.name} in {nearCity.name}
-                    </p>
-                  </Link>
-                ))}
-              </div>
-            </section>
-          )}
+                    <ChevronRight className="w-5 h-5 text-fuchsia-400 group-open:rotate-90 transition-transform flex-shrink-0" />
+                  </summary>
+                  <p className="mt-3 text-sm text-gray-400 leading-relaxed">
+                    {item.a}
+                  </p>
+                </details>
+              ))}
+            </div>
+          </section>
         </div>
       </main>
+
+      {/* Schema */}
+      <JsonLd data={breadcrumbListSchema(breadcrumbs)} id="ld-breadcrumb" />
+      <JsonLd
+        data={collectionPageSchema({
+          name: `${category.name} in ${city.name}`,
+          description: formatCategoryDescription(
+            category,
+            city.name,
+            businesses.length
+          ),
+          url: `/${city.slug}/${category.slug}`,
+          breadcrumbs,
+        })}
+        id="ld-collection"
+      />
+      {sortedBusinesses.length > 0 && (
+        <JsonLd
+          data={itemListSchema(
+            sortedBusinesses.map((b) => ({
+              name: b.name,
+              url: `/${b.city_slug}/${b.primary_category}/${b.slug}`,
+              description: b.short_description,
+              image: b.image_url,
+            })),
+            `${category.name} in ${city.name}`
+          )}
+          id="ld-itemlist"
+        />
+      )}
+      <JsonLd
+        data={faqPageSchema(
+          cityFaqItems.map((f) => ({ question: f.q, answer: f.a }))
+        )}
+        id="ld-faq"
+      />
+
       <Footer />
     </>
   );

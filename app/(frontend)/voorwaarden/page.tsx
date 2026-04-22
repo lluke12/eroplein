@@ -4,22 +4,23 @@ import { Footer } from "@/components/ui/Footer";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "Algemene Voorwaarden",
+  title: "Algemene voorwaarden Eroplein",
   description:
-    "Lees de algemene voorwaarden van Eroplein. Gebruiksregels, verantwoordelijkheden en contentbeleid.",
+    "Regels voor het gebruik van Eroplein: contentbeleid, reviewmoderatie, aansprakelijkheid en verantwoordelijkheden van gebruikers en bedrijven.",
   alternates: { canonical: "/voorwaarden" },
   openGraph: {
-    title: "Algemene Voorwaarden | Eroplein",
+    title: "Algemene voorwaarden Eroplein",
     description:
-      "De algemene voorwaarden voor het gebruik van Eroplein.",
+      "Regels, contentbeleid en verantwoordelijkheden bij gebruik van Eroplein.",
     url: "/voorwaarden",
     type: "website",
+    locale: "nl_NL",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Algemene Voorwaarden",
+    title: "Algemene voorwaarden Eroplein",
     description:
-      "Lees de algemene voorwaarden van Eroplein. Gebruiksregels, verantwoordelijkheden en contentbeleid.",
+      "Regels, contentbeleid en verantwoordelijkheden bij gebruik van Eroplein.",
   },
 };
 

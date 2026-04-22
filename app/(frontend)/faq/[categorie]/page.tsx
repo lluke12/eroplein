@@ -7,6 +7,11 @@ import { Footer } from "@/components/ui/Footer";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { FaqAccordion } from "@/components/ui/FaqAccordion";
 import { getFaqCategories, getFaqCategoryBySlug } from "@/lib/faq-data";
+import {
+  JsonLd,
+  breadcrumbListSchema,
+  faqPageSchema,
+} from "@/components/ui/JsonLd";
 
 interface FaqCategoryPageProps {
   params: Promise<{ categorie: string }>;
@@ -25,18 +30,19 @@ export async function generateMetadata({
 
   const url = `/faq/${category.slug}`;
   return {
-    title: `FAQ ${category.name} - Veelgestelde vragen`,
-    description: category.description,
+    title: `${category.name} FAQ — ${category.questions.length} antwoorden`,
+    description: `${category.questions.length} veelgestelde vragen over ${category.name.toLowerCase()} in Nederland: kosten, veiligheid, etiquette en praktische info.`,
     alternates: { canonical: url },
     openGraph: {
-      title: `Veelgestelde vragen over ${category.name} | Eroplein`,
+      title: `Veelgestelde vragen over ${category.name}`,
       description: category.description,
       url,
       type: "website",
+      locale: "nl_NL",
     },
     twitter: {
       card: "summary_large_image",
-      title: `FAQ ${category.name}`,
+      title: `${category.name} FAQ op Eroplein`,
       description: category.description,
     },
   };
@@ -54,24 +60,24 @@ export default async function FaqCategoryPage({
     (c) => c.slug !== category.slug
   );
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: category.questions.map((q) => ({
-      "@type": "Question",
-      name: q.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: q.answer,
-      },
-    })),
-  };
-
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      <JsonLd
+        data={breadcrumbListSchema([
+          { name: "Home", url: "/" },
+          { name: "FAQ", url: "/faq" },
+          { name: category.name, url: `/faq/${category.slug}` },
+        ])}
+        id="ld-breadcrumb"
+      />
+      <JsonLd
+        data={faqPageSchema(
+          category.questions.map((q) => ({
+            question: q.question,
+            answer: q.answer,
+          }))
+        )}
+        id="ld-faq"
       />
       <Navbar />
       <main className="relative z-10 pt-8 pb-20">

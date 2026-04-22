@@ -4,26 +4,32 @@ import { MapPin, Building2, ChevronRight } from "lucide-react";
 import { Navbar } from "@/components/ui/Navbar";
 import { Footer } from "@/components/ui/Footer";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
+import {
+  JsonLd,
+  breadcrumbListSchema,
+  collectionPageSchema,
+  itemListSchema,
+} from "@/components/ui/JsonLd";
 import { getCities } from "@/lib/data";
 import { getBusinessCountByCity } from "@/lib/placeholder-data";
 
 export const metadata: Metadata = {
-  title: "Provincies | Eroplein",
+  title: "Provincies — escorts, clubs & massage per regio in Nederland",
   description:
-    "Bekijk het erotisch aanbod per provincie. Van Noord-Holland tot Limburg — ontdek escorts, clubs, massage en meer in alle Nederlandse provincies.",
+    "Vind escorts, parenclubs, erotische massage en meer per Nederlandse provincie. Overzicht van 12 provincies, 48 steden en 200+ bedrijven.",
   alternates: { canonical: "/provincie" },
   openGraph: {
-    title: "Alle Provincies — Eroplein",
+    title: "Alle provincies op Eroplein",
     description:
-      "Bekijk het erotisch aanbod per provincie. Ontdek escorts, clubs, massage en meer in alle Nederlandse provincies.",
+      "Per provincie de beste bedrijven en reviews. Noord-Holland, Zuid-Holland, Noord-Brabant, Utrecht, Gelderland en meer.",
     url: "/provincie",
     type: "website",
+    locale: "nl_NL",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Provincies | Eroplein",
-    description:
-      "Bekijk het erotisch aanbod per provincie. Van Noord-Holland tot Limburg — ontdek escorts, clubs, massage en meer in alle Nederlandse provincies.",
+    title: "Alle provincies op Eroplein",
+    description: "Per provincie de beste bedrijven en reviews in Nederland.",
   },
 };
 
@@ -134,24 +140,69 @@ export default function ProvinciesPage() {
 
           {/* SEO tekst */}
           <div className="mt-16 max-w-3xl">
-            <h2 className="text-xl font-semibold text-white mb-4">
-              Erotisch aanbod per provincie
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+              Erotisch aanbod per Nederlandse provincie
             </h2>
-            <div className="text-sm text-gray-400 leading-relaxed space-y-3">
+            <div className="text-base text-gray-400 leading-relaxed space-y-4">
               <p>
-                Nederland telt elf provincies, elk met een eigen karakter en aanbod op het
-                gebied van erotische diensten. Van de bruisende nachtscene in Noord-Holland
-                en Zuid-Holland tot de gezellige clubs in Noord-Brabant en Limburg.
+                Nederland telt twaalf provincies, elk met een eigen karakter en
+                aanbod op het gebied van sekswerk en erotische diensten. In
+                Noord-Holland en Zuid-Holland ligt het zwaartepunt met
+                Amsterdam, Rotterdam, Den Haag en Utrecht als grote centra. Hier
+                vind je de meest diverse mix: raamprostitutie, luxe escortbureaus,
+                bekende parenclubs en gerenommeerde massagesalons.
               </p>
               <p>
-                Op Eroplein vind je per provincie een overzicht van alle steden met escorts,
-                clubs, privéhuizen, massagesalons en meer. Lees eerlijke reviews en ontdek
-                welke bedrijven het beste aansluiten bij jouw wensen.
+                Noord-Brabant is een uitgesproken clubregio met saunaclubs rond
+                Eindhoven, Tilburg en de regio Kerkdriel. Limburg kent een
+                Duits-georienteerde clubscene dicht bij de grens (Venlo,
+                Maastricht). Gelderland en Overijssel bieden een rustiger
+                aanbod met privehuizen en zelfstandige escorts, en in Friesland,
+                Drenthe en Groningen zijn het vooral Leeuwarden en Groningen-stad
+                waar het aanbod zich concentreert.
+              </p>
+              <p>
+                Op elke provinciepagina vind je de aangesloten steden, het totaal
+                aantal bedrijven en een overzicht per categorie. Klik door naar
+                stad voor reviews en details.
               </p>
             </div>
           </div>
         </div>
       </main>
+
+      <JsonLd
+        data={breadcrumbListSchema([
+          { name: "Home", url: "/" },
+          { name: "Provincies", url: "/provincie" },
+        ])}
+        id="ld-breadcrumb"
+      />
+      <JsonLd
+        data={collectionPageSchema({
+          name: "Provincies op Eroplein",
+          description:
+            "Overzicht van alle Nederlandse provincies met erotische diensten en reviews.",
+          url: "/provincie",
+          breadcrumbs: [
+            { name: "Home", url: "/" },
+            { name: "Provincies", url: "/provincie" },
+          ],
+        })}
+        id="ld-collection"
+      />
+      <JsonLd
+        data={itemListSchema(
+          provinces.map((p) => ({
+            name: p.name,
+            url: `/provincie/${p.slug}`,
+            description: `${p.cityCount} steden met ${p.businessCount} bedrijven in ${p.name}.`,
+          })),
+          "Provincies Nederland"
+        )}
+        id="ld-itemlist"
+      />
+
       <Footer />
     </>
   );

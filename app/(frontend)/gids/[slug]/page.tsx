@@ -14,10 +14,17 @@ import { Footer } from "@/components/ui/Footer";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { guides, getGuideBySlug, getRelatedGuides } from "@/lib/guides-data";
 import { TableOfContents } from "./TableOfContents";
+import {
+  JsonLd,
+  breadcrumbListSchema,
+  articleSchema,
+} from "@/components/ui/JsonLd";
 
 interface GuidePageProps {
   params: Promise<{ slug: string }>;
 }
+
+export const revalidate = 3600; // ISR — gids-content kan tijdens runtime gepubliceerd worden
 
 export async function generateStaticParams() {
   return guides.map((g) => ({ slug: g.slug }));
@@ -93,28 +100,6 @@ export default async function GuidePage({ params }: GuidePageProps) {
   if (!guide) notFound();
 
   const relatedGuides = getRelatedGuides(guide.relatedGuides);
-
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: guide.title,
-    description: guide.metaDescription,
-    datePublished: guide.publishedAt,
-    dateModified: guide.updatedAt,
-    author: {
-      "@type": "Organization",
-      name: "Eroplein",
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "Eroplein",
-      url: "https://www.eroplein.com",
-    },
-    mainEntityOfPage: {
-      "@type": "WebPage",
-      "@id": `https://www.eroplein.com/gids/${guide.slug}`,
-    },
-  };
 
   return (
     <>
@@ -271,9 +256,24 @@ export default async function GuidePage({ params }: GuidePageProps) {
         </div>
       </main>
 
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      <JsonLd
+        data={breadcrumbListSchema([
+          { name: "Home", url: "/" },
+          { name: "Gids", url: "/gids" },
+          { name: guide.title, url: `/gids/${guide.slug}` },
+        ])}
+        id="ld-breadcrumb"
+      />
+      <JsonLd
+        data={articleSchema({
+          headline: guide.title,
+          description: guide.metaDescription,
+          url: `/gids/${guide.slug}`,
+          datePublished: guide.publishedAt,
+          dateModified: guide.updatedAt,
+          authorName: "Eroplein Redactie",
+        })}
+        id="ld-article"
       />
 
       <Footer />

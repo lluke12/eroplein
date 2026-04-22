@@ -12,22 +12,23 @@ import {
 import { getCityBySlug, getCategoryBySlug } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Vergelijk Bedrijven",
+  title: "Vergelijk escorts, clubs & massage — Eroplein vergelijker",
   description:
-    "Vergelijk erotische bedrijven naast elkaar. Bekijk scores, reviews, prijzen en meer om de beste keuze te maken.",
+    "Vergelijk Nederlandse erotische bedrijven zij-aan-zij: score, reviews, prijsklasse, openingstijden en faciliteiten. Vind het juiste bedrijf zonder tientallen pagina's te doorzoeken.",
   alternates: { canonical: "/vergelijk" },
   openGraph: {
-    title: "Vergelijk Bedrijven",
+    title: "Vergelijk bedrijven op Eroplein",
     description:
-      "Vergelijk erotische bedrijven naast elkaar. Bekijk scores, reviews, prijzen en meer om de beste keuze te maken.",
+      "Zij-aan-zij vergelijken: scores, prijzen, reviews en faciliteiten.",
     url: "/vergelijk",
     type: "website",
+    locale: "nl_NL",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Vergelijk Bedrijven",
+    title: "Vergelijk bedrijven op Eroplein",
     description:
-      "Vergelijk erotische bedrijven naast elkaar. Bekijk scores, reviews, prijzen en meer om de beste keuze te maken.",
+      "Zij-aan-zij vergelijken: scores, prijzen, reviews en faciliteiten.",
   },
 };
 

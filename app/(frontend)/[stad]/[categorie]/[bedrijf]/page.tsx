@@ -12,17 +12,26 @@ import {
   ThumbsUp,
   ArrowRight,
   ExternalLink,
+  ChevronRight,
 } from "lucide-react";
 import { Navbar } from "@/components/ui/Navbar";
 import { Footer } from "@/components/ui/Footer";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { ReviewCard } from "@/components/ui/ReviewCard";
+import { BusinessCard } from "@/components/ui/BusinessCard";
 import { StarRating } from "@/components/ui/StarRating";
-import { getCityBySlug, getCategoryBySlug } from "@/lib/data";
+import {
+  JsonLd,
+  breadcrumbListSchema,
+  localBusinessSchema,
+  faqPageSchema,
+} from "@/components/ui/JsonLd";
+import { getCityBySlug, getCategoryBySlug, provinceSlug } from "@/lib/data";
 import {
   placeholderBusinesses,
   getPlaceholderBusinessBySlug,
   getPlaceholderReviewsByBusiness,
+  getPlaceholderBusinessesByCity,
   formatTimeAgo,
 } from "@/lib/placeholder-data";
 
@@ -47,8 +56,15 @@ export async function generateMetadata({
 
   if (!city || !business) return {};
 
-  const title = `${business.name} - ${city.name} | Ervaringen & reviews`;
-  const description = `${business.short_description} Lees ${business.review_count} eerlijke reviews over ${business.name} in ${city.name}.`;
+  const reviewText =
+    business.review_count > 0
+      ? `${business.review_count} reviews · ${business.average_rating.toFixed(1)}/5`
+      : "ervaringen & info";
+
+  const title = `${business.name} ${city.name} — ${reviewText}`;
+  const description = business.review_count > 0
+    ? `${business.short_description} Lees ${business.review_count} eerlijke reviews over ${business.name} in ${city.name} met gemiddelde score ${business.average_rating.toFixed(1)}/5.`
+    : `${business.short_description} Informatie, openingstijden en contactgegevens van ${business.name} in ${city.name}.`;
   const url = `/${city.slug}/${business.primary_category}/${business.slug}`;
   return {
     title,
@@ -59,13 +75,16 @@ export async function generateMetadata({
       description,
       url,
       type: "website",
-      ...(business.image_url && { images: [{ url: business.image_url, width: 400, height: 300, alt: business.name }] }),
+      locale: "nl_NL",
+      images: business.image_url
+        ? [{ url: business.image_url, width: 1200, height: 630, alt: `${business.name} in ${city.name}` }]
+        : [{ url: `/cities/${city.slug}.jpg`, width: 1200, height: 630, alt: `${business.name} in ${city.name}` }],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
-      ...(business.image_url && { images: [business.image_url] }),
+      images: business.image_url ? [business.image_url] : [`/cities/${city.slug}.jpg`],
     },
   };
 }
@@ -77,6 +96,46 @@ export default async function BedrijfPage({ params }: BedrijfPageProps) {
   const business = getPlaceholderBusinessBySlug(bedrijf);
 
   if (!city || !category || !business) notFound();
+
+  const similarBusinesses = getPlaceholderBusinessesByCity(city.slug)
+    .filter(
+      (b) =>
+        b.id !== business.id &&
+        b.category_slugs.some((c) => business.category_slugs.includes(c))
+    )
+    .slice(0, 3);
+
+  const breadcrumbs = [
+    { name: "Home", url: "/" },
+    { name: city.province, url: `/provincie/${provinceSlug(city.province)}` },
+    { name: city.name, url: `/${city.slug}` },
+    { name: category.name, url: `/${city.slug}/${category.slug}` },
+    {
+      name: business.name,
+      url: `/${city.slug}/${category.slug}/${business.slug}`,
+    },
+  ];
+
+  const businessFaqItems = [
+    {
+      question: `Waar is ${business.name} gevestigd?`,
+      answer: `${business.name} is gevestigd op ${business.address}${business.postal_code ? `, ${business.postal_code}` : ""} in ${city.name}, ${city.province}.`,
+    },
+    {
+      question: `Wat kost een bezoek bij ${business.name}?`,
+      answer: `${business.name} valt in prijsklasse ${"€".repeat(business.price_range)} (${business.price_range === 1 ? "budget" : business.price_range === 2 ? "gemiddeld" : business.price_range === 3 ? "bovengemiddeld" : "luxe"}). Voor exacte tarieven en aanbiedingen bel je rechtstreeks of bezoek je de website.`,
+    },
+    {
+      question: `Moet ik reserveren bij ${business.name}?`,
+      answer: `Reservering wordt aanbevolen, zeker in het weekend. Veel ${category.name.toLowerCase()}-locaties in ${city.name} werken zowel op afspraak als walk-in. Bel ${business.phone || "het bedrijf"} voor beschikbaarheid.`,
+    },
+    {
+      question: `Is ${business.name} geverifieerd?`,
+      answer: business.is_verified
+        ? `Ja. ${business.name} is door het Eroplein-team geverifieerd op vergunning en KVK-registratie. Bedrijven met status 'Geverifieerd' werken binnen het Nederlandse wettelijke kader voor sekswerk.`
+        : `${business.name} staat op Eroplein maar is nog niet volledig geverifieerd. Check zelf of een vergunning aanwezig is voordat je boekt.`,
+    },
+  ];
 
   const reviews = getPlaceholderReviewsByBusiness(business.id);
   const avgRating = business.average_rating;
@@ -151,7 +210,7 @@ export default async function BedrijfPage({ params }: BedrijfPageProps) {
                 {business.image_url ? (
                   <Image
                     src={business.image_url}
-                    alt={business.name}
+                    alt={`${business.name} — ${category.name.toLowerCase()} in ${city.name}`}
                     fill
                     className="object-cover"
                     sizes="(max-width: 1024px) 100vw, 66vw"
@@ -351,55 +410,89 @@ export default async function BedrijfPage({ params }: BedrijfPageProps) {
               </div>
             </div>
           </div>
+
+          {/* FAQ */}
+          <section className="max-w-3xl mt-20">
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-8">
+              Veelgestelde vragen over {business.name}
+            </h2>
+            <div className="space-y-3">
+              {businessFaqItems.map((item, idx) => (
+                <details
+                  key={idx}
+                  className="group rounded-xl border border-white/[0.06] bg-white/[0.02] p-5 open:bg-white/[0.04] transition-colors"
+                >
+                  <summary className="flex items-center justify-between cursor-pointer list-none">
+                    <h3 className="text-base font-semibold text-white pr-4">
+                      {item.question}
+                    </h3>
+                    <ChevronRight className="w-5 h-5 text-fuchsia-400 group-open:rotate-90 transition-transform flex-shrink-0" />
+                  </summary>
+                  <p className="mt-3 text-sm text-gray-400 leading-relaxed">
+                    {item.answer}
+                  </p>
+                </details>
+              ))}
+            </div>
+          </section>
+
+          {/* Similar businesses */}
+          {similarBusinesses.length > 0 && (
+            <section className="mt-20">
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-8">
+                Vergelijkbare {category.name.toLowerCase()} in {city.name}
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {similarBusinesses.map((biz) => (
+                  <BusinessCard key={biz.id} business={biz} />
+                ))}
+              </div>
+            </section>
+          )}
         </div>
       </main>
 
-      {/* JSON-LD Schema.org - LocalBusiness */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            "@id": `https://www.eroplein.com/${city.slug}/${category.slug}/${business.slug}`,
-            name: business.name,
-            description: business.short_description,
-            ...(business.image_url && { image: business.image_url }),
-            address: {
-              "@type": "PostalAddress",
-              streetAddress: business.address,
-              ...(business.postal_code && { postalCode: business.postal_code }),
-              addressLocality: city.name,
-              addressRegion: city.province,
-              addressCountry: "NL",
-            },
-            ...(business.phone && { telephone: business.phone }),
-            ...(business.website && { url: business.website }),
+      {/* Schema */}
+      <JsonLd data={breadcrumbListSchema(breadcrumbs)} id="ld-breadcrumb" />
+      <JsonLd
+        data={localBusinessSchema({
+          name: business.name,
+          description: business.description || business.short_description,
+          url: `/${city.slug}/${category.slug}/${business.slug}`,
+          image: business.image_url,
+          address: {
+            street: business.address,
+            locality: city.name,
+            postalCode: business.postal_code,
+            region: city.province,
+          },
+          phone: business.phone,
+          priceRange: "€".repeat(business.price_range),
+          ...(business.review_count > 0 && {
             aggregateRating: {
-              "@type": "AggregateRating",
               ratingValue: business.average_rating,
               reviewCount: business.review_count,
-              bestRating: 5,
-              worstRating: 1,
             },
-            priceRange: "€".repeat(business.price_range),
-            ...(reviews.length > 0 && {
-              review: reviews.slice(0, 5).map((r) => ({
-                "@type": "Review",
-                author: { "@type": "Person", name: r.user_display_name },
-                datePublished: r.created_at,
-                reviewRating: {
-                  "@type": "Rating",
-                  ratingValue: r.rating,
-                  bestRating: 5,
-                  worstRating: 1,
-                },
-                ...(r.title && { name: r.title }),
-                reviewBody: r.content,
-              })),
-            }),
           }),
-        }}
+          ...(reviews.length > 0 && {
+            reviews: reviews.slice(0, 5).map((r) => ({
+              author: r.user_display_name,
+              reviewRating: r.rating,
+              datePublished: r.created_at,
+              reviewBody: r.content,
+            })),
+          }),
+        })}
+        id="ld-localbusiness"
+      />
+      <JsonLd
+        data={faqPageSchema(
+          businessFaqItems.map((f) => ({
+            question: f.question,
+            answer: f.answer,
+          }))
+        )}
+        id="ld-faq"
       />
 
       <Footer />

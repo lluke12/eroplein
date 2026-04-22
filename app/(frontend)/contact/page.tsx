@@ -6,22 +6,23 @@ import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { Mail, Building2, HelpCircle, Clock, ChevronRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Contact",
+  title: "Contact Eroplein — vragen, feedback of melding",
   description:
-    "Neem contact op met Eroplein. Vragen over het platform, adverteren of je bedrijfspagina? We helpen je graag.",
+    "Contact met Eroplein: moderatie-vragen, adverteren, bedrijf claimen, melding van problematische content of juridische verzoeken. We reageren binnen 1 werkdag.",
   alternates: { canonical: "/contact" },
   openGraph: {
-    title: "Contact | Eroplein",
+    title: "Contact Eroplein",
     description:
-      "Neem contact op met Eroplein voor vragen, feedback of samenwerkingen.",
+      "Contact voor vragen, feedback, meldingen of juridische verzoeken.",
     url: "/contact",
     type: "website",
+    locale: "nl_NL",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Contact",
+    title: "Contact Eroplein",
     description:
-      "Neem contact op met Eroplein. Vragen over het platform, adverteren of je bedrijfspagina? We helpen je graag.",
+      "Contact voor vragen, feedback, meldingen of juridische verzoeken.",
   },
 };
 

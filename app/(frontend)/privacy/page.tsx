@@ -4,22 +4,23 @@ import { Footer } from "@/components/ui/Footer";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "Privacybeleid",
+  title: "Privacybeleid Eroplein — hoe wij omgaan met je gegevens",
   description:
-    "Lees hoe Eroplein omgaat met je persoonsgegevens. Ons privacybeleid conform de AVG/GDPR.",
+    "Ons AVG-conform privacybeleid. Welke gegevens we verzamelen, hoe we ze beschermen, hoe lang we ze bewaren en welke rechten je hebt als gebruiker.",
   alternates: { canonical: "/privacy" },
   openGraph: {
-    title: "Privacybeleid | Eroplein",
+    title: "Privacybeleid Eroplein",
     description:
-      "Hoe Eroplein omgaat met persoonsgegevens, cookies en je rechten onder de AVG.",
+      "AVG-conform privacybeleid. Welke gegevens we verzamelen en je rechten.",
     url: "/privacy",
     type: "website",
+    locale: "nl_NL",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Privacybeleid",
+    title: "Privacybeleid Eroplein",
     description:
-      "Lees hoe Eroplein omgaat met je persoonsgegevens. Ons privacybeleid conform de AVG/GDPR.",
+      "AVG-conform privacybeleid. Welke gegevens we verzamelen en je rechten.",
   },
 };
 

@@ -48,21 +48,27 @@ export async function generateMetadata({
   const guide = getCityGuide(stad);
   if (!city || !guide) return {};
 
-  const title = `${city.name} Erotische Gids - Alles Wat Je Moet Weten`;
-  const description = `Complete gids voor erotisch uitgaan in ${city.name}. Bekende gebieden, categorieën, praktische tips en meer. Ontdek alles over ${city.name}.`;
+  const title = `${city.name} gids — escorts, parenclubs & massage compleet`;
+  const description = `Volledige erotische stadsgids ${city.name}: populaire gebieden, prijsindicatie, praktische tips, vervoer en lokale aanbieders per categorie.`;
 
   return {
     title,
     description,
     openGraph: {
-      title: `${title} | Eroplein`,
+      title: `Gids ${city.name} — Eroplein`,
       description,
+      url: `/${city.slug}/gids`,
       type: "article",
       locale: "nl_NL",
       siteName: "Eroplein",
     },
+    twitter: {
+      card: "summary_large_image",
+      title: `Gids ${city.name} — Eroplein`,
+      description,
+    },
     alternates: {
-      canonical: `https://www.eroplein.com/${city.slug}/gids`,
+      canonical: `/${city.slug}/gids`,
     },
   };
 }

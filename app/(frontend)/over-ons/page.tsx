@@ -6,22 +6,23 @@ import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { Shield, Eye, Users, Heart, Star, MessageSquare, CheckCircle } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Over Ons",
+  title: "Over Eroplein — onafhankelijk reviewplatform sekswerk Nederland",
   description:
-    "Eroplein is het onafhankelijke reviewplatform voor erotische diensten in Nederland. Lees over onze missie, ons team en hoe we werken.",
+    "Wie zijn we, wat doen we en hoe modereren we reviews. Eroplein is het onafhankelijke Nederlandse reviewplatform voor escorts, parenclubs, massage en meer.",
   alternates: { canonical: "/over-ons" },
   openGraph: {
-    title: "Over Ons | Eroplein",
+    title: "Over Eroplein",
     description:
-      "Eroplein is het onafhankelijke reviewplatform voor erotische diensten in Nederland.",
+      "Onafhankelijk Nederlands reviewplatform voor erotische diensten. Onze missie, werkwijze en moderatie.",
     url: "/over-ons",
     type: "website",
+    locale: "nl_NL",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Over Ons",
+    title: "Over Eroplein",
     description:
-      "Eroplein is het onafhankelijke reviewplatform voor erotische diensten in Nederland. Lees over onze missie, ons team en hoe we werken.",
+      "Onafhankelijk reviewplatform voor erotische diensten in Nederland.",
   },
 };
 

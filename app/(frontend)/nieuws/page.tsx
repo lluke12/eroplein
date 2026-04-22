@@ -4,31 +4,41 @@ import { Calendar, Clock } from "lucide-react";
 import { Navbar } from "@/components/ui/Navbar";
 import { Footer } from "@/components/ui/Footer";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
-import { placeholderArticles } from "@/lib/placeholder-data";
+import { getPublishedArticles } from "@/lib/placeholder-data";
+
+export const revalidate = 3600;
+import {
+  JsonLd,
+  breadcrumbListSchema,
+  collectionPageSchema,
+  itemListSchema,
+} from "@/components/ui/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Nieuws",
+  title: "Nieuws — actueel uit de Nederlandse erotische branche",
   description:
-    "Het laatste nieuws en updates over de erotische scene in Nederland. Tips, guides en trending onderwerpen.",
+    "Nieuws, trends en beleidsupdates uit de Nederlandse sekswerk-branche: Wet regulering sekswerk, prijsontwikkelingen, club-reviews en gemeenteraad-besluiten.",
   alternates: { canonical: "/nieuws" },
   openGraph: {
-    title: "Nieuws",
+    title: "Nieuws op Eroplein",
     description:
-      "Het laatste nieuws en updates over de erotische scene in Nederland. Tips, guides en trending onderwerpen.",
+      "Actueel nieuws over de erotische branche in Nederland: wetgeving, trends, markt en club-highlights.",
     url: "/nieuws",
     type: "website",
+    locale: "nl_NL",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nieuws",
+    title: "Nieuws op Eroplein",
     description:
-      "Het laatste nieuws en updates over de erotische scene in Nederland. Tips, guides en trending onderwerpen.",
+      "Actueel nieuws over de erotische branche in Nederland.",
   },
 };
 
 export default function NieuwsPage() {
-  const featured = placeholderArticles[0];
-  const rest = placeholderArticles.slice(1);
+  const articles = getPublishedArticles();
+  const featured = articles[0];
+  const rest = articles.slice(1);
 
   return (
     <>
@@ -37,16 +47,18 @@ export default function NieuwsPage() {
         <div className="max-w-7xl mx-auto px-6">
           <Breadcrumbs items={[{ label: "Nieuws" }]} />
 
-          <div className="mb-12">
+          <div className="mb-12 max-w-3xl">
             <span className="text-xs font-medium text-fuchsia-400/80 tracking-widest uppercase mb-3 block">
               Laatste updates
             </span>
-            <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-pink-50 mb-4">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-pink-50 mb-4">
               Nieuws &{" "}
               <span className="text-fuchsia-400">artikelen</span>
             </h1>
-            <p className="text-lg text-gray-400 max-w-2xl">
-              Het laatste nieuws, tips en guides over de scene in Nederland.
+            <p className="text-lg text-gray-400">
+              Nieuws, trends en beleidsontwikkelingen uit de Nederlandse
+              erotische branche. Van wetgeving tot prijsanalyses, van
+              club-highlights tot mens-in-focus interviews.
             </p>
           </div>
 
@@ -132,6 +144,39 @@ export default function NieuwsPage() {
           </div>
         </div>
       </main>
+
+      <JsonLd
+        data={breadcrumbListSchema([
+          { name: "Home", url: "/" },
+          { name: "Nieuws", url: "/nieuws" },
+        ])}
+        id="ld-breadcrumb"
+      />
+      <JsonLd
+        data={collectionPageSchema({
+          name: "Nieuws op Eroplein",
+          description:
+            "Nieuws, trends en beleidsupdates uit de Nederlandse erotische branche.",
+          url: "/nieuws",
+          breadcrumbs: [
+            { name: "Home", url: "/" },
+            { name: "Nieuws", url: "/nieuws" },
+          ],
+        })}
+        id="ld-collection"
+      />
+      <JsonLd
+        data={itemListSchema(
+          articles.map((a) => ({
+            name: a.title,
+            url: `/nieuws/${a.slug}`,
+            description: a.excerpt,
+          })),
+          "Recent nieuws"
+        )}
+        id="ld-itemlist"
+      />
+
       <Footer />
     </>
   );

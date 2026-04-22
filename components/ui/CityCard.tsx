@@ -21,7 +21,7 @@ export function CityCard({ city, businessCount = 0 }: CityCardProps) {
       {imageUrl ? (
         <Image
           src={imageUrl}
-          alt={city.name}
+          alt={`${city.name} stadsaanzicht — escorts, parenclubs en massage reviews`}
           fill
           className="object-cover group-hover:scale-105 transition-transform duration-500"
           sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 16vw"

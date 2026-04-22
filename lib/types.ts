@@ -15,6 +15,13 @@ export interface Category {
   color: string;
   description: string;
   sort_order: number;
+  singular?: string;
+  search_term?: string;
+  seo_title_template?: string;
+  seo_description_template?: string;
+  intro_copy?: string;
+  long_intro?: string;
+  faq_questions?: { q: string; a: string }[];
 }
 
 export interface Business {

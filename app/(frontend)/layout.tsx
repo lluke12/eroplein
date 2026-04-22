@@ -14,40 +14,74 @@ const playfair = Playfair_Display({
   display: "swap",
 });
 
+const GSC_VERIFICATION = process.env.NEXT_PUBLIC_GSC_VERIFICATION;
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.eroplein.com"),
   title: {
-    default: "Eroplein - Reviews Erotische Diensten Nederland",
+    default:
+      "Eroplein — Reviews escorts, parenclubs, massage & meer in Nederland",
     template: "%s | Eroplein",
   },
   description:
-    "Eerlijke reviews en ervaringen over escorts, clubs, massage en meer in 42+ Nederlandse steden. Vergelijk bedrijven, lees beoordelingen en maak de beste keuze.",
+    "Eerlijke reviews en ervaringen over escorts, parenclubs, erotische massage, seksclubs en privéhuizen in 48 Nederlandse steden. Vergelijk bedrijven op basis van echte beoordelingen en maak de beste keuze.",
   keywords: [
     "escort reviews",
-    "ervaringen",
+    "escort ervaringen",
+    "parenclub reviews",
     "erotische massage",
     "privéhuis",
-    "parenclub",
+    "seksclub",
+    "swingersclub",
     "stripclub",
     "saunaclub",
-    "nederland",
+    "raamprostitutie",
+    "seksshop",
+    "sekswerk Nederland",
+    "beste escort",
     "beoordelingen",
   ],
+  applicationName: "Eroplein",
+  authors: [{ name: "Eroplein" }],
+  creator: "Eroplein",
+  publisher: "Eroplein",
+  category: "directory",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
   openGraph: {
     type: "website",
     locale: "nl_NL",
     siteName: "Eroplein",
+    url: "https://www.eroplein.com",
   },
   twitter: {
     card: "summary_large_image",
+    creator: "@eroplein",
+    site: "@eroplein",
   },
   robots: {
     index: true,
     follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
   alternates: {
     canonical: "/",
   },
+  ...(GSC_VERIFICATION && {
+    verification: {
+      google: GSC_VERIFICATION,
+    },
+  }),
 };
 
 export default function FrontendLayout({
@@ -56,7 +90,7 @@ export default function FrontendLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="nl" className={`${inter.variable} ${playfair.variable}`}>
+    <html lang="nl-NL" className={`${inter.variable} ${playfair.variable}`}>
       <body className="bg-[#111114] text-white min-h-screen overflow-x-hidden selection:bg-fuchsia-500/30 grain font-sans antialiased">
         {/* Subtle background glow */}
         <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden">

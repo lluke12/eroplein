@@ -13,6 +13,13 @@ import {
   placeholderBusinesses,
 } from "@/lib/placeholder-data";
 import type { City } from "@/lib/types";
+import {
+  JsonLd,
+  breadcrumbListSchema,
+  collectionPageSchema,
+  itemListSchema,
+  faqPageSchema,
+} from "@/components/ui/JsonLd";
 
 // ── Province definitions ────────────────────────────────────────────────
 
@@ -136,13 +143,13 @@ export async function generateMetadata({
   const cityNames = cities.slice(0, 4).map((c) => c.name).join(", ");
 
   const url = `/provincie/${province.slug}`;
-  const title = `${province.name} - Escorts, clubs & meer`;
-  const description = `Ontdek het erotisch aanbod in ${province.name}. ${cities.length} steden waaronder ${cityNames}. Escorts, clubs, privéhuizen en meer.`;
+  const title = `Escort, parenclub & massage ${province.name} — reviews`;
+  const description = `Erotische diensten in ${province.name}: ${cities.length} steden waaronder ${cityNames}. Vergelijk escorts, parenclubs, massagesalons en seksclubs op basis van echte reviews.`;
   return {
     title,
     description,
     alternates: { canonical: url },
-    openGraph: { title, description, url, type: "website" },
+    openGraph: { title, description, url, type: "website", locale: "nl_NL" },
     twitter: { card: "summary_large_image", title, description },
   };
 }
@@ -340,33 +347,64 @@ export default async function ProvinciePage({ params }: ProvinciePageProps) {
             </section>
           )}
 
-          {/* Structured data (JSON-LD) */}
-          <script
-            type="application/ld+json"
-            suppressHydrationWarning
-            dangerouslySetInnerHTML={{
-              __html: JSON.stringify({
-                "@context": "https://schema.org",
-                "@type": "CollectionPage",
+          {/* SEO intro */}
+          <section className="mb-16 max-w-3xl">
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+              Sekswerk en erotische diensten in {province.name}
+            </h2>
+            <div className="prose prose-invert max-w-none text-gray-400 leading-relaxed space-y-4">
+              <p>{province.description}</p>
+              <p>
+                {cities.length} steden in {province.name} hebben bedrijven op
+                Eroplein, samen goed voor {totalBusinesses} vermeldingen en
+                {" "}{businessesInProvince.reduce((s, b) => s + b.review_count, 0)}+ reviews.
+                Bedrijven beschikken over een gemeentelijke vergunning of
+                KVK-registratie onder de Wet regulering sekswerk. Voor
+                bezoekers vanaf 18 jaar zijn deze diensten legaal toegankelijk.
+              </p>
+            </div>
+          </section>
+
+          {/* Schema */}
+          <JsonLd
+            data={breadcrumbListSchema([
+              { name: "Home", url: "/" },
+              { name: "Provincies", url: "/provincie" },
+              { name: province.name, url: `/provincie/${province.slug}` },
+            ])}
+            id="ld-breadcrumb"
+          />
+          <JsonLd
+            data={{
+              ...collectionPageSchema({
                 name: `Erotische bedrijven in ${province.name}`,
                 description: province.description,
-                url: `https://www.eroplein.com/provincie/${province.slug}`,
-                isPartOf: {
-                  "@type": "WebSite",
-                  name: "Eroplein",
-                  url: "https://www.eroplein.com",
-                },
-                about: {
-                  "@type": "AdministrativeArea",
-                  name: province.name,
-                  containedInPlace: {
-                    "@type": "Country",
-                    name: "Nederland",
-                  },
-                },
-                numberOfItems: totalBusinesses,
+                url: `/provincie/${province.slug}`,
+                breadcrumbs: [
+                  { name: "Home", url: "/" },
+                  { name: "Provincies", url: "/provincie" },
+                  { name: province.name, url: `/provincie/${province.slug}` },
+                ],
               }),
+              about: {
+                "@type": "AdministrativeArea",
+                name: province.name,
+                containedInPlace: { "@type": "Country", name: "Nederland" },
+              },
+              numberOfItems: totalBusinesses,
             }}
+            id="ld-collection"
+          />
+          <JsonLd
+            data={itemListSchema(
+              cities.map((c) => ({
+                name: c.name,
+                url: `/${c.slug}`,
+                description: `Erotische diensten in ${c.name}, ${province.name}.`,
+              })),
+              `Steden in ${province.name}`
+            )}
+            id="ld-itemlist"
           />
         </div>
       </main>

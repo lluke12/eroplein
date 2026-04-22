@@ -9,10 +9,17 @@ import {
   placeholderArticles,
   getPlaceholderArticleBySlug,
 } from "@/lib/placeholder-data";
+import {
+  JsonLd,
+  breadcrumbListSchema,
+  articleSchema,
+} from "@/components/ui/JsonLd";
 
 interface ArticlePageProps {
   params: Promise<{ slug: string }>;
 }
+
+export const revalidate = 3600;
 
 export async function generateStaticParams() {
   return placeholderArticles.map((a) => ({ slug: a.slug }));
@@ -35,13 +42,17 @@ export async function generateMetadata({
       description: article.excerpt,
       url,
       type: "article",
+      locale: "nl_NL",
       publishedTime: article.published_at,
+      authors: [article.author_name],
+      tags: article.tags,
       ...(article.image_url && { images: [{ url: article.image_url, alt: article.title }] }),
     },
     twitter: {
       card: "summary_large_image",
       title: article.title,
       description: article.excerpt,
+      ...(article.image_url && { images: [article.image_url] }),
     },
   };
 }
@@ -179,26 +190,24 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
         </div>
       </main>
 
-      {/* JSON-LD Schema.org */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Article",
-            headline: article.title,
-            description: article.excerpt,
-            author: {
-              "@type": "Person",
-              name: article.author_name,
-            },
-            datePublished: article.published_at,
-            publisher: {
-              "@type": "Organization",
-              name: "Eroplein",
-            },
-          }),
-        }}
+      <JsonLd
+        data={breadcrumbListSchema([
+          { name: "Home", url: "/" },
+          { name: "Nieuws", url: "/nieuws" },
+          { name: article.title, url: `/nieuws/${article.slug}` },
+        ])}
+        id="ld-breadcrumb"
+      />
+      <JsonLd
+        data={articleSchema({
+          headline: article.title,
+          description: article.excerpt,
+          url: `/nieuws/${article.slug}`,
+          image: article.image_url,
+          datePublished: article.published_at,
+          authorName: article.author_name,
+        })}
+        id="ld-article"
       />
 
       <Footer />
