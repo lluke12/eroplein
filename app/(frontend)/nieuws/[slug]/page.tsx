@@ -7,6 +7,7 @@ import { Footer } from "@/components/ui/Footer";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import {
   placeholderArticles,
+  getAllArticles,
   getPlaceholderArticleBySlug,
 } from "@/lib/placeholder-data";
 import {
@@ -22,7 +23,7 @@ interface ArticlePageProps {
 export const revalidate = 3600;
 
 export async function generateStaticParams() {
-  return placeholderArticles.map((a) => ({ slug: a.slug }));
+  return getAllArticles().map((a) => ({ slug: a.slug }));
 }
 
 export async function generateMetadata({

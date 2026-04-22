@@ -1,0 +1,55 @@
+name: Daily Content Generation
+
+# Dagelijks om 06:00 UTC (= 07:00 NL winter / 08:00 NL zomer) genereert deze
+# workflow content voor de komende 7 dagen, commit en pusht wijzigingen naar main.
+# Vercel pakt de push op en deployt automatisch.
+
+on:
+  schedule:
+    - cron: "0 6 * * *"
+  workflow_dispatch: # Ook handmatig triggerbaar vanuit GitHub UI
+    inputs:
+      days_ahead:
+        description: "Hoeveel dagen vooruit genereren"
+        required: false
+        default: "7"
+
+permissions:
+  contents: write
+
+jobs:
+  generate-and-push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 1
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+
+      - name: Install deps
+        run: npm ci
+
+      - name: Generate content
+        run: npm run generate -- ${{ github.event.inputs.days_ahead || '7' }}
+
+      - name: Commit and push if changed
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+
+          if [ -n "$(git status --porcelain lib/generated-articles.ts lib/generated-landings.ts)" ]; then
+            git add lib/generated-articles.ts lib/generated-landings.ts
+            TODAY=$(date +%Y-%m-%d)
+            git commit -m "chore(content): auto-generate scheduled content for $TODAY+7d"
+            git push origin main
+            echo "Pushed new content"
+          else
+            echo "No changes to commit"
+          fi

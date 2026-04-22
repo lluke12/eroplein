@@ -1,6 +1,7 @@
 import type { Business, Review, Article } from "./types";
 import { realBusinesses } from "./real-businesses-data";
 import { isPublished } from "./publishing";
+import { generatedArticles } from "./generated-articles";
 
 // Re-export real businesses as the placeholder businesses
 export const placeholderBusinesses: Business[] = realBusinesses;
@@ -563,14 +564,26 @@ export function getPlaceholderReviewsByBusiness(
   return placeholderReviews.filter((r) => r.business_id === businessId);
 }
 
+// Combined: hand-written + auto-generated articles (dedupe op slug, hand-written wint)
+export function getAllArticles(): Article[] {
+  const handSlugs = new Set(placeholderArticles.map((a) => a.slug));
+  const generated = generatedArticles.filter((a) => !handSlugs.has(a.slug));
+  return [...placeholderArticles, ...generated];
+}
+
 export function getPublishedArticles(): Article[] {
-  return placeholderArticles.filter((a) => isPublished(a.published_at));
+  return getAllArticles()
+    .filter((a) => isPublished(a.published_at))
+    .sort(
+      (a, b) =>
+        new Date(b.published_at).getTime() - new Date(a.published_at).getTime()
+    );
 }
 
 export function getPlaceholderArticleBySlug(
   slug: string
 ): Article | undefined {
-  const a = placeholderArticles.find((article) => article.slug === slug);
+  const a = getAllArticles().find((article) => article.slug === slug);
   if (!a) return undefined;
   if (!isPublished(a.published_at)) return undefined;
   return a;

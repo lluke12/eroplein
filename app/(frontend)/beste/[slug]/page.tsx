@@ -14,7 +14,7 @@ import {
   faqPageSchema,
 } from "@/components/ui/JsonLd";
 import {
-  landingPages,
+  getAllLandings,
   getLandingPageBySlug,
   getRelatedLandingPages,
 } from "@/lib/landing-pages-data";
@@ -32,7 +32,7 @@ interface LandingProps {
 }
 
 export async function generateStaticParams() {
-  return landingPages.map((p) => ({ slug: p.slug }));
+  return getAllLandings().map((p) => ({ slug: p.slug }));
 }
 
 export async function generateMetadata({

@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "generate": "tsx scripts/generate-scheduled-content.ts"
   },
   "dependencies": {
     "@payloadcms/db-postgres": "^3.81.0",
@@ -34,6 +35,7 @@
     "playwright": "^1.59.1",
     "postcss": "^8.5.0",
     "tailwindcss": "^4.0.0",
+    "tsx": "^4.21.0",
     "typescript": "^5.7.0"
   }
 }

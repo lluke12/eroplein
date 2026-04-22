@@ -641,8 +641,17 @@ export const landingPages: LandingPage[] = [
   },
 ];
 
+import { generatedLandings } from "./generated-landings";
+
+// Combined: hand-written + auto-generated (dedupe op slug, hand-written wint)
+export function getAllLandings(): LandingPage[] {
+  const handSlugs = new Set(landingPages.map((p) => p.slug));
+  const gen = generatedLandings.filter((p) => !handSlugs.has(p.slug));
+  return [...landingPages, ...gen];
+}
+
 export function getLandingPageBySlug(slug: string): LandingPage | undefined {
-  const page = landingPages.find((p) => p.slug === slug);
+  const page = getAllLandings().find((p) => p.slug === slug);
   if (!page) return undefined;
   if (new Date(page.publishedAt).getTime() > Date.now()) return undefined;
   return page;
@@ -650,13 +659,15 @@ export function getLandingPageBySlug(slug: string): LandingPage | undefined {
 
 export function getPublishedLandingPages(): LandingPage[] {
   const now = Date.now();
-  return landingPages.filter((p) => new Date(p.publishedAt).getTime() <= now);
+  return getAllLandings().filter(
+    (p) => new Date(p.publishedAt).getTime() <= now
+  );
 }
 
 export function getRelatedLandingPages(slugs: string[] = []): LandingPage[] {
   const now = Date.now();
   return slugs
-    .map((s) => landingPages.find((p) => p.slug === s))
+    .map((s) => getAllLandings().find((p) => p.slug === s))
     .filter(
       (p): p is LandingPage =>
         p !== undefined && new Date(p.publishedAt).getTime() <= now
