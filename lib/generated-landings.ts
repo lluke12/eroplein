@@ -1,5 +1,5 @@
 // ── AUTO-GENERATED — do not edit manually ────────────────────────────────
-// Generated: 2026-04-23T07:57:06.538Z
+// Generated: 2026-04-24T08:06:23.140Z
 // Source: data/content-calendar.json
 //
 // Regenerate with: npm run generate
@@ -390,5 +390,56 @@ export const generatedLandings: LandingPage[] = [
     relatedLandings: [],
     publishedAt: "2026-04-30",
     updatedAt: "2026-04-30",
+  },
+  {
+    slug: "beste-saunaclubs-utrecht",
+    title: "Beste saunaclubs Utrecht regio",
+    metaTitle: "Beste saunaclubs Utrecht regio — top reviews & prijzen",
+    metaDescription: "De best beoordeelde saunaclubs in Utrecht: vergelijk op reviews, prijzen en reputatie. Geverifieerde aanbieders en actuele info.",
+    h1: "Beste saunaclubs Utrecht regio",
+    intro: "Utrecht heeft een divers aanbod aan saunaclubs. Deze ranglijst toont de best beoordeelde opties op basis van Eroplein-reviews, gesorteerd op gemiddelde score en review-volume. Alle bedrijven zijn geverifieerd op vergunning of KVK-registratie.",
+    filterType: "city_category" as const,
+    citySlug: "utrecht",
+    categorySlug: "saunaclubs",
+    
+    sections: [
+        {
+            "heading": "Hoe is deze lijst samengesteld?",
+            "body": "Gesorteerd op gemiddelde Eroplein-reviewscore, met het aantal reviews als secundaire factor. Aanbieders met minder dan 3 reviews zijn uitgesloten. Alle bedrijven zijn geverifieerd via KVK en gemeentelijke vergunningsadministratie."
+        },
+        {
+            "heading": "Prijsrange saunaclub in utrecht",
+            "body": "Gangbare tarieven: 80-200 euro all-in entree. In lijn met landelijk gemiddelde."
+        },
+        {
+            "heading": "Waarop letten we bij de beoordeling?",
+            "body": "Betrouwbaarheid (transparante prijzen, duidelijke communicatie), consistentie van kwaliteit over reviews heen, discretie en klantenservice, en waarde voor geld. Bedrijven die regelmatig negatieve reviews krijgen op specifieke punten (onduidelijke prijsstellingen, onprofessioneel gedrag) worden lager geplaatst of uitgesloten."
+        }
+    ],
+    faq: [
+        {
+            "question": "Wat is de prijsrange voor saunaclub in Utrecht?",
+            "answer": "80-200 euro all-in entree, met uitzondering van luxe-segment dat boven 200 euro kan liggen."
+        },
+        {
+            "question": "Hoe vaak wordt deze ranglijst ge-update?",
+            "answer": "Elk kwartaal op basis van de meest recente reviews. Grote veranderingen in de markt worden vaker verwerkt."
+        },
+        {
+            "question": "Kunnen bedrijven zichzelf op deze lijst kopen?",
+            "answer": "Nee. Positie op Eroplein-ranglijsten wordt uitsluitend bepaald door objectieve reviewscore en volume. Adverteren beïnvloedt de ordening niet."
+        },
+        {
+            "question": "Wat kost een bezoek aan een saunaclub?",
+            "answer": "Entree voor een saunaclub kost meestal 80 tot 140 euro, inclusief toegang tot wellness en buffet. Een sessie met een dame is extra: 70 tot 120 euro voor 30 minuten, 130 tot 220 euro voor een uur."
+        },
+        {
+            "question": "Is het verplicht om naakt te zijn?",
+            "answer": "Ja, in FKK-stijl saunaclubs is naaktheid standaard in alle wellnessruimtes. Je krijgt een handdoek en kan die om heupen dragen op de lounges. Zwemkleding is niet toegestaan uit hygienische overwegingen."
+        }
+    ],
+    relatedLandings: [],
+    publishedAt: "2026-05-01",
+    updatedAt: "2026-05-01",
   }
 ];

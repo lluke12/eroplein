@@ -1,5 +1,5 @@
 // ── AUTO-GENERATED — do not edit manually ────────────────────────────────
-// Generated: 2026-04-23T07:57:06.538Z
+// Generated: 2026-04-24T08:06:23.140Z
 // Source: data/content-calendar.json
 //
 // Regenerate with: npm run generate
@@ -126,5 +126,20 @@ export const generatedArticles: Article[] = [
     published_at: "2026-04-30",
     reading_time: 3,
     tags: ["saunaclubs","gids"],
+  },
+  {
+    id: "gen-escort-den-haag-gids",
+    title: "Escort Den Haag: bureaus & onafhankelijke dames",
+    slug: "escort-den-haag-gids",
+    excerpt: "1 escorts in Den Haag vergeleken: prijzen, reviews en praktische info voor 2026.",
+    content: "## De escorts-markt in Den Haag\n\nDen Haag heeft als grote Nederlandse stad in Zuid-Holland een eigen karakter in de erotische branche. Deze gids zet alles op een rij: wat je kunt verwachten, welke prijzen gangbaar zijn, en waar je op let bij het kiezen van een escort.\n\n## Wat je kunt verwachten\n\nEen escort in Nederland boek je via een bureau of rechtstreeks bij een onafhankelijke dame of heer. Bureaus nemen de planning, verificatie en facturatie uit handen, zijn vergund door de gemeente en hebben meerdere dames beschikbaar. Onafhankelijke escorts adverteren zelf en bouwen vaak een vaste klantenkring op. Op Eroplein vind je beide typen, gefilterd per stad en voorzien van echte reviews.\n\nTypisch escorts-bezoek in Den Haag: boeking vooraf, duidelijke prijsafspraak, incall of outcall, sessie van 1-3 uur.\n\n## Prijzen en wat je krijgt\n\nDe gangbare tarieven in Den Haag zijn:\n\n- Incall: 140-240 euro per uur\n- Outcall: 180-300 euro per uur (exclusief reiskosten)\n- Extra's en specials: apart geprijsd, altijd vooraf bespreken\n\nPrijzen liggen iets boven het landelijke gemiddelde door hogere locatiekosten. Voor langere boekingen of terugkerende klanten geven veel aanbieders staffelkortingen.\n\n## Top aanbieders in Den Haag voor escorts\n\nOp basis van Eroplein-reviews zijn dit de best beoordeelde aanbieders op dit moment:\n\n**1. Escort Services Den Haag** — Professionele escort service in Den Haag en omgeving.. Gemiddelde reviewscore: nog geen reviews op basis van 0 ervaringen. Prijsklasse: €€€. [Bekijk pagina](/den-haag/escorts/escort-services-den-haag)\n\nVoor de volledige lijst: zie [Escorts in Den Haag](/den-haag/escorts)\n\n## Tips voor een goede ervaring\n\n**Lees reviews.** Drie of meer gedetailleerde reviews met verschillende auteurs is een goede indicator van kwaliteit.\n\n**Check vergunning.** Eroplein vermeldt bij elk bedrijf of het geverifieerd is. Boek bij voorkeur alleen bij vergunde aanbieders.\n\n**Bespreek vooraf wat je wilt.** Transparantie over je verwachtingen voorkomt teleurstelling.\n\n**Kies tussen bureau en zelfstandige.** Bureau = breed aanbod + planning; zelfstandig = persoonlijker + vaak goedkoper.\n\n**Outcall naar hotel.** Hotels in centrum van de stad zijn standaard incheck-discreet voor deze boekingen.\n\n## Veelgestelde vragen\n\n**Wat kost een escort in Den Haag?**\n\nGemiddeld 140-240 euro per uur, afhankelijk van aanbieder en specifieke afspraken.\n\n**Is escorts legaal in Den Haag?**\n\nJa. Alle vergunde aanbieders werken binnen de Nederlandse wet (Wet regulering sekswerk, gemeentelijke exploitatievergunningen). Boek bij voorkeur bij aanbieders die geverifieerd zijn op Eroplein.\n\n**Wat kost een escort gemiddeld in Nederland?**\n\nDe gemiddelde uurprijs voor een escort in Nederland ligt tussen 150 en 300 euro. Amsterdam en Utrecht zijn iets duurder (gemiddeld 200-350 euro), terwijl kleinere steden en onafhankelijke escorts vanaf 120 euro beschikbaar zijn. Outcall is meestal 30 tot 80 euro duurder dan incall.\n\n**Hoe herken ik een betrouwbaar escortbureau?**\n\nBetrouwbare bureaus hebben een gemeentelijke vergunning, een vast kantooradres, duidelijke prijzen, geverifieerde foto's, meerdere positieve reviews, en een transparant annuleringsbeleid. Vermijd bureaus zonder online aanwezigheid, onrealistische foto's of zonder contactpersoon.",
+    category_slug: "escorts",
+    city_slug: "den-haag",
+    author_name: "Redactie Eroplein",
+    author_initial: "R",
+    image_url: undefined,
+    published_at: "2026-05-01",
+    reading_time: 3,
+    tags: ["den-haag","escorts","gids"],
   }
 ];
