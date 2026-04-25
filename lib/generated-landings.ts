@@ -1,5 +1,5 @@
 // ── AUTO-GENERATED — do not edit manually ────────────────────────────────
-// Generated: 2026-04-24T08:06:23.140Z
+// Generated: 2026-04-25T07:19:49.317Z
 // Source: data/content-calendar.json
 //
 // Regenerate with: npm run generate
@@ -441,5 +441,56 @@ export const generatedLandings: LandingPage[] = [
     relatedLandings: [],
     publishedAt: "2026-05-01",
     updatedAt: "2026-05-01",
+  },
+  {
+    slug: "beste-escorts-groningen",
+    title: "Beste escort Groningen 2026",
+    metaTitle: "Beste escort Groningen 2026 — top reviews & prijzen",
+    metaDescription: "De best beoordeelde escorts in Groningen: vergelijk op reviews, prijzen en reputatie. Geverifieerde aanbieders en actuele info.",
+    h1: "Beste escort Groningen 2026",
+    intro: "Groningen heeft een divers aanbod aan escorts. Deze ranglijst toont de best beoordeelde opties op basis van Eroplein-reviews, gesorteerd op gemiddelde score en review-volume. Alle bedrijven zijn geverifieerd op vergunning of KVK-registratie.",
+    filterType: "city_category" as const,
+    citySlug: "groningen",
+    categorySlug: "escorts",
+    
+    sections: [
+        {
+            "heading": "Hoe is deze lijst samengesteld?",
+            "body": "Gesorteerd op gemiddelde Eroplein-reviewscore, met het aantal reviews als secundaire factor. Aanbieders met minder dan 3 reviews zijn uitgesloten. Alle bedrijven zijn geverifieerd via KVK en gemeentelijke vergunningsadministratie."
+        },
+        {
+            "heading": "Prijsrange escort in groningen",
+            "body": "Gangbare tarieven: 140-240 euro per uur. Outcall: 180-300 euro (exclusief reiskosten). In lijn met landelijk gemiddelde."
+        },
+        {
+            "heading": "Waarop letten we bij de beoordeling?",
+            "body": "Betrouwbaarheid (transparante prijzen, duidelijke communicatie), consistentie van kwaliteit over reviews heen, discretie en klantenservice, en waarde voor geld. Bedrijven die regelmatig negatieve reviews krijgen op specifieke punten (onduidelijke prijsstellingen, onprofessioneel gedrag) worden lager geplaatst of uitgesloten."
+        }
+    ],
+    faq: [
+        {
+            "question": "Wat is de prijsrange voor escort in Groningen?",
+            "answer": "140-240 euro per uur, met uitzondering van luxe-segment dat boven 240 euro kan liggen."
+        },
+        {
+            "question": "Hoe vaak wordt deze ranglijst ge-update?",
+            "answer": "Elk kwartaal op basis van de meest recente reviews. Grote veranderingen in de markt worden vaker verwerkt."
+        },
+        {
+            "question": "Kunnen bedrijven zichzelf op deze lijst kopen?",
+            "answer": "Nee. Positie op Eroplein-ranglijsten wordt uitsluitend bepaald door objectieve reviewscore en volume. Adverteren beïnvloedt de ordening niet."
+        },
+        {
+            "question": "Wat kost een escort gemiddeld in Nederland?",
+            "answer": "De gemiddelde uurprijs voor een escort in Nederland ligt tussen 150 en 300 euro. Amsterdam en Utrecht zijn iets duurder (gemiddeld 200-350 euro), terwijl kleinere steden en onafhankelijke escorts vanaf 120 euro beschikbaar zijn. Outcall is meestal 30 tot 80 euro duurder dan incall."
+        },
+        {
+            "question": "Hoe herken ik een betrouwbaar escortbureau?",
+            "answer": "Betrouwbare bureaus hebben een gemeentelijke vergunning, een vast kantooradres, duidelijke prijzen, geverifieerde foto's, meerdere positieve reviews, en een transparant annuleringsbeleid. Vermijd bureaus zonder online aanwezigheid, onrealistische foto's of zonder contactpersoon."
+        }
+    ],
+    relatedLandings: [],
+    publishedAt: "2026-05-02",
+    updatedAt: "2026-05-02",
   }
 ];

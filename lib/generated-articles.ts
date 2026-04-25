@@ -1,5 +1,5 @@
 // ── AUTO-GENERATED — do not edit manually ────────────────────────────────
-// Generated: 2026-04-24T08:06:23.140Z
+// Generated: 2026-04-25T07:19:49.316Z
 // Source: data/content-calendar.json
 //
 // Regenerate with: npm run generate
@@ -141,5 +141,20 @@ export const generatedArticles: Article[] = [
     published_at: "2026-05-01",
     reading_time: 3,
     tags: ["den-haag","escorts","gids"],
+  },
+  {
+    id: "gen-stripclub-yab-yum-amsterdam",
+    title: "Yab Yum Amsterdam: de legende, de realiteit",
+    slug: "stripclub-yab-yum-amsterdam",
+    excerpt: "2 stripclubs in Amsterdam vergeleken: prijzen, reviews en praktische info voor 2026.",
+    content: "## De stripclubs-markt in Amsterdam\n\nAmsterdam heeft als grote Nederlandse stad in Noord-Holland een eigen karakter in de erotische branche. Deze gids zet alles op een rij: wat je kunt verwachten, welke prijzen gangbaar zijn, en waar je op let bij het kiezen van een stripclub.\n\n## Wat je kunt verwachten\n\nStripclubs en gentlemen's clubs combineren dans- en bar-ervaring met een volwassen show. Nederland heeft er ruim dertig, veelal in uitgaansgebieden van de grote steden. Shows varieren van klassieke pole dance tot moderne burlesque. Table dances (individuele dans naast je tafel) en VIP-rooms zijn standaard.\n\nTypisch stripclubs-bezoek in Amsterdam: verschillende services, afhankelijk van aanbieder.\n\n## Prijzen en wat je krijgt\n\nDe gangbare tarieven in Amsterdam zijn:\n\n- Incall: 20-60 euro entree\n- Extra's en specials: apart geprijsd, altijd vooraf bespreken\n\nPrijzen liggen iets boven het landelijke gemiddelde door hogere locatiekosten. Voor langere boekingen of terugkerende klanten geven veel aanbieders staffelkortingen.\n\n## Top aanbieders in Amsterdam voor stripclubs\n\nOp basis van Eroplein-reviews zijn dit de best beoordeelde aanbieders op dit moment:\n\n**1. BonTon** — Meest luxueuze stripclub van Amsterdam in een prachtig grachtenpand, ook voor stellen.. Gemiddelde reviewscore: nog geen reviews op basis van 0 ervaringen. Prijsklasse: €€€€. [Bekijk pagina](/amsterdam/stripclubs/bonton-amsterdam)\n\n**2. Casa Rosso** — Legendarisch erotisch theater in de Red Light District met 50+ jaar ervaring.. Gemiddelde reviewscore: nog geen reviews op basis van 0 ervaringen. Prijsklasse: €€€. [Bekijk pagina](/amsterdam/stripclubs/casa-rosso)\n\nVoor de volledige lijst: zie [Stripclubs in Amsterdam](/amsterdam/stripclubs)\n\n## Tips voor een goede ervaring\n\n**Lees reviews.** Drie of meer gedetailleerde reviews met verschillende auteurs is een goede indicator van kwaliteit.\n\n**Check vergunning.** Eroplein vermeldt bij elk bedrijf of het geverifieerd is. Boek bij voorkeur alleen bij vergunde aanbieders.\n\n**Bespreek vooraf wat je wilt.** Transparantie over je verwachtingen voorkomt teleurstelling.\n\n**Fooien zijn gebruikelijk.** 10-20% extra na een table dance die je leuk vond.\n\n**Kijken, geen aanraken.** Nederlandse stripclubs: strikt 'look but don't touch' als basis.\n\n## Veelgestelde vragen\n\n**Wat kost een stripclub in Amsterdam?**\n\nGemiddeld 20-60 euro entree, afhankelijk van aanbieder en specifieke afspraken.\n\n**Is stripclubs legaal in Amsterdam?**\n\nJa. Alle vergunde aanbieders werken binnen de Nederlandse wet (Wet regulering sekswerk, gemeentelijke exploitatievergunningen). Boek bij voorkeur bij aanbieders die geverifieerd zijn op Eroplein.\n\n**Wat is een redelijke fooi voor een dans?**\n\nBij een table dance (20-40 euro aan de kassa of aan de danser betaald): 10 tot 20 procent fooi extra is gepast als je het leuk vond. Bij een VIP-dans is de fooi vaak al ingerekend in het tarief.\n\n**Mogen stellen naar een stripclub?**\n\nJa, en het wordt in veel clubs juist gewaardeerd. Check of de club 'couple-friendly' of 'stellen welkom' vermeldt. Sommige clubs geven zelfs korting voor stellen op rustigere avonden.",
+    category_slug: "stripclubs",
+    city_slug: "amsterdam",
+    author_name: "Redactie Eroplein",
+    author_initial: "R",
+    image_url: undefined,
+    published_at: "2026-05-02",
+    reading_time: 3,
+    tags: ["amsterdam","stripclubs","gids"],
   }
 ];
