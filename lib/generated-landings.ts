@@ -1,5 +1,5 @@
 // ── AUTO-GENERATED — do not edit manually ────────────────────────────────
-// Generated: 2026-04-25T07:19:49.317Z
+// Generated: 2026-04-26T07:42:18.865Z
 // Source: data/content-calendar.json
 //
 // Regenerate with: npm run generate
@@ -7,57 +7,6 @@
 import type { LandingPage } from "./landing-pages-data";
 
 export const generatedLandings: LandingPage[] = [
-  {
-    slug: "beste-escorts-rotterdam",
-    title: "Beste escorts Rotterdam 2026",
-    metaTitle: "Beste escorts Rotterdam 2026 — top reviews & prijzen",
-    metaDescription: "De best beoordeelde escorts in Rotterdam: vergelijk op reviews, prijzen en reputatie. Geverifieerde aanbieders en actuele info.",
-    h1: "Beste escorts Rotterdam 2026",
-    intro: "Rotterdam heeft een divers aanbod aan escorts. Deze ranglijst toont de best beoordeelde opties op basis van Eroplein-reviews, gesorteerd op gemiddelde score en review-volume. Alle bedrijven zijn geverifieerd op vergunning of KVK-registratie.",
-    filterType: "city_category" as const,
-    citySlug: "rotterdam",
-    categorySlug: "escorts",
-    
-    sections: [
-        {
-            "heading": "Hoe is deze lijst samengesteld?",
-            "body": "Gesorteerd op gemiddelde Eroplein-reviewscore, met het aantal reviews als secundaire factor. Aanbieders met minder dan 3 reviews zijn uitgesloten. Alle bedrijven zijn geverifieerd via KVK en gemeentelijke vergunningsadministratie."
-        },
-        {
-            "heading": "Prijsrange escort in rotterdam",
-            "body": "Gangbare tarieven: 140-240 euro per uur. Outcall: 180-300 euro (exclusief reiskosten). Amsterdam en andere grote steden liggen iets boven dit gemiddelde."
-        },
-        {
-            "heading": "Waarop letten we bij de beoordeling?",
-            "body": "Betrouwbaarheid (transparante prijzen, duidelijke communicatie), consistentie van kwaliteit over reviews heen, discretie en klantenservice, en waarde voor geld. Bedrijven die regelmatig negatieve reviews krijgen op specifieke punten (onduidelijke prijsstellingen, onprofessioneel gedrag) worden lager geplaatst of uitgesloten."
-        }
-    ],
-    faq: [
-        {
-            "question": "Wat is de prijsrange voor escort in Rotterdam?",
-            "answer": "140-240 euro per uur, met uitzondering van luxe-segment dat boven 240 euro kan liggen."
-        },
-        {
-            "question": "Hoe vaak wordt deze ranglijst ge-update?",
-            "answer": "Elk kwartaal op basis van de meest recente reviews. Grote veranderingen in de markt worden vaker verwerkt."
-        },
-        {
-            "question": "Kunnen bedrijven zichzelf op deze lijst kopen?",
-            "answer": "Nee. Positie op Eroplein-ranglijsten wordt uitsluitend bepaald door objectieve reviewscore en volume. Adverteren beïnvloedt de ordening niet."
-        },
-        {
-            "question": "Wat kost een escort gemiddeld in Nederland?",
-            "answer": "De gemiddelde uurprijs voor een escort in Nederland ligt tussen 150 en 300 euro. Amsterdam en Utrecht zijn iets duurder (gemiddeld 200-350 euro), terwijl kleinere steden en onafhankelijke escorts vanaf 120 euro beschikbaar zijn. Outcall is meestal 30 tot 80 euro duurder dan incall."
-        },
-        {
-            "question": "Hoe herken ik een betrouwbaar escortbureau?",
-            "answer": "Betrouwbare bureaus hebben een gemeentelijke vergunning, een vast kantooradres, duidelijke prijzen, geverifieerde foto's, meerdere positieve reviews, en een transparant annuleringsbeleid. Vermijd bureaus zonder online aanwezigheid, onrealistische foto's of zonder contactpersoon."
-        }
-    ],
-    relatedLandings: [],
-    publishedAt: "2026-04-23",
-    updatedAt: "2026-04-23",
-  },
   {
     slug: "beste-parenclubs-nederland",
     title: "Beste parenclubs Nederland 2026",
@@ -492,5 +441,56 @@ export const generatedLandings: LandingPage[] = [
     relatedLandings: [],
     publishedAt: "2026-05-02",
     updatedAt: "2026-05-02",
+  },
+  {
+    slug: "beste-erotische-massage-rotterdam",
+    title: "Beste erotische massage Rotterdam",
+    metaTitle: "Beste erotische massage Rotterdam — top reviews & prijzen",
+    metaDescription: "De best beoordeelde erotische massage in Rotterdam: vergelijk op reviews, prijzen en reputatie. Geverifieerde aanbieders en actuele info.",
+    h1: "Beste erotische massage Rotterdam",
+    intro: "Rotterdam heeft een divers aanbod aan erotische massage. Deze ranglijst toont de best beoordeelde opties op basis van Eroplein-reviews, gesorteerd op gemiddelde score en review-volume. Alle bedrijven zijn geverifieerd op vergunning of KVK-registratie.",
+    filterType: "city_category" as const,
+    citySlug: "rotterdam",
+    categorySlug: "erotische-massage",
+    
+    sections: [
+        {
+            "heading": "Hoe is deze lijst samengesteld?",
+            "body": "Gesorteerd op gemiddelde Eroplein-reviewscore, met het aantal reviews als secundaire factor. Aanbieders met minder dan 3 reviews zijn uitgesloten. Alle bedrijven zijn geverifieerd via KVK en gemeentelijke vergunningsadministratie."
+        },
+        {
+            "heading": "Prijsrange erotische massage in rotterdam",
+            "body": "Gangbare tarieven: 80-220 euro per 60 min. Amsterdam en andere grote steden liggen iets boven dit gemiddelde."
+        },
+        {
+            "heading": "Waarop letten we bij de beoordeling?",
+            "body": "Betrouwbaarheid (transparante prijzen, duidelijke communicatie), consistentie van kwaliteit over reviews heen, discretie en klantenservice, en waarde voor geld. Bedrijven die regelmatig negatieve reviews krijgen op specifieke punten (onduidelijke prijsstellingen, onprofessioneel gedrag) worden lager geplaatst of uitgesloten."
+        }
+    ],
+    faq: [
+        {
+            "question": "Wat is de prijsrange voor erotische massage in Rotterdam?",
+            "answer": "80-220 euro per 60 min, met uitzondering van luxe-segment dat boven 220 euro kan liggen."
+        },
+        {
+            "question": "Hoe vaak wordt deze ranglijst ge-update?",
+            "answer": "Elk kwartaal op basis van de meest recente reviews. Grote veranderingen in de markt worden vaker verwerkt."
+        },
+        {
+            "question": "Kunnen bedrijven zichzelf op deze lijst kopen?",
+            "answer": "Nee. Positie op Eroplein-ranglijsten wordt uitsluitend bepaald door objectieve reviewscore en volume. Adverteren beïnvloedt de ordening niet."
+        },
+        {
+            "question": "Wat is het verschil tussen tantra en erotische massage?",
+            "answer": "Tantra is een spirituele massagevorm gericht op energie-geleiding, ademhaling en langdurige opbouw. Een reguliere erotische massage is directer fysiek en focust op ontspanning en sensualiteit. Tantra duurt doorgaans 90-120 minuten, erotische massage 30-60 minuten."
+        },
+        {
+            "question": "Moet ik naakt zijn bij een erotische massage?",
+            "answer": "Ja, bij bijna alle erotische massagevormen werk je onbedekt. Je krijgt een douche en handdoek vooraf. De masseuse werkt professioneel, ongemak bespreek je van tevoren."
+        }
+    ],
+    relatedLandings: [],
+    publishedAt: "2026-05-03",
+    updatedAt: "2026-05-03",
   }
 ];

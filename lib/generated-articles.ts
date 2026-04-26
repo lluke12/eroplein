@@ -1,5 +1,5 @@
 // ── AUTO-GENERATED — do not edit manually ────────────────────────────────
-// Generated: 2026-04-25T07:19:49.316Z
+// Generated: 2026-04-26T07:42:18.865Z
 // Source: data/content-calendar.json
 //
 // Regenerate with: npm run generate
@@ -7,21 +7,6 @@
 import type { Article } from "./types";
 
 export const generatedArticles: Article[] = [
-  {
-    id: "gen-escort-amsterdam-wallen-gids",
-    title: "Escort op de Wallen Amsterdam: hoe werkt het in 2026",
-    slug: "escort-amsterdam-wallen-gids",
-    excerpt: "De beste ramen in Amsterdam: 0 aanbieders vergeleken, met actuele prijzen en reviews.",
-    content: "## Ramen in Amsterdam: de actuele stand\n\nHet ramen-aanbod in Amsterdam is in de afgelopen jaren gestabiliseerd. Prijzen liggen rond het landelijk gemiddelde, de kwaliteit van de aanbieders is doorgaans goed. In deze gids lees je wat je kunt verwachten en hoe je kiest uit het aanbod.\n\n## De praktische gang van zaken\n\nBij een raamprostitutie kies je doorgaans voor een van de volgende opties: het aanbod van vergunde aanbieders in de regio. Elke keuze heeft eigen voor- en nadelen die we hieronder verder uitleggen.\n\n## Prijzen en wat je krijgt\n\nDe gangbare tarieven in Amsterdam zijn:\n\n- Incall: 50-150 euro voor 15-60 min\n- Extra's en specials: apart geprijsd, altijd vooraf bespreken\n\nPrijzen liggen iets boven het landelijke gemiddelde door hogere locatiekosten. Voor langere boekingen of terugkerende klanten geven veel aanbieders staffelkortingen.\n\n## Tips voor een goede ervaring\n\n**Lees reviews.** Drie of meer gedetailleerde reviews met verschillende auteurs is een goede indicator van kwaliteit.\n\n**Check vergunning.** Eroplein vermeldt bij elk bedrijf of het geverifieerd is. Boek bij voorkeur alleen bij vergunde aanbieders.\n\n**Bespreek vooraf wat je wilt.** Transparantie over je verwachtingen voorkomt teleurstelling.\n\n**Geen foto's.** Streng verboden en strikt gehandhaafd in Amsterdam.\n\n**Blijf niet staren.** Respectvolle benadering begint met normaal langslopen.\n\n## Veelgestelde vragen\n\n**Wat kost een raamprostitutie in Amsterdam?**\n\nGemiddeld 50-150 euro voor 15-60 min, afhankelijk van aanbieder en specifieke afspraken.\n\n**Is ramen legaal in Amsterdam?**\n\nJa. Alle vergunde aanbieders werken binnen de Nederlandse wet (Wet regulering sekswerk, gemeentelijke exploitatievergunningen). Boek bij voorkeur bij aanbieders die geverifieerd zijn op Eroplein.\n\n**Hoe werkt raamprostitutie praktisch?**\n\nJe loopt langs de ramen in de aangewezen zones. Bij interesse klop je op het raam of opent de werker de deur zelf. Je bespreekt handelingen, tijd en prijs. Akkoord betekent naar binnen, betaal vooraf, daarna de afspraak. Niet akkoord betekent vriendelijk doorlopen.\n\n**Wat kost raamprostitutie?**\n\nStandaardtarief voor 15-20 minuten ligt rond 50 euro. Een half uur kost 80 tot 100 euro, een uur 150 tot 200 euro. Speciale handelingen kosten extra, altijd voor binnengaan afgesproken.",
-    category_slug: "ramen",
-    city_slug: "amsterdam",
-    author_name: "Redactie Eroplein",
-    author_initial: "R",
-    image_url: undefined,
-    published_at: "2026-04-23",
-    reading_time: 3,
-    tags: ["amsterdam","ramen","gids"],
-  },
   {
     id: "gen-parenclub-beginners-gids",
     title: "Eerste keer parenclub: complete beginnersgids 2026",
@@ -156,5 +141,20 @@ export const generatedArticles: Article[] = [
     published_at: "2026-05-02",
     reading_time: 3,
     tags: ["amsterdam","stripclubs","gids"],
+  },
+  {
+    id: "gen-escort-eindhoven-prijzen",
+    title: "Escort Eindhoven: prijzen en top bureaus 2026",
+    slug: "escort-eindhoven-prijzen",
+    excerpt: "3 escorts in Eindhoven vergeleken: prijzen, reviews en praktische info voor 2026.",
+    content: "## De escorts-markt in Eindhoven\n\nEindhoven heeft als grote Nederlandse stad in Noord-Brabant een eigen karakter in de erotische branche. Deze gids zet alles op een rij: wat je kunt verwachten, welke prijzen gangbaar zijn, en waar je op let bij het kiezen van een escort.\n\n## Wat je kunt verwachten\n\nEen escort in Nederland boek je via een bureau of rechtstreeks bij een onafhankelijke dame of heer. Bureaus nemen de planning, verificatie en facturatie uit handen, zijn vergund door de gemeente en hebben meerdere dames beschikbaar. Onafhankelijke escorts adverteren zelf en bouwen vaak een vaste klantenkring op. Op Eroplein vind je beide typen, gefilterd per stad en voorzien van echte reviews.\n\nTypisch escorts-bezoek in Eindhoven: boeking vooraf, duidelijke prijsafspraak, incall of outcall, sessie van 1-3 uur.\n\n## Prijzen en wat je krijgt\n\nDe gangbare tarieven in Eindhoven zijn:\n\n- Incall: 140-240 euro per uur\n- Outcall: 180-300 euro per uur (exclusief reiskosten)\n- Extra's en specials: apart geprijsd, altijd vooraf bespreken\n\nPrijzen volgen het landelijk gemiddelde. Voor langere boekingen of terugkerende klanten geven veel aanbieders staffelkortingen.\n\n## Top aanbieders in Eindhoven voor escorts\n\nOp basis van Eroplein-reviews zijn dit de best beoordeelde aanbieders op dit moment:\n\n**1. Escort Services Eindhoven** — Professionele escort service in Eindhoven en omgeving.. Gemiddelde reviewscore: 5.0 op basis van 1 ervaringen. Prijsklasse: €€€. [Bekijk pagina](/eindhoven/escorts/escort-services-eindhoven)\n\n**2. Escort Service Eindhoven** — Betrouwbare escort service in Eindhoven en omstreken.. Gemiddelde reviewscore: nog geen reviews op basis van 0 ervaringen. Prijsklasse: €€€. [Bekijk pagina](/eindhoven/escorts/escort-service-eindhoven)\n\n**3. Happy Escort Noord-Brabant** — Escort service actief in heel Noord-Brabant.. Gemiddelde reviewscore: nog geen reviews op basis van 0 ervaringen. Prijsklasse: €€€. [Bekijk pagina](/eindhoven/escorts/happy-escort-noord-brabant)\n\nVoor de volledige lijst: zie [Escorts in Eindhoven](/eindhoven/escorts)\n\n## Tips voor een goede ervaring\n\n**Lees reviews.** Drie of meer gedetailleerde reviews met verschillende auteurs is een goede indicator van kwaliteit.\n\n**Check vergunning.** Eroplein vermeldt bij elk bedrijf of het geverifieerd is. Boek bij voorkeur alleen bij vergunde aanbieders.\n\n**Bespreek vooraf wat je wilt.** Transparantie over je verwachtingen voorkomt teleurstelling.\n\n**Kies tussen bureau en zelfstandige.** Bureau = breed aanbod + planning; zelfstandig = persoonlijker + vaak goedkoper.\n\n**Outcall naar hotel.** Hotels in centrum van de stad zijn standaard incheck-discreet voor deze boekingen.\n\n## Veelgestelde vragen\n\n**Wat kost een escort in Eindhoven?**\n\nGemiddeld 140-240 euro per uur, afhankelijk van aanbieder en specifieke afspraken.\n\n**Is escorts legaal in Eindhoven?**\n\nJa. Alle vergunde aanbieders werken binnen de Nederlandse wet (Wet regulering sekswerk, gemeentelijke exploitatievergunningen). Boek bij voorkeur bij aanbieders die geverifieerd zijn op Eroplein.\n\n**Wat kost een escort gemiddeld in Nederland?**\n\nDe gemiddelde uurprijs voor een escort in Nederland ligt tussen 150 en 300 euro. Amsterdam en Utrecht zijn iets duurder (gemiddeld 200-350 euro), terwijl kleinere steden en onafhankelijke escorts vanaf 120 euro beschikbaar zijn. Outcall is meestal 30 tot 80 euro duurder dan incall.\n\n**Hoe herken ik een betrouwbaar escortbureau?**\n\nBetrouwbare bureaus hebben een gemeentelijke vergunning, een vast kantooradres, duidelijke prijzen, geverifieerde foto's, meerdere positieve reviews, en een transparant annuleringsbeleid. Vermijd bureaus zonder online aanwezigheid, onrealistische foto's of zonder contactpersoon.",
+    category_slug: "escorts",
+    city_slug: "eindhoven",
+    author_name: "Redactie Eroplein",
+    author_initial: "R",
+    image_url: undefined,
+    published_at: "2026-05-03",
+    reading_time: 4,
+    tags: ["eindhoven","escorts","gids"],
   }
 ];
