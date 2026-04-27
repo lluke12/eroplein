@@ -1,5 +1,5 @@
 // ── AUTO-GENERATED — do not edit manually ────────────────────────────────
-// Generated: 2026-04-26T07:42:18.865Z
+// Generated: 2026-04-27T08:28:35.084Z
 // Source: data/content-calendar.json
 //
 // Regenerate with: npm run generate
@@ -7,21 +7,6 @@
 import type { Article } from "./types";
 
 export const generatedArticles: Article[] = [
-  {
-    id: "gen-parenclub-beginners-gids",
-    title: "Eerste keer parenclub: complete beginnersgids 2026",
-    slug: "parenclub-beginners-gids",
-    excerpt: "Complete gids over clubs in Nederland: wat het is, wat het kost en hoe je de beste kiest.",
-    content: "## Over clubs\n\nClubs zijn er in allerlei smaken: parenclubs waar je heen gaat met je partner, seksclubs waar je dames kunt ontmoeten, en swingersclubs waar bezoekers zelf actief worden. Elke club heeft eigen huisregels, dresscode en entreeprijzen. Op Eroplein vind je ze per stad, gesorteerd op sfeer en beoordeling. Deze gids behandelt de essentie zonder marketingtaal: feiten, prijzen, en praktische info.\n\n## Wat je kunt verwachten\n\nClubs zijn er in allerlei smaken: parenclubs waar je heen gaat met je partner, seksclubs waar je dames kunt ontmoeten, en swingersclubs waar bezoekers zelf actief worden. Elke club heeft eigen huisregels, dresscode en entreeprijzen. Op Eroplein vind je ze per stad, gesorteerd op sfeer en beoordeling.\n\nTypisch clubs-bezoek: entree aan de deur, dresscode, meerdere uren ter plaatse.\n\n## Prijzen en wat je krijgt\n\nDe gangbare tarieven zijn:\n\n- Incall: 50-150 euro entree per paar\n- Extra's en specials: apart geprijsd, altijd vooraf bespreken\n\n Voor langere boekingen of terugkerende klanten geven veel aanbieders staffelkortingen.\n\n## Top aanbieders voor clubs\n\nOp basis van Eroplein-reviews zijn dit de best beoordeelde aanbieders op dit moment:\n\n**1. Fata Morgana** — Luxe parenclub bij Amsterdam, uitgeroepen tot beste swingersclub van Nederland.. Gemiddelde reviewscore: nog geen reviews op basis van 0 ervaringen. Prijsklasse: €€€€. [Bekijk pagina](/amsterdam/clubs/fata-morgana)\n\n**2. Sameplace** — Gezellige swingersclub aan de Nassaukade, ideaal voor beginners met diverse thema-avonden.. Gemiddelde reviewscore: nog geen reviews op basis van 0 ervaringen. Prijsklasse: €€. [Bekijk pagina](/amsterdam/clubs/sameplace)\n\n**3. Casa Rosso** — Legendarisch erotisch theater in de Red Light District met 50+ jaar ervaring.. Gemiddelde reviewscore: nog geen reviews op basis van 0 ervaringen. Prijsklasse: €€€. [Bekijk pagina](/amsterdam/stripclubs/casa-rosso)\n\nVoor de volledige lijst.\n\n## Tips voor een goede ervaring\n\n**Lees reviews.** Drie of meer gedetailleerde reviews met verschillende auteurs is een goede indicator van kwaliteit.\n\n**Check vergunning.** Eroplein vermeldt bij elk bedrijf of het geverifieerd is. Boek bij voorkeur alleen bij vergunde aanbieders.\n\n**Bespreek vooraf wat je wilt.** Transparantie over je verwachtingen voorkomt teleurstelling.\n\n**Respecteer de dresscode.** Nette kleding aan, binnen vaak badjas/lingerie — check per club.\n\n**Kom niet zwaar aangeschoten.** Vaak geweigerd aan de deur en sowieso onplezierig voor andere bezoekers.\n\n## Veelgestelde vragen\n\n**Wat is het verschil tussen een parenclub en seksclub?**\n\nEen parenclub is voor paren (en eventueel trio's of singles op specifieke avonden) waar bezoekers zelf seksueel actief worden met andere bezoekers. Een seksclub heeft betaalde dames in dienst waar je als klant gebruik van maakt. Vergelijkbaar met een luxe bordeel.\n\n**Mag ik als single naar een parenclub?**\n\nMeestal niet, of alleen op specifieke single-avonden en vaak met wachtlijst of ballotage. Fata Morgana, De Kastelein en andere topclubs zijn in principe paren-only. Check altijd de website of bel voor beleid.",
-    category_slug: "clubs",
-    city_slug: undefined,
-    author_name: "Redactie Eroplein",
-    author_initial: "R",
-    image_url: undefined,
-    published_at: "2026-04-24",
-    reading_time: 3,
-    tags: ["clubs","gids"],
-  },
   {
     id: "gen-tantra-massage-vs-erotische-massage",
     title: "Tantra vs erotische massage: welk verschil?",
@@ -156,5 +141,20 @@ export const generatedArticles: Article[] = [
     published_at: "2026-05-03",
     reading_time: 4,
     tags: ["eindhoven","escorts","gids"],
+  },
+  {
+    id: "gen-swingersclub-vs-parenclub",
+    title: "Swingersclub vs parenclub: is het verschil?",
+    slug: "swingersclub-vs-parenclub",
+    excerpt: "Actuele informatie, prijzen en tips over swingersclub vs parenclub: is het verschil?.",
+    content: "Swingersclub vs parenclub: is het verschil?\n\n## De praktische gang van zaken\n\nBij een seksclub kies je doorgaans voor een van de volgende opties: een parenclub (paren-only), seksclub (met dames in dienst), of swingersclub (open voor wisseling). Elke keuze heeft eigen voor- en nadelen die we hieronder verder uitleggen.\n\n## Prijzen en wat je krijgt\n\nDe gangbare tarieven zijn:\n\n- Incall: 50-150 euro entree per paar\n- Extra's en specials: apart geprijsd, altijd vooraf bespreken\n\n Voor langere boekingen of terugkerende klanten geven veel aanbieders staffelkortingen.\n\n## Top aanbieders voor clubs\n\nOp basis van Eroplein-reviews zijn dit de best beoordeelde aanbieders op dit moment:\n\n**1. Fata Morgana** — Luxe parenclub bij Amsterdam, uitgeroepen tot beste swingersclub van Nederland.. Gemiddelde reviewscore: nog geen reviews op basis van 0 ervaringen. Prijsklasse: €€€€. [Bekijk pagina](/amsterdam/clubs/fata-morgana)\n\n**2. Sameplace** — Gezellige swingersclub aan de Nassaukade, ideaal voor beginners met diverse thema-avonden.. Gemiddelde reviewscore: nog geen reviews op basis van 0 ervaringen. Prijsklasse: €€. [Bekijk pagina](/amsterdam/clubs/sameplace)\n\n**3. Casa Rosso** — Legendarisch erotisch theater in de Red Light District met 50+ jaar ervaring.. Gemiddelde reviewscore: nog geen reviews op basis van 0 ervaringen. Prijsklasse: €€€. [Bekijk pagina](/amsterdam/stripclubs/casa-rosso)\n\nVoor de volledige lijst.\n\n## Tips voor een goede ervaring\n\n**Lees reviews.** Drie of meer gedetailleerde reviews met verschillende auteurs is een goede indicator van kwaliteit.\n\n**Check vergunning.** Eroplein vermeldt bij elk bedrijf of het geverifieerd is. Boek bij voorkeur alleen bij vergunde aanbieders.\n\n**Bespreek vooraf wat je wilt.** Transparantie over je verwachtingen voorkomt teleurstelling.\n\n**Respecteer de dresscode.** Nette kleding aan, binnen vaak badjas/lingerie — check per club.\n\n**Kom niet zwaar aangeschoten.** Vaak geweigerd aan de deur en sowieso onplezierig voor andere bezoekers.\n\n## Veelgestelde vragen\n\n**Wat is het verschil tussen een parenclub en seksclub?**\n\nEen parenclub is voor paren (en eventueel trio's of singles op specifieke avonden) waar bezoekers zelf seksueel actief worden met andere bezoekers. Een seksclub heeft betaalde dames in dienst waar je als klant gebruik van maakt. Vergelijkbaar met een luxe bordeel.\n\n**Mag ik als single naar een parenclub?**\n\nMeestal niet, of alleen op specifieke single-avonden en vaak met wachtlijst of ballotage. Fata Morgana, De Kastelein en andere topclubs zijn in principe paren-only. Check altijd de website of bel voor beleid.",
+    category_slug: "clubs",
+    city_slug: undefined,
+    author_name: "Redactie Eroplein",
+    author_initial: "R",
+    image_url: undefined,
+    published_at: "2026-05-04",
+    reading_time: 3,
+    tags: ["clubs","gids"],
   }
 ];

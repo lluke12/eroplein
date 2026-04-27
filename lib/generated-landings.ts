@@ -1,5 +1,5 @@
 // ── AUTO-GENERATED — do not edit manually ────────────────────────────────
-// Generated: 2026-04-26T07:42:18.865Z
+// Generated: 2026-04-27T08:28:35.085Z
 // Source: data/content-calendar.json
 //
 // Regenerate with: npm run generate
@@ -7,45 +7,6 @@
 import type { LandingPage } from "./landing-pages-data";
 
 export const generatedLandings: LandingPage[] = [
-  {
-    slug: "beste-parenclubs-nederland",
-    title: "Beste parenclubs Nederland 2026",
-    metaTitle: "Beste parenclubs Nederland 2026 — top reviews & prijzen",
-    metaDescription: "Top clubs in Nederland: de best beoordeelde opties met reviews, prijzen en vergelijkingstabel.",
-    h1: "Beste parenclubs Nederland 2026",
-    intro: "Deze lijst toont de best beoordeelde clubs van Nederland, gebaseerd op echte Eroplein-reviews en gemiddelde scores over meerdere maanden.",
-    filterType: "category" as const,
-    
-    categorySlug: "clubs",
-    
-    sections: [
-        {
-            "heading": "Hoe is deze lijst samengesteld?",
-            "body": "Gesorteerd op gemiddelde Eroplein-reviewscore, met het aantal reviews als secundaire factor. Aanbieders met minder dan 3 reviews zijn uitgesloten. Alle bedrijven zijn geverifieerd via KVK en gemeentelijke vergunningsadministratie."
-        },
-        {
-            "heading": "Prijsrange seksclub in nederland",
-            "body": "Gangbare tarieven: 50-150 euro entree per paar. "
-        },
-        {
-            "heading": "Waarop letten we bij de beoordeling?",
-            "body": "Betrouwbaarheid (transparante prijzen, duidelijke communicatie), consistentie van kwaliteit over reviews heen, discretie en klantenservice, en waarde voor geld. Bedrijven die regelmatig negatieve reviews krijgen op specifieke punten (onduidelijke prijsstellingen, onprofessioneel gedrag) worden lager geplaatst of uitgesloten."
-        }
-    ],
-    faq: [
-        {
-            "question": "Wat is het verschil tussen een parenclub en seksclub?",
-            "answer": "Een parenclub is voor paren (en eventueel trio's of singles op specifieke avonden) waar bezoekers zelf seksueel actief worden met andere bezoekers. Een seksclub heeft betaalde dames in dienst waar je als klant gebruik van maakt. Vergelijkbaar met een luxe bordeel."
-        },
-        {
-            "question": "Mag ik als single naar een parenclub?",
-            "answer": "Meestal niet, of alleen op specifieke single-avonden en vaak met wachtlijst of ballotage. Fata Morgana, De Kastelein en andere topclubs zijn in principe paren-only. Check altijd de website of bel voor beleid."
-        }
-    ],
-    relatedLandings: [],
-    publishedAt: "2026-04-24",
-    updatedAt: "2026-04-24",
-  },
   {
     slug: "beste-escorts-eindhoven",
     title: "Beste escort Eindhoven 2026",
@@ -492,5 +453,56 @@ export const generatedLandings: LandingPage[] = [
     relatedLandings: [],
     publishedAt: "2026-05-03",
     updatedAt: "2026-05-03",
+  },
+  {
+    slug: "beste-privehuizen-rotterdam",
+    title: "Beste privehuizen Rotterdam",
+    metaTitle: "Beste privehuizen Rotterdam — top reviews & prijzen",
+    metaDescription: "De best beoordeelde privehuizen in Rotterdam: vergelijk op reviews, prijzen en reputatie. Geverifieerde aanbieders en actuele info.",
+    h1: "Beste privehuizen Rotterdam",
+    intro: "Rotterdam heeft een divers aanbod aan privehuizen. Deze ranglijst toont de best beoordeelde opties op basis van Eroplein-reviews, gesorteerd op gemiddelde score en review-volume. Alle bedrijven zijn geverifieerd op vergunning of KVK-registratie.",
+    filterType: "city_category" as const,
+    citySlug: "rotterdam",
+    categorySlug: "privehuizen",
+    
+    sections: [
+        {
+            "heading": "Hoe is deze lijst samengesteld?",
+            "body": "Gesorteerd op gemiddelde Eroplein-reviewscore, met het aantal reviews als secundaire factor. Aanbieders met minder dan 3 reviews zijn uitgesloten. Alle bedrijven zijn geverifieerd via KVK en gemeentelijke vergunningsadministratie."
+        },
+        {
+            "heading": "Prijsrange privehuis in rotterdam",
+            "body": "Gangbare tarieven: 50-180 euro voor 30-60 min. Amsterdam en andere grote steden liggen iets boven dit gemiddelde."
+        },
+        {
+            "heading": "Waarop letten we bij de beoordeling?",
+            "body": "Betrouwbaarheid (transparante prijzen, duidelijke communicatie), consistentie van kwaliteit over reviews heen, discretie en klantenservice, en waarde voor geld. Bedrijven die regelmatig negatieve reviews krijgen op specifieke punten (onduidelijke prijsstellingen, onprofessioneel gedrag) worden lager geplaatst of uitgesloten."
+        }
+    ],
+    faq: [
+        {
+            "question": "Wat is de prijsrange voor privehuis in Rotterdam?",
+            "answer": "50-180 euro voor 30-60 min, met uitzondering van luxe-segment dat boven 180 euro kan liggen."
+        },
+        {
+            "question": "Hoe vaak wordt deze ranglijst ge-update?",
+            "answer": "Elk kwartaal op basis van de meest recente reviews. Grote veranderingen in de markt worden vaker verwerkt."
+        },
+        {
+            "question": "Kunnen bedrijven zichzelf op deze lijst kopen?",
+            "answer": "Nee. Positie op Eroplein-ranglijsten wordt uitsluitend bepaald door objectieve reviewscore en volume. Adverteren beïnvloedt de ordening niet."
+        },
+        {
+            "question": "Wat kost een bezoek aan een privehuis?",
+            "answer": "Een standaardbezoek van 30 minuten kost meestal 50 tot 80 euro. Een uur ligt tussen 120 en 180 euro. Amsterdamse privehuizen zijn vaak 20 tot 40 euro duurder dan in kleinere steden."
+        },
+        {
+            "question": "Moet ik reserveren bij een privehuis?",
+            "answer": "Nee, bij de meeste privehuizen loop je gewoon binnen tijdens openingsuren. Reserveren kan wel bij specifieke dames of op drukke momenten (weekendavonden). Bel het huis even van tevoren voor beschikbaarheid."
+        }
+    ],
+    relatedLandings: [],
+    publishedAt: "2026-05-04",
+    updatedAt: "2026-05-04",
   }
 ];
