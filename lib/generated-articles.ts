@@ -1,5 +1,5 @@
 // ── AUTO-GENERATED — do not edit manually ────────────────────────────────
-// Generated: 2026-04-27T08:28:35.084Z
+// Generated: 2026-04-28T08:27:24.791Z
 // Source: data/content-calendar.json
 //
 // Regenerate with: npm run generate
@@ -7,21 +7,6 @@
 import type { Article } from "./types";
 
 export const generatedArticles: Article[] = [
-  {
-    id: "gen-tantra-massage-vs-erotische-massage",
-    title: "Tantra vs erotische massage: welk verschil?",
-    slug: "tantra-massage-vs-erotische-massage",
-    excerpt: "Actuele informatie, prijzen en tips over tantra vs erotische massage: welk verschil?.",
-    content: "Tantra vs erotische massage: welk verschil?\n\n## De praktische gang van zaken\n\nBij een erotische massage kies je doorgaans voor een van de volgende opties: reguliere body-to-body, spirituele tantra, of specialistische nuru. Elke keuze heeft eigen voor- en nadelen die we hieronder verder uitleggen.\n\n## Prijzen en wat je krijgt\n\nDe gangbare tarieven zijn:\n\n- Incall: 80-220 euro per 60 min\n- Extra's en specials: apart geprijsd, altijd vooraf bespreken\n\n Voor langere boekingen of terugkerende klanten geven veel aanbieders staffelkortingen.\n\n## Top aanbieders voor erotische massage\n\nOp basis van Eroplein-reviews zijn dit de best beoordeelde aanbieders op dit moment:\n\n**1. Asmara** — Eerste vergunde bordeel van Amsterdam sinds 1985, bekend om high-end service en faciliteiten.. Gemiddelde reviewscore: nog geen reviews op basis van 0 ervaringen. Prijsklasse: €€€. [Bekijk pagina](/amsterdam/privehuizen/asmara)\n\n**2. Samaya Kashmiri Tantra** — Authentieke Kashmiri tantramassage in Amsterdam, gespecialiseerd in heilende behandelingen.. Gemiddelde reviewscore: nog geen reviews op basis van 0 ervaringen. Prijsklasse: €€€. [Bekijk pagina](/amsterdam/erotische-massage/samaya-kashmiri-tantra)\n\n**3. IsabellaStella** — Bekende erotische massagesalon in het centrum van Rotterdam met luxueuze sfeer.. Gemiddelde reviewscore: nog geen reviews op basis van 0 ervaringen. Prijsklasse: €€€. [Bekijk pagina](/rotterdam/erotische-massage/isabellastella)\n\nVoor de volledige lijst.\n\n## Tips voor een goede ervaring\n\n**Lees reviews.** Drie of meer gedetailleerde reviews met verschillende auteurs is een goede indicator van kwaliteit.\n\n**Check vergunning.** Eroplein vermeldt bij elk bedrijf of het geverifieerd is. Boek bij voorkeur alleen bij vergunde aanbieders.\n\n**Bespreek vooraf wat je wilt.** Transparantie over je verwachtingen voorkomt teleurstelling.\n\n**Douche vooraf.** Dit is bij vrijwel elke massagesalon standaard. Handdoek krijg je van het huis.\n\n**Vraag expliciet om technieken.** Tantra, nuru, body-to-body zijn verschillende ervaringen.\n\n## Veelgestelde vragen\n\n**Wat is het verschil tussen tantra en erotische massage?**\n\nTantra is een spirituele massagevorm gericht op energie-geleiding, ademhaling en langdurige opbouw. Een reguliere erotische massage is directer fysiek en focust op ontspanning en sensualiteit. Tantra duurt doorgaans 90-120 minuten, erotische massage 30-60 minuten.\n\n**Moet ik naakt zijn bij een erotische massage?**\n\nJa, bij bijna alle erotische massagevormen werk je onbedekt. Je krijgt een douche en handdoek vooraf. De masseuse werkt professioneel, ongemak bespreek je van tevoren.",
-    category_slug: "erotische-massage",
-    city_slug: undefined,
-    author_name: "Redactie Eroplein",
-    author_initial: "R",
-    image_url: undefined,
-    published_at: "2026-04-25",
-    reading_time: 3,
-    tags: ["erotische-massage","gids"],
-  },
   {
     id: "gen-escort-rotterdam-ervaring-tips",
     title: "Escort boeken in Rotterdam: praktische tips 2026",
@@ -156,5 +141,20 @@ export const generatedArticles: Article[] = [
     published_at: "2026-05-04",
     reading_time: 3,
     tags: ["clubs","gids"],
+  },
+  {
+    id: "gen-nuru-massage-nederland",
+    title: "Nuru massage in Nederland: waar, hoe en wat kost het",
+    slug: "nuru-massage-nederland",
+    excerpt: "Complete gids over erotische massage in Nederland: wat het is, wat het kost en hoe je de beste kiest.",
+    content: "## Over erotische massage\n\nErotische massage is een breed begrip: van sensuele ontspanning en body-to-body tot tantra en lingam. Elke techniek heeft een eigen focus. Tantra gaat over energie en ademhaling, body-to-body is fysiek en intens, nuru is Japans en gebruikt zeewier-gel. Salons adverteren altijd welke massages ze aanbieden; lees reviews om te zien of de uitvoering ook matcht. Deze gids behandelt de essentie zonder marketingtaal: feiten, prijzen, en praktische info.\n\n## Wat je kunt verwachten\n\nErotische massage is een breed begrip: van sensuele ontspanning en body-to-body tot tantra en lingam. Elke techniek heeft een eigen focus. Tantra gaat over energie en ademhaling, body-to-body is fysiek en intens, nuru is Japans en gebruikt zeewier-gel. Salons adverteren altijd welke massages ze aanbieden; lees reviews om te zien of de uitvoering ook matcht.\n\nTypisch erotische massage-bezoek: afspraak maken, douche, sessie van 30-90 minuten.\n\n## Prijzen en wat je krijgt\n\nDe gangbare tarieven zijn:\n\n- Incall: 80-220 euro per 60 min\n- Extra's en specials: apart geprijsd, altijd vooraf bespreken\n\n Voor langere boekingen of terugkerende klanten geven veel aanbieders staffelkortingen.\n\n## Top aanbieders voor erotische massage\n\nOp basis van Eroplein-reviews zijn dit de best beoordeelde aanbieders op dit moment:\n\n**1. Asmara** — Eerste vergunde bordeel van Amsterdam sinds 1985, bekend om high-end service en faciliteiten.. Gemiddelde reviewscore: nog geen reviews op basis van 0 ervaringen. Prijsklasse: €€€. [Bekijk pagina](/amsterdam/privehuizen/asmara)\n\n**2. Samaya Kashmiri Tantra** — Authentieke Kashmiri tantramassage in Amsterdam, gespecialiseerd in heilende behandelingen.. Gemiddelde reviewscore: nog geen reviews op basis van 0 ervaringen. Prijsklasse: €€€. [Bekijk pagina](/amsterdam/erotische-massage/samaya-kashmiri-tantra)\n\n**3. IsabellaStella** — Bekende erotische massagesalon in het centrum van Rotterdam met luxueuze sfeer.. Gemiddelde reviewscore: nog geen reviews op basis van 0 ervaringen. Prijsklasse: €€€. [Bekijk pagina](/rotterdam/erotische-massage/isabellastella)\n\nVoor de volledige lijst.\n\n## Tips voor een goede ervaring\n\n**Lees reviews.** Drie of meer gedetailleerde reviews met verschillende auteurs is een goede indicator van kwaliteit.\n\n**Check vergunning.** Eroplein vermeldt bij elk bedrijf of het geverifieerd is. Boek bij voorkeur alleen bij vergunde aanbieders.\n\n**Bespreek vooraf wat je wilt.** Transparantie over je verwachtingen voorkomt teleurstelling.\n\n**Douche vooraf.** Dit is bij vrijwel elke massagesalon standaard. Handdoek krijg je van het huis.\n\n**Vraag expliciet om technieken.** Tantra, nuru, body-to-body zijn verschillende ervaringen.\n\n## Veelgestelde vragen\n\n**Wat is het verschil tussen tantra en erotische massage?**\n\nTantra is een spirituele massagevorm gericht op energie-geleiding, ademhaling en langdurige opbouw. Een reguliere erotische massage is directer fysiek en focust op ontspanning en sensualiteit. Tantra duurt doorgaans 90-120 minuten, erotische massage 30-60 minuten.\n\n**Moet ik naakt zijn bij een erotische massage?**\n\nJa, bij bijna alle erotische massagevormen werk je onbedekt. Je krijgt een douche en handdoek vooraf. De masseuse werkt professioneel, ongemak bespreek je van tevoren.",
+    category_slug: "erotische-massage",
+    city_slug: undefined,
+    author_name: "Redactie Eroplein",
+    author_initial: "R",
+    image_url: undefined,
+    published_at: "2026-05-05",
+    reading_time: 3,
+    tags: ["erotische-massage","gids"],
   }
 ];
