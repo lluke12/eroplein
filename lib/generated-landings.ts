@@ -1,5 +1,5 @@
 // ── AUTO-GENERATED — do not edit manually ────────────────────────────────
-// Generated: 2026-04-28T08:27:24.792Z
+// Generated: 2026-04-29T08:21:57.548Z
 // Source: data/content-calendar.json
 //
 // Regenerate with: npm run generate
@@ -7,57 +7,6 @@
 import type { LandingPage } from "./landing-pages-data";
 
 export const generatedLandings: LandingPage[] = [
-  {
-    slug: "beste-erotische-massage-utrecht",
-    title: "Beste erotische massage Utrecht",
-    metaTitle: "Beste erotische massage Utrecht — top reviews & prijzen",
-    metaDescription: "De best beoordeelde erotische massage in Utrecht: vergelijk op reviews, prijzen en reputatie. Geverifieerde aanbieders en actuele info.",
-    h1: "Beste erotische massage Utrecht",
-    intro: "Utrecht heeft een divers aanbod aan erotische massage. Deze ranglijst toont de best beoordeelde opties op basis van Eroplein-reviews, gesorteerd op gemiddelde score en review-volume. Alle bedrijven zijn geverifieerd op vergunning of KVK-registratie.",
-    filterType: "city_category" as const,
-    citySlug: "utrecht",
-    categorySlug: "erotische-massage",
-    
-    sections: [
-        {
-            "heading": "Hoe is deze lijst samengesteld?",
-            "body": "Gesorteerd op gemiddelde Eroplein-reviewscore, met het aantal reviews als secundaire factor. Aanbieders met minder dan 3 reviews zijn uitgesloten. Alle bedrijven zijn geverifieerd via KVK en gemeentelijke vergunningsadministratie."
-        },
-        {
-            "heading": "Prijsrange erotische massage in utrecht",
-            "body": "Gangbare tarieven: 80-220 euro per 60 min. In lijn met landelijk gemiddelde."
-        },
-        {
-            "heading": "Waarop letten we bij de beoordeling?",
-            "body": "Betrouwbaarheid (transparante prijzen, duidelijke communicatie), consistentie van kwaliteit over reviews heen, discretie en klantenservice, en waarde voor geld. Bedrijven die regelmatig negatieve reviews krijgen op specifieke punten (onduidelijke prijsstellingen, onprofessioneel gedrag) worden lager geplaatst of uitgesloten."
-        }
-    ],
-    faq: [
-        {
-            "question": "Wat is de prijsrange voor erotische massage in Utrecht?",
-            "answer": "80-220 euro per 60 min, met uitzondering van luxe-segment dat boven 220 euro kan liggen."
-        },
-        {
-            "question": "Hoe vaak wordt deze ranglijst ge-update?",
-            "answer": "Elk kwartaal op basis van de meest recente reviews. Grote veranderingen in de markt worden vaker verwerkt."
-        },
-        {
-            "question": "Kunnen bedrijven zichzelf op deze lijst kopen?",
-            "answer": "Nee. Positie op Eroplein-ranglijsten wordt uitsluitend bepaald door objectieve reviewscore en volume. Adverteren beïnvloedt de ordening niet."
-        },
-        {
-            "question": "Wat is het verschil tussen tantra en erotische massage?",
-            "answer": "Tantra is een spirituele massagevorm gericht op energie-geleiding, ademhaling en langdurige opbouw. Een reguliere erotische massage is directer fysiek en focust op ontspanning en sensualiteit. Tantra duurt doorgaans 90-120 minuten, erotische massage 30-60 minuten."
-        },
-        {
-            "question": "Moet ik naakt zijn bij een erotische massage?",
-            "answer": "Ja, bij bijna alle erotische massagevormen werk je onbedekt. Je krijgt een douche en handdoek vooraf. De masseuse werkt professioneel, ongemak bespreek je van tevoren."
-        }
-    ],
-    relatedLandings: [],
-    publishedAt: "2026-04-26",
-    updatedAt: "2026-04-26",
-  },
   {
     slug: "beste-privehuizen-amsterdam",
     title: "Beste privehuizen Amsterdam",
@@ -504,5 +453,56 @@ export const generatedLandings: LandingPage[] = [
     relatedLandings: [],
     publishedAt: "2026-05-05",
     updatedAt: "2026-05-05",
+  },
+  {
+    slug: "beste-parenclubs-utrecht",
+    title: "Beste parenclubs Utrecht regio",
+    metaTitle: "Beste parenclubs Utrecht regio — top reviews & prijzen",
+    metaDescription: "De best beoordeelde clubs in Utrecht: vergelijk op reviews, prijzen en reputatie. Geverifieerde aanbieders en actuele info.",
+    h1: "Beste parenclubs Utrecht regio",
+    intro: "Utrecht heeft een divers aanbod aan clubs. Deze ranglijst toont de best beoordeelde opties op basis van Eroplein-reviews, gesorteerd op gemiddelde score en review-volume. Alle bedrijven zijn geverifieerd op vergunning of KVK-registratie.",
+    filterType: "city_category" as const,
+    citySlug: "utrecht",
+    categorySlug: "clubs",
+    
+    sections: [
+        {
+            "heading": "Hoe is deze lijst samengesteld?",
+            "body": "Gesorteerd op gemiddelde Eroplein-reviewscore, met het aantal reviews als secundaire factor. Aanbieders met minder dan 3 reviews zijn uitgesloten. Alle bedrijven zijn geverifieerd via KVK en gemeentelijke vergunningsadministratie."
+        },
+        {
+            "heading": "Prijsrange seksclub in utrecht",
+            "body": "Gangbare tarieven: 50-150 euro entree per paar. In lijn met landelijk gemiddelde."
+        },
+        {
+            "heading": "Waarop letten we bij de beoordeling?",
+            "body": "Betrouwbaarheid (transparante prijzen, duidelijke communicatie), consistentie van kwaliteit over reviews heen, discretie en klantenservice, en waarde voor geld. Bedrijven die regelmatig negatieve reviews krijgen op specifieke punten (onduidelijke prijsstellingen, onprofessioneel gedrag) worden lager geplaatst of uitgesloten."
+        }
+    ],
+    faq: [
+        {
+            "question": "Wat is de prijsrange voor seksclub in Utrecht?",
+            "answer": "50-150 euro entree per paar, met uitzondering van luxe-segment dat boven 150 euro kan liggen."
+        },
+        {
+            "question": "Hoe vaak wordt deze ranglijst ge-update?",
+            "answer": "Elk kwartaal op basis van de meest recente reviews. Grote veranderingen in de markt worden vaker verwerkt."
+        },
+        {
+            "question": "Kunnen bedrijven zichzelf op deze lijst kopen?",
+            "answer": "Nee. Positie op Eroplein-ranglijsten wordt uitsluitend bepaald door objectieve reviewscore en volume. Adverteren beïnvloedt de ordening niet."
+        },
+        {
+            "question": "Wat is het verschil tussen een parenclub en seksclub?",
+            "answer": "Een parenclub is voor paren (en eventueel trio's of singles op specifieke avonden) waar bezoekers zelf seksueel actief worden met andere bezoekers. Een seksclub heeft betaalde dames in dienst waar je als klant gebruik van maakt. Vergelijkbaar met een luxe bordeel."
+        },
+        {
+            "question": "Mag ik als single naar een parenclub?",
+            "answer": "Meestal niet, of alleen op specifieke single-avonden en vaak met wachtlijst of ballotage. Fata Morgana, De Kastelein en andere topclubs zijn in principe paren-only. Check altijd de website of bel voor beleid."
+        }
+    ],
+    relatedLandings: [],
+    publishedAt: "2026-05-06",
+    updatedAt: "2026-05-06",
   }
 ];

@@ -1,5 +1,5 @@
 // ── AUTO-GENERATED — do not edit manually ────────────────────────────────
-// Generated: 2026-04-28T08:27:24.791Z
+// Generated: 2026-04-29T08:21:57.547Z
 // Source: data/content-calendar.json
 //
 // Regenerate with: npm run generate
@@ -7,21 +7,6 @@
 import type { Article } from "./types";
 
 export const generatedArticles: Article[] = [
-  {
-    id: "gen-escort-rotterdam-ervaring-tips",
-    title: "Escort boeken in Rotterdam: praktische tips 2026",
-    slug: "escort-rotterdam-ervaring-tips",
-    excerpt: "De beste escorts in Rotterdam: 4 aanbieders vergeleken, met actuele prijzen en reviews.",
-    content: "## Escorts in Rotterdam: de actuele stand\n\nHet escorts-aanbod in Rotterdam is in de afgelopen jaren gestabiliseerd. Prijzen liggen rond het landelijk gemiddelde, de kwaliteit van de aanbieders is doorgaans goed. In deze gids lees je wat je kunt verwachten en hoe je kiest uit het aanbod.\n\n## De praktische gang van zaken\n\nBij een escort kies je doorgaans voor een van de volgende opties: een bureau (bredere selectie, meer discretie) of een zelfstandige (persoonlijker, vaak lagere prijs). Elke keuze heeft eigen voor- en nadelen die we hieronder verder uitleggen.\n\n## Prijzen en wat je krijgt\n\nDe gangbare tarieven in Rotterdam zijn:\n\n- Incall: 140-240 euro per uur\n- Outcall: 180-300 euro per uur (exclusief reiskosten)\n- Extra's en specials: apart geprijsd, altijd vooraf bespreken\n\nPrijzen liggen iets boven het landelijke gemiddelde door hogere locatiekosten. Voor langere boekingen of terugkerende klanten geven veel aanbieders staffelkortingen.\n\n## Top aanbieders in Rotterdam voor escorts\n\nOp basis van Eroplein-reviews zijn dit de best beoordeelde aanbieders op dit moment:\n\n**1. Hollandse Escort Service** — Professioneel escortbureau actief in meerdere grote steden met discrete service.. Gemiddelde reviewscore: nog geen reviews op basis van 0 ervaringen. Prijsklasse: €€€. [Bekijk pagina](/rotterdam/escorts/hollandse-escort-service)\n\n**2. Escort Services Rotterdam** — Professionele escort service in Rotterdam en omgeving.. Gemiddelde reviewscore: nog geen reviews op basis van 0 ervaringen. Prijsklasse: €€€. [Bekijk pagina](/rotterdam/escorts/escort-services-rotterdam)\n\n**3. Escort Service Rotterdam** — Betrouwbare escort service in Rotterdam en omstreken.. Gemiddelde reviewscore: nog geen reviews op basis van 0 ervaringen. Prijsklasse: €€€. [Bekijk pagina](/rotterdam/escorts/escort-service-rotterdam)\n\nVoor de volledige lijst: zie [Escorts in Rotterdam](/rotterdam/escorts)\n\n## Tips voor een goede ervaring\n\n**Lees reviews.** Drie of meer gedetailleerde reviews met verschillende auteurs is een goede indicator van kwaliteit.\n\n**Check vergunning.** Eroplein vermeldt bij elk bedrijf of het geverifieerd is. Boek bij voorkeur alleen bij vergunde aanbieders.\n\n**Bespreek vooraf wat je wilt.** Transparantie over je verwachtingen voorkomt teleurstelling.\n\n**Kies tussen bureau en zelfstandige.** Bureau = breed aanbod + planning; zelfstandig = persoonlijker + vaak goedkoper.\n\n**Outcall naar hotel.** Hotels in centrum van de stad zijn standaard incheck-discreet voor deze boekingen.\n\n## Veelgestelde vragen\n\n**Wat kost een escort in Rotterdam?**\n\nGemiddeld 140-240 euro per uur, afhankelijk van aanbieder en specifieke afspraken.\n\n**Is escorts legaal in Rotterdam?**\n\nJa. Alle vergunde aanbieders werken binnen de Nederlandse wet (Wet regulering sekswerk, gemeentelijke exploitatievergunningen). Boek bij voorkeur bij aanbieders die geverifieerd zijn op Eroplein.\n\n**Wat kost een escort gemiddeld in Nederland?**\n\nDe gemiddelde uurprijs voor een escort in Nederland ligt tussen 150 en 300 euro. Amsterdam en Utrecht zijn iets duurder (gemiddeld 200-350 euro), terwijl kleinere steden en onafhankelijke escorts vanaf 120 euro beschikbaar zijn. Outcall is meestal 30 tot 80 euro duurder dan incall.\n\n**Hoe herken ik een betrouwbaar escortbureau?**\n\nBetrouwbare bureaus hebben een gemeentelijke vergunning, een vast kantooradres, duidelijke prijzen, geverifieerde foto's, meerdere positieve reviews, en een transparant annuleringsbeleid. Vermijd bureaus zonder online aanwezigheid, onrealistische foto's of zonder contactpersoon.",
-    category_slug: "escorts",
-    city_slug: "rotterdam",
-    author_name: "Redactie Eroplein",
-    author_initial: "R",
-    image_url: undefined,
-    published_at: "2026-04-26",
-    reading_time: 4,
-    tags: ["rotterdam","escorts","gids"],
-  },
   {
     id: "gen-raamprostitutie-alkmaar-achterdam",
     title: "Achterdam Alkmaar: complete gids raamprostitutie",
@@ -156,5 +141,20 @@ export const generatedArticles: Article[] = [
     published_at: "2026-05-05",
     reading_time: 3,
     tags: ["erotische-massage","gids"],
+  },
+  {
+    id: "gen-escort-groningen-gids",
+    title: "Escort Groningen: studentenstad met rijk aanbod",
+    slug: "escort-groningen-gids",
+    excerpt: "3 escorts in Groningen vergeleken: prijzen, reviews en praktische info voor 2026.",
+    content: "## De escorts-markt in Groningen\n\nGroningen heeft als grote Nederlandse stad in Groningen een eigen karakter in de erotische branche. Deze gids zet alles op een rij: wat je kunt verwachten, welke prijzen gangbaar zijn, en waar je op let bij het kiezen van een escort.\n\n## Wat je kunt verwachten\n\nEen escort in Nederland boek je via een bureau of rechtstreeks bij een onafhankelijke dame of heer. Bureaus nemen de planning, verificatie en facturatie uit handen, zijn vergund door de gemeente en hebben meerdere dames beschikbaar. Onafhankelijke escorts adverteren zelf en bouwen vaak een vaste klantenkring op. Op Eroplein vind je beide typen, gefilterd per stad en voorzien van echte reviews.\n\nTypisch escorts-bezoek in Groningen: boeking vooraf, duidelijke prijsafspraak, incall of outcall, sessie van 1-3 uur.\n\n## Prijzen en wat je krijgt\n\nDe gangbare tarieven in Groningen zijn:\n\n- Incall: 140-240 euro per uur\n- Outcall: 180-300 euro per uur (exclusief reiskosten)\n- Extra's en specials: apart geprijsd, altijd vooraf bespreken\n\nPrijzen volgen het landelijk gemiddelde. Voor langere boekingen of terugkerende klanten geven veel aanbieders staffelkortingen.\n\n## Top aanbieders in Groningen voor escorts\n\nOp basis van Eroplein-reviews zijn dit de best beoordeelde aanbieders op dit moment:\n\n**1. Escort Services Groningen** — Professionele escort service in Groningen en omgeving.. Gemiddelde reviewscore: 4.0 op basis van 1 ervaringen. Prijsklasse: €€€. [Bekijk pagina](/groningen/escorts/escort-services-groningen)\n\n**2. Escort Service Groningen** — Betrouwbare escort service in Groningen en omstreken.. Gemiddelde reviewscore: nog geen reviews op basis van 0 ervaringen. Prijsklasse: €€€. [Bekijk pagina](/groningen/escorts/escort-service-groningen)\n\n**3. Happy Escort Groningen** — Escort service actief in heel Groningen.. Gemiddelde reviewscore: nog geen reviews op basis van 0 ervaringen. Prijsklasse: €€€. [Bekijk pagina](/groningen/escorts/happy-escort-groningen)\n\nVoor de volledige lijst: zie [Escorts in Groningen](/groningen/escorts)\n\n## Tips voor een goede ervaring\n\n**Lees reviews.** Drie of meer gedetailleerde reviews met verschillende auteurs is een goede indicator van kwaliteit.\n\n**Check vergunning.** Eroplein vermeldt bij elk bedrijf of het geverifieerd is. Boek bij voorkeur alleen bij vergunde aanbieders.\n\n**Bespreek vooraf wat je wilt.** Transparantie over je verwachtingen voorkomt teleurstelling.\n\n**Kies tussen bureau en zelfstandige.** Bureau = breed aanbod + planning; zelfstandig = persoonlijker + vaak goedkoper.\n\n**Outcall naar hotel.** Hotels in centrum van de stad zijn standaard incheck-discreet voor deze boekingen.\n\n## Veelgestelde vragen\n\n**Wat kost een escort in Groningen?**\n\nGemiddeld 140-240 euro per uur, afhankelijk van aanbieder en specifieke afspraken.\n\n**Is escorts legaal in Groningen?**\n\nJa. Alle vergunde aanbieders werken binnen de Nederlandse wet (Wet regulering sekswerk, gemeentelijke exploitatievergunningen). Boek bij voorkeur bij aanbieders die geverifieerd zijn op Eroplein.\n\n**Wat kost een escort gemiddeld in Nederland?**\n\nDe gemiddelde uurprijs voor een escort in Nederland ligt tussen 150 en 300 euro. Amsterdam en Utrecht zijn iets duurder (gemiddeld 200-350 euro), terwijl kleinere steden en onafhankelijke escorts vanaf 120 euro beschikbaar zijn. Outcall is meestal 30 tot 80 euro duurder dan incall.\n\n**Hoe herken ik een betrouwbaar escortbureau?**\n\nBetrouwbare bureaus hebben een gemeentelijke vergunning, een vast kantooradres, duidelijke prijzen, geverifieerde foto's, meerdere positieve reviews, en een transparant annuleringsbeleid. Vermijd bureaus zonder online aanwezigheid, onrealistische foto's of zonder contactpersoon.",
+    category_slug: "escorts",
+    city_slug: "groningen",
+    author_name: "Redactie Eroplein",
+    author_initial: "R",
+    image_url: undefined,
+    published_at: "2026-05-06",
+    reading_time: 4,
+    tags: ["groningen","escorts","gids"],
   }
 ];
