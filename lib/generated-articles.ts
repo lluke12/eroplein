@@ -1,5 +1,5 @@
 // ── AUTO-GENERATED — do not edit manually ────────────────────────────────
-// Generated: 2026-04-29T08:21:57.547Z
+// Generated: 2026-04-30T08:24:19.324Z
 // Source: data/content-calendar.json
 //
 // Regenerate with: npm run generate
@@ -7,21 +7,6 @@
 import type { Article } from "./types";
 
 export const generatedArticles: Article[] = [
-  {
-    id: "gen-raamprostitutie-alkmaar-achterdam",
-    title: "Achterdam Alkmaar: complete gids raamprostitutie",
-    slug: "raamprostitutie-alkmaar-achterdam",
-    excerpt: "Actuele informatie, prijzen en tips over achterdam alkmaar: complete gids raamprostitutie.",
-    content: "Achterdam Alkmaar: complete gids raamprostitutie\n\n## De praktische gang van zaken\n\nBij een raamprostitutie kies je doorgaans voor een van de volgende opties: het aanbod van vergunde aanbieders in de regio. Elke keuze heeft eigen voor- en nadelen die we hieronder verder uitleggen.\n\n## Prijzen en wat je krijgt\n\nDe gangbare tarieven zijn:\n\n- Incall: 50-150 euro voor 15-60 min\n- Extra's en specials: apart geprijsd, altijd vooraf bespreken\n\n Voor langere boekingen of terugkerende klanten geven veel aanbieders staffelkortingen.\n\n## Tips voor een goede ervaring\n\n**Lees reviews.** Drie of meer gedetailleerde reviews met verschillende auteurs is een goede indicator van kwaliteit.\n\n**Check vergunning.** Eroplein vermeldt bij elk bedrijf of het geverifieerd is. Boek bij voorkeur alleen bij vergunde aanbieders.\n\n**Bespreek vooraf wat je wilt.** Transparantie over je verwachtingen voorkomt teleurstelling.\n\n**Geen foto's.** Streng verboden en strikt gehandhaafd in Amsterdam.\n\n**Blijf niet staren.** Respectvolle benadering begint met normaal langslopen.\n\n## Veelgestelde vragen\n\n**Hoe werkt raamprostitutie praktisch?**\n\nJe loopt langs de ramen in de aangewezen zones. Bij interesse klop je op het raam of opent de werker de deur zelf. Je bespreekt handelingen, tijd en prijs. Akkoord betekent naar binnen, betaal vooraf, daarna de afspraak. Niet akkoord betekent vriendelijk doorlopen.\n\n**Wat kost raamprostitutie?**\n\nStandaardtarief voor 15-20 minuten ligt rond 50 euro. Een half uur kost 80 tot 100 euro, een uur 150 tot 200 euro. Speciale handelingen kosten extra, altijd voor binnengaan afgesproken.",
-    category_slug: "ramen",
-    city_slug: "alkmaar",
-    author_name: "Redactie Eroplein",
-    author_initial: "R",
-    image_url: undefined,
-    published_at: "2026-04-27",
-    reading_time: 3,
-    tags: ["ramen","gids"],
-  },
   {
     id: "gen-privehuis-utrecht-reviews",
     title: "Privehuis Utrecht: top locaties met reviews",
@@ -156,5 +141,20 @@ export const generatedArticles: Article[] = [
     published_at: "2026-05-06",
     reading_time: 4,
     tags: ["groningen","escorts","gids"],
+  },
+  {
+    id: "gen-bdsm-club-nederland",
+    title: "BDSM clubs en events in Nederland: een overzicht",
+    slug: "bdsm-club-nederland",
+    excerpt: "Actuele informatie, prijzen en tips over bdsm clubs en events in nederland: een overzicht.",
+    content: "BDSM clubs en events in Nederland: een overzicht\n\n## De praktische gang van zaken\n\nBij een seksclub kies je doorgaans voor een van de volgende opties: een parenclub (paren-only), seksclub (met dames in dienst), of swingersclub (open voor wisseling). Elke keuze heeft eigen voor- en nadelen die we hieronder verder uitleggen.\n\n## Prijzen en wat je krijgt\n\nDe gangbare tarieven zijn:\n\n- Incall: 50-150 euro entree per paar\n- Extra's en specials: apart geprijsd, altijd vooraf bespreken\n\n Voor langere boekingen of terugkerende klanten geven veel aanbieders staffelkortingen.\n\n## Top aanbieders voor clubs\n\nOp basis van Eroplein-reviews zijn dit de best beoordeelde aanbieders op dit moment:\n\n**1. Fata Morgana** — Luxe parenclub bij Amsterdam, uitgeroepen tot beste swingersclub van Nederland.. Gemiddelde reviewscore: nog geen reviews op basis van 0 ervaringen. Prijsklasse: €€€€. [Bekijk pagina](/amsterdam/clubs/fata-morgana)\n\n**2. Sameplace** — Gezellige swingersclub aan de Nassaukade, ideaal voor beginners met diverse thema-avonden.. Gemiddelde reviewscore: nog geen reviews op basis van 0 ervaringen. Prijsklasse: €€. [Bekijk pagina](/amsterdam/clubs/sameplace)\n\n**3. Casa Rosso** — Legendarisch erotisch theater in de Red Light District met 50+ jaar ervaring.. Gemiddelde reviewscore: nog geen reviews op basis van 0 ervaringen. Prijsklasse: €€€. [Bekijk pagina](/amsterdam/stripclubs/casa-rosso)\n\nVoor de volledige lijst.\n\n## Tips voor een goede ervaring\n\n**Lees reviews.** Drie of meer gedetailleerde reviews met verschillende auteurs is een goede indicator van kwaliteit.\n\n**Check vergunning.** Eroplein vermeldt bij elk bedrijf of het geverifieerd is. Boek bij voorkeur alleen bij vergunde aanbieders.\n\n**Bespreek vooraf wat je wilt.** Transparantie over je verwachtingen voorkomt teleurstelling.\n\n**Respecteer de dresscode.** Nette kleding aan, binnen vaak badjas/lingerie — check per club.\n\n**Kom niet zwaar aangeschoten.** Vaak geweigerd aan de deur en sowieso onplezierig voor andere bezoekers.\n\n## Veelgestelde vragen\n\n**Wat is het verschil tussen een parenclub en seksclub?**\n\nEen parenclub is voor paren (en eventueel trio's of singles op specifieke avonden) waar bezoekers zelf seksueel actief worden met andere bezoekers. Een seksclub heeft betaalde dames in dienst waar je als klant gebruik van maakt. Vergelijkbaar met een luxe bordeel.\n\n**Mag ik als single naar een parenclub?**\n\nMeestal niet, of alleen op specifieke single-avonden en vaak met wachtlijst of ballotage. Fata Morgana, De Kastelein en andere topclubs zijn in principe paren-only. Check altijd de website of bel voor beleid.",
+    category_slug: "clubs",
+    city_slug: undefined,
+    author_name: "Redactie Eroplein",
+    author_initial: "R",
+    image_url: undefined,
+    published_at: "2026-05-07",
+    reading_time: 3,
+    tags: ["clubs","gids"],
   }
 ];

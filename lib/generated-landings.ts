@@ -1,5 +1,5 @@
 // ── AUTO-GENERATED — do not edit manually ────────────────────────────────
-// Generated: 2026-04-29T08:21:57.548Z
+// Generated: 2026-04-30T08:24:19.324Z
 // Source: data/content-calendar.json
 //
 // Regenerate with: npm run generate
@@ -7,57 +7,6 @@
 import type { LandingPage } from "./landing-pages-data";
 
 export const generatedLandings: LandingPage[] = [
-  {
-    slug: "beste-privehuizen-amsterdam",
-    title: "Beste privehuizen Amsterdam",
-    metaTitle: "Beste privehuizen Amsterdam — top reviews & prijzen",
-    metaDescription: "De best beoordeelde privehuizen in Amsterdam: vergelijk op reviews, prijzen en reputatie. Geverifieerde aanbieders en actuele info.",
-    h1: "Beste privehuizen Amsterdam",
-    intro: "Amsterdam heeft een divers aanbod aan privehuizen. Deze ranglijst toont de best beoordeelde opties op basis van Eroplein-reviews, gesorteerd op gemiddelde score en review-volume. Alle bedrijven zijn geverifieerd op vergunning of KVK-registratie.",
-    filterType: "city_category" as const,
-    citySlug: "amsterdam",
-    categorySlug: "privehuizen",
-    
-    sections: [
-        {
-            "heading": "Hoe is deze lijst samengesteld?",
-            "body": "Gesorteerd op gemiddelde Eroplein-reviewscore, met het aantal reviews als secundaire factor. Aanbieders met minder dan 3 reviews zijn uitgesloten. Alle bedrijven zijn geverifieerd via KVK en gemeentelijke vergunningsadministratie."
-        },
-        {
-            "heading": "Prijsrange privehuis in amsterdam",
-            "body": "Gangbare tarieven: 50-180 euro voor 30-60 min. Amsterdam en andere grote steden liggen iets boven dit gemiddelde."
-        },
-        {
-            "heading": "Waarop letten we bij de beoordeling?",
-            "body": "Betrouwbaarheid (transparante prijzen, duidelijke communicatie), consistentie van kwaliteit over reviews heen, discretie en klantenservice, en waarde voor geld. Bedrijven die regelmatig negatieve reviews krijgen op specifieke punten (onduidelijke prijsstellingen, onprofessioneel gedrag) worden lager geplaatst of uitgesloten."
-        }
-    ],
-    faq: [
-        {
-            "question": "Wat is de prijsrange voor privehuis in Amsterdam?",
-            "answer": "50-180 euro voor 30-60 min, met uitzondering van luxe-segment dat boven 180 euro kan liggen."
-        },
-        {
-            "question": "Hoe vaak wordt deze ranglijst ge-update?",
-            "answer": "Elk kwartaal op basis van de meest recente reviews. Grote veranderingen in de markt worden vaker verwerkt."
-        },
-        {
-            "question": "Kunnen bedrijven zichzelf op deze lijst kopen?",
-            "answer": "Nee. Positie op Eroplein-ranglijsten wordt uitsluitend bepaald door objectieve reviewscore en volume. Adverteren beïnvloedt de ordening niet."
-        },
-        {
-            "question": "Wat kost een bezoek aan een privehuis?",
-            "answer": "Een standaardbezoek van 30 minuten kost meestal 50 tot 80 euro. Een uur ligt tussen 120 en 180 euro. Amsterdamse privehuizen zijn vaak 20 tot 40 euro duurder dan in kleinere steden."
-        },
-        {
-            "question": "Moet ik reserveren bij een privehuis?",
-            "answer": "Nee, bij de meeste privehuizen loop je gewoon binnen tijdens openingsuren. Reserveren kan wel bij specifieke dames of op drukke momenten (weekendavonden). Bel het huis even van tevoren voor beschikbaarheid."
-        }
-    ],
-    relatedLandings: [],
-    publishedAt: "2026-04-27",
-    updatedAt: "2026-04-27",
-  },
   {
     slug: "beste-tantra-nederland",
     title: "Beste tantra-salons Nederland",
@@ -504,5 +453,56 @@ export const generatedLandings: LandingPage[] = [
     relatedLandings: [],
     publishedAt: "2026-05-06",
     updatedAt: "2026-05-06",
+  },
+  {
+    slug: "beste-escorts-nijmegen",
+    title: "Beste escort Nijmegen 2026",
+    metaTitle: "Beste escort Nijmegen 2026 — top reviews & prijzen",
+    metaDescription: "De best beoordeelde escorts in Nijmegen: vergelijk op reviews, prijzen en reputatie. Geverifieerde aanbieders en actuele info.",
+    h1: "Beste escort Nijmegen 2026",
+    intro: "Nijmegen heeft een divers aanbod aan escorts. Deze ranglijst toont de best beoordeelde opties op basis van Eroplein-reviews, gesorteerd op gemiddelde score en review-volume. Alle bedrijven zijn geverifieerd op vergunning of KVK-registratie.",
+    filterType: "city_category" as const,
+    citySlug: "nijmegen",
+    categorySlug: "escorts",
+    
+    sections: [
+        {
+            "heading": "Hoe is deze lijst samengesteld?",
+            "body": "Gesorteerd op gemiddelde Eroplein-reviewscore, met het aantal reviews als secundaire factor. Aanbieders met minder dan 3 reviews zijn uitgesloten. Alle bedrijven zijn geverifieerd via KVK en gemeentelijke vergunningsadministratie."
+        },
+        {
+            "heading": "Prijsrange escort in nijmegen",
+            "body": "Gangbare tarieven: 140-240 euro per uur. Outcall: 180-300 euro (exclusief reiskosten). Doorgaans iets onder landelijk gemiddelde."
+        },
+        {
+            "heading": "Waarop letten we bij de beoordeling?",
+            "body": "Betrouwbaarheid (transparante prijzen, duidelijke communicatie), consistentie van kwaliteit over reviews heen, discretie en klantenservice, en waarde voor geld. Bedrijven die regelmatig negatieve reviews krijgen op specifieke punten (onduidelijke prijsstellingen, onprofessioneel gedrag) worden lager geplaatst of uitgesloten."
+        }
+    ],
+    faq: [
+        {
+            "question": "Wat is de prijsrange voor escort in Nijmegen?",
+            "answer": "140-240 euro per uur, met uitzondering van luxe-segment dat boven 240 euro kan liggen."
+        },
+        {
+            "question": "Hoe vaak wordt deze ranglijst ge-update?",
+            "answer": "Elk kwartaal op basis van de meest recente reviews. Grote veranderingen in de markt worden vaker verwerkt."
+        },
+        {
+            "question": "Kunnen bedrijven zichzelf op deze lijst kopen?",
+            "answer": "Nee. Positie op Eroplein-ranglijsten wordt uitsluitend bepaald door objectieve reviewscore en volume. Adverteren beïnvloedt de ordening niet."
+        },
+        {
+            "question": "Wat kost een escort gemiddeld in Nederland?",
+            "answer": "De gemiddelde uurprijs voor een escort in Nederland ligt tussen 150 en 300 euro. Amsterdam en Utrecht zijn iets duurder (gemiddeld 200-350 euro), terwijl kleinere steden en onafhankelijke escorts vanaf 120 euro beschikbaar zijn. Outcall is meestal 30 tot 80 euro duurder dan incall."
+        },
+        {
+            "question": "Hoe herken ik een betrouwbaar escortbureau?",
+            "answer": "Betrouwbare bureaus hebben een gemeentelijke vergunning, een vast kantooradres, duidelijke prijzen, geverifieerde foto's, meerdere positieve reviews, en een transparant annuleringsbeleid. Vermijd bureaus zonder online aanwezigheid, onrealistische foto's of zonder contactpersoon."
+        }
+    ],
+    relatedLandings: [],
+    publishedAt: "2026-05-07",
+    updatedAt: "2026-05-07",
   }
 ];
